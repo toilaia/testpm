@@ -1,0 +1,833 @@
+
+<div id='init_data' style='display:none'>{"shift_table":{"__id":"","pk":{"c":"css","t":"text"},"colmap":{"1":[]},"rows":[{"id":"OH","i":[{"t":"OH"},[],{"t":"H\u00e0nh ch\u00e1nh"},{"t":"08:00"},{"t":"17:00"}],"_t":"f_004_10"},{"id":"S1","i":[{"t":"S1"},[],{"t":"Ca 1"},{"t":"06:00"},{"t":"14:00"}],"_t":"f_004_11"},{"id":"S2","i":[{"t":"S2"},[],{"t":"Ca 2"},{"t":"14:00"},{"t":"22:00"}],"_t":"f_004_12"},{"id":"S3","i":[{"t":"S3"},[],{"t":"Ca 3"},{"t":"22:00"},{"t":"06:00"}],"_t":"f_004_13"},{"id":"HM","i":[{"t":"HM"},[],{"t":"Ca s\u00e1ng"},{"t":"07:30"},{"t":"11:30"}],"_t":"f_004_14","s2":{"TongTG":4,"CountD":0.5,"isCI":true,"isCO":true,"isBOT":-1,"isAOT":-1,"noiseI":"1","noiseO":"0","hBR":-1,"vBR":0,"brCO":false,"brCI":false,"nT1":true,"wT1":false,"nT2":true,"wT2":false,"nT3":true,"wT3":false,"nT4":true,"wT4":false,"nT5":true,"wT5":false,"nT6":true,"wT6":false,"nT7":true,"wT7":true}},{"id":"HA","i":[{"t":"HA"},[],{"t":"Ca chi\u1ec1u"},{"t":"13:00"},{"t":"17:00"}],"_t":"f_004_15","s2":{"TongTG":4,"CountD":0.5,"isBOT":-1,"isAOT":-1,"noiseI":"1","noiseO":"0","hBR":-1,"vBR":0,"nT1":true,"wT1":false,"nT2":true,"wT2":false,"nT3":true,"wT3":false,"nT4":true,"wT4":false,"nT5":true,"wT5":false,"nT6":true,"wT6":false,"nT7":true,"wT7":true}}]}}</div><pre id="template" style="display:none">&lt;form&gt;
+        &lt;div class=&quot;row&quot;&gt;
+            &lt;div class=&quot;col-md-2  col-sm-4 col-4&quot;&gt;
+                &lt;div class=&quot;form-group&quot;&gt;
+                    &lt;label class=&quot;control-label&quot;&gt;
+                        #
+                        &lt;span class=&quot;symbol required&quot;&gt;&lt;/span&gt;
+                    &lt;/label&gt;
+                    &lt;input type=&quot;text&quot; class=&quot;form-control&quot; placeholder=&quot;ID&quot; id=&quot;id&quot; name=&quot;id&quot; maxlength=&quot;10&quot; autocomplete=&quot;off&quot;/&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;col-md-6  col-sm-8 col-8&quot;&gt;
+                &lt;div class=&quot;form-group&quot;&gt;
+                    &lt;label class=&quot;control-label&quot;&gt;T&ecirc;n ca k&iacute;p:
+                        &lt;span class=&quot;symbol required&quot;&gt;&lt;/span&gt;
+                    &lt;/label&gt;
+                    &lt;input type=&quot;text&quot; class=&quot;form-control&quot; placeholder=&quot;T&ecirc;n ca k&iacute;p&quot; id=&quot;shiftname&quot; name=&quot;shiftname&quot; maxlength=&quot;50&quot; autocomplete=&quot;off&quot;/&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;col-md-2 col-sm-4 col-4 &quot;&gt;
+                &lt;div class=&quot;form-group&quot;&gt;
+                    &lt;label class=&quot;control-label&quot;&gt;Giờ v&agrave;o: &lt;span class=&quot;symbol required&quot;&gt;&lt;/span&gt;
+                    &lt;/label&gt;
+                    &lt;input type=&quot;text&quot; class=&quot;form-control&quot; placeholder=&quot;__:__&quot; id=&quot;shift_giovao&quot; name=&quot;shift_giovao&quot;  value=&quot;08:00&quot;/&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;col-md-2 col-sm-4 col-4 &quot;&gt;
+                &lt;div class=&quot;form-group&quot;&gt;
+                    &lt;label class=&quot;control-label&quot;&gt;Giờ ra: &lt;span class=&quot;symbol required&quot;&gt;&lt;/span&gt;
+                    &lt;/label&gt;
+                    &lt;input type=&quot;text&quot; class=&quot;form-control&quot; placeholder=&quot;__:__&quot; id=&quot;shift_giora&quot; name=&quot;shift_giora&quot; value=&quot;16:00&quot;/&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;col-md-12&quot;&gt;
+                &lt;div class=&quot;errorHandler alert alert-danger no-display&quot;&gt;
+                    &lt;i class=&quot;fa fa-times-sign&quot;&gt;&lt;/i&gt; You have some form errors. Please check below.
+                &lt;/div&gt;
+                &lt;div class=&quot;successHandler alert alert-success no-display&quot;&gt;
+                    &lt;i class=&quot;fa fa-ok&quot;&gt;&lt;/i&gt; Your form validation is successful!
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/form&gt;</pre><pre id="lang" style="display:none">eyJqc18wMDRfMjUiOiJNXHUwMGUzIiwianNfMDA0XzI2IjoiVFx1MDBlYW4iLCJqc18wMDRfMjciOiJUaFx1MWVkZGkgZ2lhbiIsImpzXzAwNF8zMiI6IlRcdTFlZDVuZyB0aFx1MWViYiIsImpzXzAwNF8zMyI6Ik5oXHUwMGUybiB2aVx1MDBlYW4iLCJqc18wMDRfMSI6IlRcdTFlYTFvIE1cdTFlZGJpIENhIEtcdTAwZWRwIiwianNfMDA0XzIiOiJDaFx1MWVjZG4gQ2EgS1x1MDBlZHAgVFx1MWVlYiBEYW5oIFNcdTAwZTFjaCIsImpzXzAwNF8zIjoiXHUwMTEwXHUxZWQzbmcgXHUwMGZkIiwianNfMDA0XzQiOiJMXHUwMWIwdSBsXHUxZWExaSIsImpzXzAwNF81IjoiPGJyXC8+PGEgaHJlZj1qYXZhc2NyaXB0OnZvaWQoJiMzOTswJiMzOTspPjxzdHJvbmc+UGhpXHUwMGVhbiBiXHUxZWEzbiBjXHUwMGUwaSBcdTAxMTFcdTFlYjd0IFdpbmRvd3MgXC88XC9zdHJvbmc+PFwvYT4gPGEgaHJlZj1qYXZhc2NyaXB0OnZvaWQoJiMzOTswJiMzOTspPlRoaVx1MWViZnQga1x1MWViZiBnaVx1MWVhM2kgcGhcdTAwZTFwICZhbXA7IFBoXHUxZWE3biBtXHUxZWMxbSBcLzxcL2E+IDxhIGhyZWY9amF2YXNjcmlwdDp2b2lkKCYjMzk7MCYjMzk7KT5UaGlcdTFlYmZ0IGJcdTFlY2IgY2hcdTFlYTVtIGNcdTAwZjRuZzxcL2E+IiwianNfMDA0XzYiOiJYXHUwMGYzYSB0XHUxZWE1dCBjXHUxZWEzIGNhIGtcdTAwZWRwIHRyb25nIGRhbmggc1x1MDBlMWNoLiIsImpzXzAwNF83IjoiWFx1MDBmM2EgY2Ega1x1MDBlZHAuIiwianNfMDA0XzgiOiJUaVx1MWViZnAgdFx1MWVlNWMiLCJqc18wMDRfOSI6IlRyXHUxZWRmIGxcdTFlYTFpIiwianNfMDA0XzEwIjoiU1x1MDFhMSBcdTAxMTBcdTFlZDMgQ2EgS1x1MDBlZHAiLCJqc18wMDRfMTEiOlsiVHJcdTAxYjBcdTFlZGRuZyBuXHUwMGUweSBsXHUwMGUwIGJcdTFlYWZ0IGJ1XHUxZWQ5Yy4iLCJIXHUwMGUzeSBuaFx1MWVhZHAgXHUwMGVkdCBuaFx1MWVhNXQgMDIga1x1MDBmZCB0XHUxZWYxLiIsIktoXHUwMGY0bmcgaFx1MWVlM3AgbFx1MWVjNy4iLCJUclx1MDBmOW5nIG1cdTAwZTMhIl0sImpzXzAwNF8xMiI6WyJUaFx1MWVhMyB0XHUxZWFkcCB0aW4gY2hcdTFlZTlhIGRcdTFlZWYgbGlcdTFlYzd1IGdcdTFlYTF0IHRoXHUxZWJiIGNoXHUxZWE1bSBjXHUwMGY0bmcgdlx1MDBlMG8gXHUwMTExXHUwMGUyeSwgaG9cdTFlYjdjIG5oXHUxZWE1cCBjaHVcdTFlZDl0IHZcdTAwZTBvIFx1MDExMVx1MWVjMyBjaFx1MWVjZG4gdFx1MWVhZHAgdGluIHRcdTFlYTNpIGxcdTAwZWFuICguZGF0LCAueGxzeCwgLnhscywgLmNzdiwgLnR4dCkiXSwianNfMDA0XzEzIjpbIlRcdTFlZWIgbmdcdTAwZTB5OiAiLCJcdTAxMTBcdTFlYmZuIG5nXHUwMGUweTogIiwiTmhcdTFlY2YgbmhcdTFlYTV0IiwiTFx1MWVkYm4gbmhcdTFlYTV0Il0sImpzXzAwNF8xNCI6WyJDaFx1MWVjZG4ga2hvXHUxZWEzbmcgdGhcdTFlZGRpIGdpYW4gLi4uIiwiRFx1MDBmOW5nIFx1MDExMVx1MWVjMyBnaVx1MWVkYmkgaFx1MWVhMW4gbFx1MWVhMWkgZFx1MWVlZiBsaVx1MWVjN3UgdGhcdTFlYmIgdHJvbmcga2hvXHUxZWEzbmcgdGhcdTFlZGRpIGdpYW4gVFx1MWVlYiBuZ1x1MDBlMHkgLSBcdTAxMTBcdTFlYmZuIG5nXHUwMGUweS4iLCJDaFx1MWVjZG4gbmhcdTAwZTJuIHZpXHUwMGVhbiAuLi4iLCJMXHUxZWYxYSBjaFx1MWVjZG4gbmhcdTAwZTJuIHZpXHUwMGVhbiBjXHUxZWE3biB0XHUwMGVkbmggY1x1MDBmNG5nIChtXHUxZWI3YyBcdTAxMTFcdTFlY2JuaCBraFx1MDBmNG5nIGNoXHUxZWNkbiBsXHUwMGUwIHRcdTAwZWRuaCB0XHUxZWE1dCBjXHUxZWEzIGRhbmggc1x1MDBlMWNoKSJdLCJqc18wMDRfMTUiOlsiQ2hcdTFlY2RuIHRcdTFlZWIgbFx1MDFiMHUgdHJcdTFlZWYiLCJEYW5oIHNcdTAwZTFjaCBsXHUwMWIwdSB0clx1MWVlZiIsIlRcdTAwZWFuIHRcdTFlYzdwIiwiVGhcdTFlZGRpIGdpYW4iLCJUXHUxZWQ1bmcgY1x1MWVkOW5nOiIsIkRcdTFlZWYgbGlcdTFlYzd1IGNoXHUxZWE1bSBjXHUwMGY0bmcgXHUwMTExXHUwMGUzIGNcdTAwZjMgdGhheSBcdTAxMTFcdTFlZDVpIHNvIHZcdTFlZGJpIGxcdTAxYjB1IHRyXHUxZWVmIGdcdTFlZDFjPGJyXC8+TmhcdTFlYTVuIDxpIGNsYXNzPSdjb250ZXh0LWhlbHAgdGktbW91c2UtYWx0Jz48XC9pPiBPSyBcdTAxMTFcdTFlYzMgbFx1MDFiMHUgdHJcdTFlZWYgdlx1MDBlMCB0aFx1MWVmMWMgaGlcdTFlYzduIHRcdTAwZWRuaCBsXHUxZWExaS4iXSwianNfMDA0XzE2IjpbIlZ1aSBsXHUwMGYybmcgeFx1MDBlMWMgbmhcdTFlYWRuIGxcdTAwZTA6IiwiQlx1MWVhMW4gdGhcdTFlYWR0IHNcdTFlZjEgbXVcdTFlZDFuIGJcdTFlY2YgcXVhIGtoXHUwMGY0bmcgbFx1MDFiMHUgdHJcdTFlZWYgVFx1MWVjN3AgaGlcdTFlYzduIHRcdTFlYTFpPyIsIkJcdTFlYTFuIGNcdTAwZjMgdGhcdTFlYWR0IHNcdTFlZjEgbXVcdTFlZDFuIHhcdTAwZjNhIGxcdTAxYjB1IHRyXHUxZWVmIFx1MDExMWFuZyBjaFx1MWVjZG4/IiwiQlx1MWVhMW4gdGhcdTFlYWR0IHNcdTFlZjEgbXVcdTFlZDFuIGJcdTFlY2YgcmEgKGtoXHUwMGY0bmcgeFx1MDBmM2Ega2hcdTFlY2ZpIGxcdTAxYjB1IHRyXHUxZWVmKSIsIkJcdTFlYTFuIHRoXHUxZWFkdCBzXHUxZWYxIG11XHUxZWQxbiBiXHUxZWNmIHRcdTFlYTV0IGNcdTFlYTMgKGtoXHUwMGY0bmcgeFx1MDBmM2Ega2hcdTFlY2ZpIGxcdTAxYjB1IHRyXHUxZWVmKSIsIkJcdTFlYTFuIHRoXHUxZWFkdCBzXHUxZWYxIG11XHUxZWQxbiBiXHUxZWNmIHF1YSBzXHUxZWYxIHRoYXkgXHUwMTExXHUxZWQ1aSB2XHUwMGUwIHRyXHUxZWRmIHZcdTFlYzEgIGJcdTFlYTNuIGdcdTFlZDFjPyJdLCJqc18wMDRfMTciOlsiVFx1MWVjN3Agblx1MDBlMHkgXHUwMTExXHUwMGUzIFx1MDExMVx1MDFiMFx1MWVlM2MgbFx1MDFiMHUgLi4uIDxiclwvPlZ1aSBsXHUwMGYybmcgeFx1MDBlMWMgbmhcdTFlYWRuIG5cdTFlYmZ1IGJcdTFlYTFuIG11XHUxZWQxbiBjXHUxZWFkcCBuaFx1MWVhZHQgbVx1MWVkYmkiLCJEXHUxZWVmIGxpXHUxZWM3dSBjXHUwMGYzIHRoYXkgXHUwMTExXHUxZWQ1aSIsIkJcdTFlYTFuIGNcdTAwZjMgdGhcdTFlYzMgTFx1MDFiMHUgbFx1MWVhMWkgaG9cdTFlYjdjIEhcdTFlZTd5IGJcdTFlY2Ygc1x1MWVmMSB0aGF5IFx1MDExMVx1MWVkNWkgblx1MDBlMHkgYlx1MWViMW5nIGNcdTAwZTFjaCBuaFx1MWVhNW4gPGkgY2xhc3M9J2NvbnRleHQtaGVscCB0aS1tb3VzZS1hbHQnPjxcL2k+IHZcdTAwZTBvIG1cdTFlZDl0IHRyb25nIDAyIG5cdTAwZmF0IGxcdTFlYzduaCBiXHUwMGVhbiB0clx1MDBlYW4gLi4uIiwiQlx1MWVhMW4gY1x1MDBmMyB0aFx1MWVjMyBIXHUxZWU3eSBiXHUxZWNmIHNcdTFlZjEgdGhheSBcdTAxMTFcdTFlZDVpIG5cdTAwZTB5IGJcdTFlYjFuZyBjXHUwMGUxY2ggbmhcdTFlYTVuIDxpIGNsYXNzPSdjb250ZXh0LWhlbHAgdGktbW91c2UtYWx0Jz48XC9pPiB2XHUwMGUwbyBuXHUwMGZhdCBsXHUxZWM3bmggYlx1MDBlYW4gdHJcdTAwZWFuIC4uLiJdLCJqc18wMDRfMTgiOlsiQ1x1MWVhN24gcXV5XHUxZWJmdCBcdTAxMTFcdTFlY2JuaCBjXHUxZWU3YSBCXHUxZWExbiEiLCI8ZGl2IGNsYXNzPSd0ZXh0LWNlbnRlcic+PHA+RFx1MWVlZiBsaVx1MWVjN3UgXHUwMTExXHUwMGUzIGNcdTAwZjMgdGhheSBcdTAxMTFcdTFlZDVpIHNvIHZcdTFlZGJpIGJcdTFlYTNuIGdcdTFlZDFjLjxcL3A+Qlx1MWVhMW4gdnVpIGxcdTAwZjJuZyBuaFx1MWVhNW4gPGkgY2xhc3M9J2NvbnRleHQtaGVscCB0aS1tb3VzZS1hbHQnPjxcL2k+IHZcdTAwZTBvIG1cdTFlZDl0IHRyb25nIGNcdTAwZTFjIG5cdTAwZmF0IGxcdTFlYzduaCBiXHUwMGVhbiBkXHUwMWIwXHUxZWRiaSAuLi48XC9kaXY+IiwiWGVtIGtcdTFlYmZ0IHF1XHUxZWEzIGNcdTAxNjkiLCJDXHUxZWFkcCBuaFx1MWVhZHQgJiBUXHUwMGVkbmgiXSwianNfMDA0XzE5IjpbIlx1MDExMGFuZyB0XHUwMGVkbmggY1x1MDBmNG5nIiwiQlx1MWVhMW4gY1x1MDBmMyB0aFx1MWVjMyBkXHUxZWVibmcgbFx1MWVhMWkgYlx1MWViMW5nIGNcdTAwZTFjaCBuaFx1MWVhNW4gblx1MDBmYXQgXHUyMDFjIFN0b3AgXHUyMDFkIC4uLiIsIlF1eSBcdTAxYjBcdTFlZGJjIHRcdTAwZWRuaCIsIkJcdTFlYTFuIGNcdTAwZjMgdGhcdTFlYzMgdGhheSBcdTAxMTFcdTFlZDVpIHF1eSBcdTAxYjBcdTFlZGJjIHZcdTAwZTAgbmhcdTFlYTVuIG5cdTAwZmF0IFx1MjAxYyBUXHUwMGVkbmggbFx1MWVhMWkgXHUyMDFkIiwiVFx1MDBlZG5oIGxcdTFlYTFpIiwiVnVpIGxcdTAwZjJuZyB4XHUwMGUxYyBuaFx1MWVhZG4gdHJcdTAxYjBcdTFlZGJjIGtoaSBUXHUwMGVkbmggbFx1MWVhMWkuIiwiWHVcdTFlYTV0IGtcdTFlYmZ0IHF1XHUxZWEzIiwiVFx1MWVhM2kgbFx1MWVhMWkga1x1MWViZnQgcXVcdTFlYTMiXSwianNfZ29qcyI6WyJMXHUxZWNhQ0ggQ1x1MDBkNE5HIFRcdTAwYzFDIFRVXHUxZWE2TiIsIlRoXHUxZWU5IDIiLCJUaFx1MWVlOSAzIiwiVGhcdTFlZTkgNCIsIlRoXHUxZWU5IDUiLCJUaFx1MWVlOSA2IiwiVGhcdTFlZTkgNyIsIkMuTmhcdTFlYWR0IiwiVFx1MWVmMSBcdTAxMTFcdTFlZDluZyB0XHUwMGVkbmggT1Qgblx1MWViZnUgdlx1MDBlMG8gc1x1MWVkYm0gaFx1MDFhMW46ICIsIlRcdTFlZjEgXHUwMTExXHUxZWQ5bmcgdFx1MDBlZG5oIE9UIG5cdTFlYmZ1IHJhIHZcdTFlYzEgdHJcdTFlYzUgaFx1MDFhMW46ICIsIkdpXHUxZWRkIHZcdTAwZTBvOiAiLCJHaVx1MWVkZCByYTogIiwiU1x1MWVkMSBHaVx1MWVkZCBjXHUwMGY0bmcgbFx1MDBlMG0gdmlcdTFlYzdjOiAiLCJxdXkgXHUwMTExXHUxZWQ1aSByYSBOZ1x1MDBlMHkgY1x1MDBmNG5nOiAiLCJDXHUwMGYzIHBoXHUwMGUybiBjXHUwMGY0bmcgZ2lcdTFlZGQgbFx1MDBlMG0gdmlcdTFlYzdjOiAiLCJMXHUwMGUwIG5nXHUwMGUweSBuZ2hcdTFlYzkgdHVcdTFlYTduOiAiLCJOXHUxZWJmdSBjXHUwMGYzIG5oaVx1MWVjMXUgdGhcdTFlYmIgcmEgdGhcdTAwZWMgdFx1MDBlZG5oIHRoXHUxZWJiOiIsIk5cdTFlYmZ1IGNcdTAwZjMgbmhpXHUxZWMxdSB0aFx1MWViYiB2XHUwMGUwbyB0aFx1MDBlYyB0XHUwMGVkbmggdGhcdTFlYmI6IiwiVEhcdTFlZGNJIEdJQU4gTkdIXHUxZWM4IEdJXHUxZWVlQSBDQSIsIlNhdSBnaVx1MWVkZCB2XHUwMGUwbyAocGhcdTAwZmF0KTogIiwiVFx1MWVkNW5nIHNcdTFlZDEgcGhcdTAwZmF0IG5naFx1MWVjOTogIiwiQlx1MWVjZiBxdWEgdGhhbSBzXHUxZWQxIG5cdTAwZTB5IG5cdTFlYmZ1IGdpXHUwMGUxIHRyXHUxZWNiID0tMVxuQ2hcdTFlYzkgdFx1MDBlZG5oIGtoaSBnaVx1MDBlMSB0clx1MWVjYiA+PTAgcGhcdTAwZmF0IiwiS2lcdTFlYzNtIHZcdTAwZTBvPyIsIktpXHUxZWMzbSByYT8iLCJHaVx1MWVkZCBiXHUxZWFmdCBcdTAxMTFcdTFlYTd1IG5naFx1MWVjOSIsIkhcdTFlYmZ0IGdpXHUxZWRkIG5naFx1MWVjOSJdLCJqc19nb2pzXzEiOiJEaSBjaHV5XHUxZWMzbiBzXHUwMWExIFx1MDExMVx1MWVkMyIsImpzX2dvanNfMiI6Ik1cdTFlZDFjIDAgZ2lcdTFlZGQiLCJqc19nb2pzXzMiOlt7ImlkIjoiMCIsImRlcyI6InNcdTFlZGJtIG5oXHUxZWE1dCJ9LHsiaWQiOiIxIiwiZGVzIjoidHJcdTFlYzUgbmhcdTFlYTV0In1dLCJqc19nb2pzXzQiOlsiVFx1MWVkNW5nIHRoXHUxZWRkaSBnaWFuIiwiS2hvXHUxZWEzbmcgdGhcdTFlZGRpIGdpYW4gdFx1MDBlZG5oIFRoXHUxZWJiLVZcdTAwZTBvIGhcdTFlZTNwIGxcdTFlYzciLCJLaG9cdTFlYTNuZyB0aFx1MWVkZGkgZ2lhbiB0XHUwMGVkbmggVGhcdTFlYmItVlx1MDBlMG8tVHJcdTFlYzUiLCJLaG9cdTFlYTNuZyB0aFx1MWVkZGkgZ2lhbiB0XHUwMGVkbmggVGhcdTFlYmItVlx1MWVjMS1TXHUxZWRibSIsIktob1x1MWVhM25nIHRoXHUxZWRkaSBnaWFuIHRcdTAwZWRuaCBUaFx1MWViYi1SYSAgaFx1MWVlM3AgbFx1MWVjNyIsInBoXHUwMGZhdCJdLCJqc19nb2pzXzUiOlsiVlx1MDBlMG8iLCJUclx1MWVjNSIsIlNcdTFlZGJtIiwiUmEiXSwianNfZ29qc182IjpbIlhcdTAwZTFjIE5oXHUxZWFkbiBUclx1MDFiMFx1MWVkYmMgS2hpIFhcdTAwZjNhPyIsIkJcdTFlYTFuIGNcdTAwZjMgY2hcdTFlYWZjIGNoXHUxZWFmbiBsXHUwMGUwIG11XHUxZWQxbiB4XHUwMGYzYSBDYSBrXHUwMGVkcCBcdTAxMTFhbmcgY2hcdTFlY2RuPyIsIkJcdTFlYTFuIGNcdTAwZjMgY2hcdTFlYWZjIGNoXHUxZWFmbiBsXHUwMGUwIG11XHUxZWQxbiB4XHUwMGYzYSB0XHUxZWE1dCBjXHUxZWEzIENhIGtcdTAwZWRwIl0sImpzX2dvanNfNyI6WyJYXHUwMGUxYyBOaFx1MWVhZG4gTFx1MDFiMHUgVGhheSBcdTAxMTBcdTFlZDVpIFRoYW0gU1x1MWVkMSBDYSBLXHUwMGVkcD8iLCJUXHUxZWYxIFx1MDExMVx1MWVkOW5nIExcdTAxYjB1IGtoXHUwMGY0bmcgY1x1MWVhN24gaFx1MWVjZmkiLCIoQlx1MWVhZnQgXHUwMTExXHUxZWE3dSB0XHUwMGVkbmggdGhcdTFlZGRpIGdpYW4gdlx1MDBlMG8pIiwiKEdpXHUxZWRkIHZcdTAwZTBvIHF1eSBcdTAxMTFcdTFlY2JuaCkiLCIoQlx1MWVhZnQgXHUwMTExXHUxZWE3dSB0XHUwMGVkbmggdlx1MDBlMG8gdHJcdTFlYzUpIiwiKEtcdTFlYmZ0IHRoXHUwMGZhYyB0XHUwMGVkbmggZ2lcdTFlZGQgdlx1MDBlMG8pIiwiKEJcdTFlYWZ0IFx1MDExMVx1MWVhN3UgdFx1MDBlZG5oIHRoXHUxZWRkaSBnaWFuIHJhKSIsIihNXHUxZWQxYyB0aFx1MWVkZGkgZ2lhbiB0XHUwMGVkbmggdlx1MWVjMSBzXHUxZWRibSkiLCIoR2lcdTFlZGQgcmEgcXV5IFx1MDExMVx1MWVjYm5oKSIsIihLXHUxZWJmdCB0aFx1MDBmYWMgdFx1MDBlZG5oIGdpXHUxZWRkIHJhKSJdfQ==</pre>
+
+<div class="wrap-content container timekeeperonline" style="display:none;max-width:100%!important;">
+
+    <!--http://192.168.1.91:10996/online?XDEBUG_SESSION_START=154A5348&sf=eyJmIjoiMSIsInMiOjAsImRlbW8iOiIxIn0=-->
+    <!--https://htmlcompressor.com/compressor/-->
+    <!--https://www.base64encode.org/-->
+    <!--{"f":"1","s":2,"demo":"1"}             http://192.168.1.91:10996/online?sf=eyJmIjoiMiJ9&XDEBUG_SESSION_START=154A5348-->
+    <!--sf=0 eyJmIjoiMSIsInMiOjAsImRlbW8iOiIxIn0=-->
+    <!--sf=1 eyJmIjoiMSIsInMiOjEsImRlbW8iOiIxIn0=-->
+    <!--sf=2 eyJmIjoiMSIsInMiOjIsImRlbW8iOiIxIn0==-->
+    <!--sf=3 eyJmIjoiMSIsInMiOjMsImRlbW8iOiIxIn0g-->
+    <!-- start: PAGE TITLE -->
+    <!--<section>
+            <div class="row">
+                <div class="col-md-12">
+                    <h1 class="mainTitle">PAYROLL ONLINE</h1>
+                </div>
+
+            </div>
+        </section>-->
+    <!-- end: PAGE TITLE -->
+    <!-- start: WIZARD DEMO -->
+    <div class="long-title">
+        <h3 style="margin:0px 5px 0 5px" class="pt-1">
+            <span class="step_focused">...</span>
+            <span type="trogiup" class="btn btn-outline-info btn-sm pull-right margin-left-10">
+                <i class="ti-help"></i>
+                <span class="d-none d-sm-inline" data-lang="js_003_help"></span>
+            </span>
+        </h3>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div>
+                <!-- start: WIZARD FORM -->
+                <div class="smart-wizard" id="form">
+                    <div id="wizard" class="swMain">
+                        <!-- start: WIZARD SEPS -->
+                        <ul class="container" style="background:transparent;z-index:1">
+                            <li>
+                                <a href="#step-1">
+                                    <div class="stepNumber">
+                                        1
+                                    </div>
+                                    <span class="stepDesc popover bs-popover-bottom">
+                                        <span class="at">
+                                            Ca kíp                                                <span class="arrow" style="display:none"></span>
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#step-2">
+                                    <div class="stepNumber">
+                                        2
+                                    </div>
+                                    <span class="stepDesc popover bs-popover-bottom">
+                                        <span class="at">
+                                            Log gạt thẻ                                                <span class="arrow" style="display:none"></span>
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#step-3">
+                                    <div class="stepNumber">
+                                        3
+                                    </div>
+                                    <span class="stepDesc  popover bs-popover-bottom">
+                                        <span class="at">
+                                            Tính công                                                <span class="arrow" style="display:none"></span>
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#step-4">
+                                    <div class="stepNumber">
+                                        4
+                                    </div>
+                                    <span class="stepDesc  popover bs-popover-bottom">
+                                        <span class="at">
+                                            Xuất Excel                                                <span class="arrow" style="display:none"></span>
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                        <!-- end: WIZARD SEPS -->
+                        <!-- start: WIZARD STEP 1 -->
+                        <div id="step-1">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="padding-horizontal-20">
+                                        <h2 class='StepTitle'>Mô tả Ca kíp ...<span class='text-large block'>Danh sách các khoảng thời gian làm việc trong ngày</span></h2><p>Bạn có thể tùy chỉnh lại các thông số để phù hợp với nhu cầu sử dụng thực tế.</p><p class='text-small'><ul class='no-margin'><li>Tạo mới Ca kíp bằng cách → nhấn vào nút Tạo mới <i alt='#newShift' class='context-help ti-mouse-alt'></i></li><li>Chọn Ca kíp từ danh mục hiện có → nhấn nút Chọn vào <i alt='#selShift' class='context-help choose ti-mouse-alt'></i></li><li>Muốn xóa một Ca kíp → click chuột vào dấu <i class='fa fa-times' style='color:red'></i> màu đỏ ở bên phải. Nếu muốn xóa tất cả → click chuột vào biểu tượng thùng rác <i class='fa fa-trash' style='color:#93e41c'></i></li><li>Để thay đổi các tham số chấm công của Ca kíp → dùng chuột <i class='ti-mouse'></i> điều chỉnh các tham số trong sơ đồ bên dưới.</li></ul></p><p class='text-large'>Nhấn nút Tiếp tục <i alt='.next-step' class='context-help ti-mouse-alt'></i> để qua bước tiếp theo</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="panel">
+                                        <div class="panel-heading border-light">
+                                            <button id="newShift" lang="f_004_2" type="button" class="btn btn-secondary btn-sm" style="margin-top:-7px;">
+                                                <i class="fa fa-plus fa-white"></i>
+                                                Tạo mới
+                                            </button>
+                                            &nbsp;hoặc&nbsp;                                                <button id="selShift" lang="f_004_4" type="button" class="btn btn-success btn-sm" style="margin-top:-7px;">
+                                                <i class="fa fa-check-square fa-white"></i>
+                                                Chọn vào
+                                            </button>
+                                            <h4 class="panel-title" lang="f_004_5" style="display:inline-block">
+                                                <span lang='f_004_3' id='emptyshiftlist' data-container='#shift_table' data-offset='0,10' data-toggle='popover' data-placement='bottom' data-title='Danh Sách Ca Kíp Rổng !' data-content='Bạn vui lòng &#39;Tạo mới&#39;, hoặc &#39;Chọn vào&#39; tối thiểu 01 Ca kíp để tiếp tục bước tiếp theo ...'>&nbsp;danh sách Ca kíp dùng tính công</span>
+                                            </h4>
+                                        </div>
+                                        <div class="panel-body" style="min-height:150px">
+                                            <table class="table" id="shift_table">
+                                                <thead>
+                                                    <tr>
+                                                        <th class="center">
+                                                            #
+                                                        </th>
+                                                        <th class="center">
+                                                            <div class="checkbox clip-check check-success">
+                                                                <input type="checkbox" id="ck" value="0" />
+                                                                <label for="ck"></label>
+                                                            </div>
+                                                        </th>
+                                                        <th lang="f_004_1">
+                                                            Tên ca kíp
+                                                        </th>
+                                                        <th lang="f_004_6">
+                                                            Giờ vào
+                                                        </th>
+                                                        <th lang="f_004_7" class="hidden-xs">
+                                                            Giờ ra
+                                                        </th>
+                                                        <th class="center">
+                                                            <a class="btn btn-transparent btn-xs xoarow" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Remove all" lang="js_004_6">
+                                                                <i class="fa fa-trash" aria-hidden="true" style="color:#93e41c"></i>
+                                                            </a>
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="center">1</td>
+                                                        <td class="center">
+                                                            <div class="checkbox clip-check check-primary">
+                                                                <input type="checkbox" id="ck" value="1" />
+                                                                <label for="ck"></label>
+                                                            </div>
+                                                        </td>
+                                                        <td data-field="name"></td>
+                                                        <td data-field="SI"></td>
+                                                        <td data-field="SO"></td>
+                                                        <td class="center">
+                                                            <div class="desktop">
+                                                                <a class="btn btn-transparent btn-xs xoarow" data-toggle="tooltip" data-placement="left" title="" data-original-title="Remove" lang="js_004_7">
+                                                                    <i class="fa fa-times" style="color:red"></i>
+                                                                </a>
+                                                            </div>
+                                                            <div class="mobile">
+                                                                <div class="fuckdrop dropdown-toggle">
+                                                                    <i class="fa fa-cog"></i>&nbsp;
+                                                                    <span class="caret"></span>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <a id="mobilefuckdrop" class="dogcat dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
+                                            <div id="mobilefuckdrop_body" class="dropdown-menu dropdown-light dropdown-menu-right adudrop_body">
+                                                <div class="arrowtop"></div>
+                                                <a class="dropdown-item editrow" lang="f_004_9">
+                                                    Chỉnh sửa
+                                                </a>
+                                                <a class="dropdown-item xoarow" lang="f_004_8">
+                                                    Xóa ca kíp.
+                                                </a>
+                                                <div class="arrowbottom"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group" style="margin:-15px 20px 50px;">
+                                <h4 id="mobhide-shifttitle" style="float:left; margin-top:15px;display:none" data-lang="js_004_10"></h4>
+                                <a class="btn btn-primary btn-o next-step btn-wide pull-right">
+                                    <span data-lang="js_004_8"></span> <i class="fa fa-arrow-circle-right"></i>
+                                </a>
+                            </div>
+                            <div id="mobhide-sample" style="display:none;background-color:#fff">
+                                <div id="myDiagramDiv" class="desk_mode"></div>
+                                <!--<div>
+                                    <textarea id="mySavedModel" style="width:100%;height:300px">
+                                    </textarea>
+                                </div>-->
+                            </div>
+                        </div>
+                        <!-- end: WIZARD STEP 1 -->
+                        <!-- start: WIZARD STEP 2 -->
+                        <div id="step-2">
+
+                            <!--<div class="setting-box position-absolute mcc-using">
+                                <span class="setting-switch">
+                                    <label class="tgl">
+                                        <input type="checkbox" class="mcc-using-sel" />
+                                        <span class="tgl_body">
+                                            <span class="tgl_switch"></span>
+                                            <span class="tgl_track">
+                                                <span class="tgl_bgd"></span>
+                                                <span class="tgl_bgd tgl_bgd-negative"></span>
+                                            </span>
+                                        </span>
+                                    </label>
+                                </span>
+                                <span class="setting-title">Log the thu cong</span>
+                            </div>-->
+                            <div class="manual">
+                                <div class="row pt-3">
+                                    <div class="col-md-5 dropzonecmd">
+
+                                        <!--<h2>Select raw attendace log file</h2>-->
+                                        <br />
+                                        <div class="uploadattlog pb-2" style="height:150px;max-height: 150px;overflow: hidden;"></div>
+                                        <span class="selAttlog">
+                                            <a class="samplefile btn btn-primary btn-o  btn-sm">
+                                                <i class="ti-cloud-down"></i> Tệp mẫu
+                                            </a>
+                                            <button type="button" class="upfile btn btn-primary btn-sm">
+                                                <i class='ti-upload'></i> Nạp
+                                            </button>
+
+                                        </span>
+                                        <button type="button" class="btn btn-outline-danger btn-sm rmvHisAttlog" style="padding:5px 6px 2px;border:none;display:none">
+                                            <i class='ti-close'></i>
+                                        </button>
+
+                                        <span style="display:none">
+                                            <button type="button" class="btn btn-success btn-sm saveAttlog">
+                                                <i class='fa fa-floppy-o'></i> Lưu lại
+                                            </button>
+                                            <button style="display:none" type="button" class="btn btn-outline-secondary btn-sm cancelSaveAttlog">
+                                                <i class='fa fa-undo'></i>
+                                            </button>
+                                        </span>
+                                        <span style="display:none" class="pull-right mr-2">
+                                            <button type="button" class="btn btn-outline-danger btn-sm delHisAttlog">
+                                                <i class='fa fa-trash'></i>
+                                            </button>
+                                        </span>
+                                        <div style="margin-bottom:30px">
+                                            <hr size="3" noshade color="#F00000" style="background-color:#F00000;margin: 9px 0px 15px 0px;" />
+                                            <div style="font-size: 0.8em">
+                                                <button type="button" class="btn btn-secondary btn-sm logFROMDB" style="display:none">
+                                                    <i class="fa fa-database"></i> Chọn từ lưu trữ
+                                                </button>
+                                                <button type="button" class="btn btn-outline-warning btn-sm testupload">
+                                                    <i class='fa fa-table'></i> Xem dữ liệu gạt thẻ                                                        <span class="needuptclick" data-toggle="popover" title="<i class='ti-alert'></i> Popover title" data-content="And here's some amazing content. It's very engaging. Right?"></span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-7 about_logs  mt-4 mt-md-0 mb-3 mb-md-0">
+                                        <a class="dogcat dropdown-toggle s2_fuckdrowdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
+                                        <div class="dropdown-menu dropdown-light dropdown-menu-right adudrop_body s2_fuckdrowdown_body">
+                                            <div class="arrowtop"></div>
+                                            <div class="sepetab menuitems" style="display:none">
+                                                <a class="dropdown-item">tab</a>
+                                                <a class="dropdown-item" style="padding-left: 5px;padding-right: 5px;">
+                                                    Nhập ký tự:                                                         <input type="text" style="line-height:18px;width:30px" maxlength="1" />
+                                                </a>
+                                            </div>
+                                            <div class="fdata menuitems" style="display:none">
+                                                <a f="i" class="dropdown-item">
+                                                    Mã
+                                                </a>
+                                                <a f="n" class="dropdown-item">
+                                                    Tên
+                                                </a>
+                                                <a f="t" class="dropdown-item">
+                                                    Thời gian
+                                                </a>
+                                                <a f="b" class="dropdown-item">
+                                                    (không dùng)
+                                                </a>
+                                            </div>
+                                            <div class="tgformat menuitems" style="display:none">
+                                                <a class="dropdown-item">YYYY-MM-DD HH:mm:ss</a>
+                                                <a class="dropdown-item" style="padding-left: 5px;padding-right: 5px;">
+                                                    Định dạng:                                                         <input type="text" style="line-height:18px;width:130px;font-size:11px" maxlength="20" />
+                                                </a>
+                                            </div>
+                                            <div class="arrowbottom"></div>
+                                        </div>
+
+
+                                        <h5 style="margin-top:5px;font-size: 1.1rem;">
+                                            Dán hoặc Chỉnh sửa trực tiếp bên dưới
+                                        </h5>
+
+                                        <div class="margin-bottom-5 log-ctrl">
+                                            <span>
+                                                <i>
+                                                    Ký tự phân cách:
+                                                </i>
+                                            </span>
+                                            <kbd class="sepetab">
+                                                <span>tab</span>
+                                            </kbd>
+                                            &ensp;
+                                            <span>
+                                                <i>
+                                                    Thứ tự dữ liệu:
+                                                </i>
+                                            </span>
+                                            <kbd class="fdata">
+                                                <span f="i">
+                                                    Mã
+                                                </span>
+                                            </kbd>&ensp;
+                                            <kbd class="fdata">
+                                                <span f="n">
+                                                    Tên
+                                                </span>
+                                            </kbd>&ensp;
+                                            <kbd class="fdata">
+                                                <span f="t">
+                                                    Thời gian
+                                                </span>
+                                            </kbd>&ensp;
+                                            <kbd class="fdata">
+                                                <span f="b">&nbsp;</span>
+                                            </kbd>&ensp;
+                                            <kbd class="fdata">
+                                                <span f="b">&nbsp;</span>
+                                            </kbd>&ensp;
+                                            <kbd class="fdata">
+                                                <span f="b">&nbsp;</span>
+                                            </kbd>&ensp;
+                                            <div style="display:inline-block">
+                                                <span>
+                                                    <i>
+                                                        Định dạng thời gian:
+                                                    </i>
+                                                </span>
+                                                <kbd class="tgformat">
+                                                    <span>YYYY-MM-DD HH:mm:ss</span>
+                                                </kbd>&ensp;
+                                            </div>
+
+                                        </div>
+
+                                        <textarea class="showinvisibles" style="font-size:12px;width:100%;height:150px;resize: none;outline:none;background:none;"
+                                                  onkeydown="if(event.keyCode===9){var v=this.value,s=this.selectionStart,e=this.selectionEnd;this.value=v.substring(0, s)+'\t'+v.substring(e);this.selectionStart=this.selectionEnd=s+1;return false;}">
+                                            1	Mr.One	2021-01-01 17:00:00&#13;&#10;1	Mr.One	2021-01-01 23:00:14
+                                        </textarea>
+
+
+                                        <div style="position:relative">
+
+
+                                            <div class="log_fromto_popover" style="position:absolute;right:0px;text-align: right;">
+                                                <div style="float:right;margin-left:10px">
+                                                    <span class="badge badge-primary margin-bottom-5">
+                                                        Nhân viên
+                                                    </span>
+                                                    <h2 style="margin-top:4px">
+                                                        <span class="totalemps">1</span>
+                                                    </h2>
+                                                </div>
+                                            </div>
+                                            <div class="space10">
+                                                <span class="badge badge-success margin-bottom-5">
+                                                    Tổng thẻ
+                                                </span>
+                                                <h2 style="margin-top:4px">
+                                                    <span class="logok">2</span>
+                                                </h2>
+                                            </div>
+
+                                            <div class="space10 log-sample">
+                                                <span>
+                                                    <i>
+                                                        Kết quả mẫu:
+                                                    </i>
+                                                </span>
+                                                &ensp;Mã:
+                                                <kbd class="frst">1</kbd>
+                                                &ensp;Tên:
+                                                <kbd class="frst">Mr.One</kbd>&ensp;
+                                                <div style="display:inline-block">
+                                                    Thời gian:
+                                                    <kbd class="frst">2021-01-01 17:00:00</kbd>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="rst_attlog grid-stt"></div>
+                            </div>
+                            <div class="row mt-2 mt-md-0 mb-3 mb-md-0">
+                                <div class="col-md-5"></div>
+                                <div class="col-md-7">
+                                    <br />
+                                    <div class="form-group">
+                                        <a class="btn btn-primary btn-o back-step btn-wide pull-left">
+                                            <i class="fa fa-arrow-circle-left"></i>
+                                            <span data-lang="js_004_9"></span>
+                                        </a>
+                                        <a class="btn btn-primary btn-o next-step btn-wide pull-right attlog_verify">
+                                            <span>Tính công</span> <i class="fa fa-arrow-circle-right"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- end: WIZARD STEP 2 -->
+                        <!-- start: WIZARD STEP 3 -->
+                        <div id="step-3" class="kiem-the" style="position:relative">
+
+                            <div class="step3_rst height-transition-hidden" style="position: relative;z-index: 1;width:100%">
+
+                                <div class="step3_rst_grid grid-stt gid_lineh_1"></div>
+
+                                <div class="row pufscr-hidden margin-top-10">
+                                    <div class="col-6 col-md-5">
+                                        <div class="form-group">
+                                            <a class="btn btn-primary btn-o back-step btn-wide pull-right" role="button" aria-disabled="true">
+                                                <i class="fa fa-arrow-circle-left"></i> Back
+                                            </a>
+
+
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-md-7">
+                                        <div class="form-group">
+                                            <a class="btn btn-primary btn-o next-step btn-wide pull-left" role="button" aria-disabled="true">
+                                                Next
+                                                <i class="fa fa-arrow-circle-right"></i>
+                                            </a>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div id="s3_one" class="row margin-top-20">
+
+                                <div class="col-md-5 mb-3">
+                                    <div class="calc_cores" style="text-align:center"></div>
+                                    <div class="s30-tieude text-center">
+                                        <!--<div>
+                                            Bang ket qua tinh duoc dieu chinh, vui long ...
+                                        </div>-->
+                                        <div class="StepTitle">
+                                            <h2>...</h2>
+                                            <p class="sub-tieude">...</p>
+                                        </div>
+
+                                        <div class="StepTitle-calc btn btn-lg btn-outline-warning">
+                                            STOP
+                                        </div>
+                                    </div>
+                                    <div class="StepTitle-rule" style="display:none">
+
+                                        <article>
+                                            <div class="text-large" style="display:flex">
+                                                <div class="timekeeper-rule1"></div>
+                                                <div data-toggle="collapse" hrefx=".hc4logsx" class="xt1">1. Rule of selecting logs if they are close together</div>
+                                            </div>
+                                            <div class="collapse show hc4logsx">
+                                                <div class="media mt-2">
+                                                    <div class="media-body">
+                                                        <div class="xt2">Timekeeper log times are close together equal or less than:</div>
+                                                        <span class="logs-spacing" style="display:inline-block"></span>
+                                                        <span class="xt3"> minutes</span>
+                                                        <div class="xt4 margin-top-15 ">Will choose to calculate log on the side:</div>
+                                                        <div class="logs-effect">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </article>
+
+                                    </div>
+
+                                    <style>
+                                        .xwindow {
+                                            clear: both; /*clear float left title*/
+                                        }
+
+                                            .xwindow .ps__rail-y {
+                                                z-index: 10;
+                                            }
+
+                                            .xwindow.hide-overflow-y {
+                                                overflow-y: hidden !important;
+                                            }
+
+                                        .lightcolor .xwindow {
+                                            background: #ddd;
+                                        }
+
+                                        .darkcolor .xwindow {
+                                            background: #1b1e24; /*#252a33;*/
+                                        }
+
+                                        .btn-tinhlai {
+                                            position: absolute;
+                                            right: -20px;
+                                            bottom: -20px;
+                                            width: 170px;
+                                            height: 70px;
+                                            border-top-left-radius: 70px;
+                                            padding: 15px 0px 0px 15px;
+                                            display: none;
+                                        }
+
+                                        .lightcolor .btn-tinhlai {
+                                            background: white;
+                                        }
+
+                                        .darkcolor .btn-tinhlai {
+                                            background: #2a2a2a;
+                                        }
+
+
+
+                                        /* Cursor animation */
+
+                                        @-webkit-keyframes blink {
+                                            50% {
+                                                opacity: 0;
+                                            }
+                                        }
+
+                                        @keyframes blink {
+                                            50% {
+                                                opacity: 0;
+                                            }
+                                        }
+                                    </style>
+
+
+                                </div>
+                                <div class="col-md-7">
+                                    <div class="mac-window active" style="height: 220px;">
+                                        <div class="title-bar">
+                                            <div class="xbuttons" style="width:5px;margin-left:5px;position:relative;">
+                                                <!--<i class="dx-icon dx-icon-preferences calc-setting"></i>-->
+                                                <!--<div class="xclose"></div>
+                                                <div class="minimize"></div>
+                                                <div class="maximize"></div>-->
+                                            </div>
+                                            <div class="title" style="position:relative;margin-left:25px">
+                                                <!--vi nut setting ko the click duoc-->
+                                                <!--https://codepen.io/solaimankmail/pen/gLQXGz*/-->
+                                                <div id="s3manual_runstep" style="line-height: 20px;">Calculator - Logs</div>
+                                                <ul class="pagi-log">
+                                                    <li style="display:none">
+                                                        <a class="prev"><<</a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="btnall active">All</a>
+                                                    </li>
+                                                    <li style="display:none">
+                                                        <a class="next">>></a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+                                        </div>
+                                        <div class="xwindow">
+
+                                            <!-- the termynal container -->
+                                            <!--<div class="termynal" data-termynal>
+                                                <span data-ty="input">pip install spacy</span>
+                                                <span data-ty="progress"></span>
+                                                <span data-ty>Successfully installed spacy</span>
+                                                <span data-ty></span>
+                                                <span data-ty="input">python -m spacy download en</span>
+                                                <span data-ty="progress"></span>
+                                                <span data-ty>Installed model 'en'</span>
+                                                <span data-ty></span>
+                                                <span data-ty="input">python</span>
+                                                <span data-ty="input" data-ty-prompt=">>>">import spacy</span>
+                                                <span data-ty="input" data-ty-prompt=">>>">nlp = spacy.load('en')</span>
+                                                <span data-ty="input" data-ty-prompt=">>>">doc = nlp(u'Hello world')</span>
+                                                <span data-ty="input" data-ty-prompt=">>>">print([(w.text, w.pos_) for w in doc])</span>
+                                                <span data-ty>[('Hello', 'INTJ'), ('world', 'NOUN')]</span>
+                                            </div>-->
+                                            <!--<div class="command-line" style="max-height: 200px;">
+                                                <div class="command-row info">
+                                                    <div class="command-time">[15:29:33]</div>
+                                                    <div class="command-entry command-entry-protected"></div>
+                                                    <div class="command-entry" contenteditable="false">Type [help] to show available commands</div>
+                                                </div>
+                                                <div class="command-row active">
+                                                    <div class="command-time">[15:29:33]</div>
+                                                    <div class="command-user">Solaiman$</div>
+                                                    <div class="command-entry command-entry-protected"></div>
+                                                    <div class="command-entry" contenteditable="true"></div>
+                                                </div>
+                                                <div class="command-row">
+                                                    <div class="command-time">[15:29:33]</div>
+                                                    <div class="command-entry command-entry-protected"></div>
+                                                    <div class="command-entry" contenteditable="false">Type any username to login</div>
+                                                </div>
+                                                <div class="command-row active">
+                                                    <div class="command-time">[15:29:33]</div>
+                                                    <div class="command-entry command-entry-protected">Enter your username [any name]: <span class="typed-cursor">&nbsp;</span></div>
+                                                    <div class="command-entry" contenteditable="true"></div>
+                                                </div>
+                                            </div>-->
+                                        </div>
+
+                                        <div class="text-center  justify-content-center btn-tinhlai">
+                                            <!--<a class="btn btn-lg btn-outline-success align-self-center">
+                                                TINH LAI
+                                            </a>-->
+                                            <div class="btn btn-lg btn-outline-warning align-self-center">
+                                                Tính lại
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <span style="display:none" class="progress phantram-rail">
+                                        <span class="progress-bar phantramcouting" style="width:0%;white-space:nowrap;transition: none"></span>
+                                        <span class="progress-bar phantram-remain text-center" style="width:100%">
+                                            Calcualating process
+                                        </span>
+                                    </span>
+                                </div>
+
+
+                            </div>
+
+                        </div>
+                        <!-- end: WIZARD STEP 3 -->
+                        <!-- start: WIZARD STEP 4 -->
+                        <div id="step-4">
+
+                            <div style="position:relative;display:none">
+                                <div class="previewatt">
+                                    <!--<iframe id="previewatt" width="100%" height="500px"></iframe>-->
+                                </div>
+                                <div class="text-center">
+                                    <a class="btn btn-primary btn-o back-step btn-wide pull-left">
+                                        <i class="fa fa-arrow-circle-left"></i> Back
+                                    </a>
+                                    <div class="btn btn-warning back_excelviewer">
+                                        <i class="ti-close"></i> Tro ve
+                                    </div>
+                                    <a class="btn btn-primary  btn-o download_excel pull-right">
+                                        <i class="ti-download"></i> Download
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="step4info row">
+                                <div class="col-md-5" style="z-index:1">
+
+                                    <div class="text-center">
+                                        <h1 class="ti-check block text-primary"></h1>
+                                        <h2 class="StepTitle">Congratulations!</h2>
+                                        <p class="text-large">
+                                            Your tutorial is complete.
+                                        </p>
+                                        <p class="text-small">
+                                            Thank you for your registration. Your transaction has been completed, and a receipt for your purchase has been emailed to
+                                            you. You may log into your account to view details of this transaction.
+                                        </p>
+
+                                        <!--<a class="btn btn-primary btn-o go-first" href="javascript:void(0)">
+                                            Back to first step
+                                        </a>-->
+                                        <a class="btn btn-primary btn-o back-step btn-wide">
+                                            <i class="fa fa-arrow-circle-left"></i> Back
+                                        </a>
+                                        <a class="btn btn-primary  btn-o download_excel">
+                                            <i class="ti-download"></i> Download
+                                        </a>
+
+                                    </div>
+                                </div>
+
+                                <div class="col-md-7 d-flex align-items-center  justify-content-center">
+                                    <div style="position:absolute;z-index:1">
+                                        <div class="btn btn-lg btn-success btn-shaw-4  excelviewer d-none">
+                                            <i class="ti-link"></i> Xem Excel
+                                        </div>
+                                    </div>
+                                    <img style="max-width:100%;position:relative;display:none;opacity:0.3" />
+                                </div>
+                            </div>
+
+
+
+                        </div>
+                        <!-- end: WIZARD STEP 4 -->
+                    </div>
+                </div>
+                <!-- end: WIZARD FORM -->
+            </div>
+
+        </div>
+    </div>
+
+    <!-- start: WIZARD DEMO -->
+
+</div>
+
+<!--(function (a) {
+        if (!tabglobalJS.hasOwnProperty('JS_payrollonline')) tabglobalJS['JS_payrollonline'] = a();//pass pubArgs later if need
+    id=M6WalJWdpZqPnXiMpZuTl6WomDE2SVBcc2J6cWxvb2xtb2ptZjSlmpSVnaWaj514jKWblJmloZQxNk5XW3RlfXZraGhramhtamE17szD2tXQkNHNsbjnj8bM4jE2T1ZadWR8d2ppaWpraWxrYDbuzMPa1dCQxdqugerPMTZMVVl2Z390aWpqaWhqb2hj
+    })-->
+<script id="M9zGztPb19TOmrq028bVldDU2DE2SVBcc2J6cWxvb2xtb2ptZjTVxc/Q2tCQ0c2xuOePxsziMTZOV1t0ZX12a2hoa2pobWphNejF0JXU4c+P4rgxNk9WWnVkfHdqaWlqa2lsa2A2pZqUlZ2lmo+deIylm5OXpaiYMTZMVVl2Z390aWpqaWhqb2hjN+DQxcjY19HU4ISIpZKWMTZNVFh3Zn51aGtraGlrbmliOKWalJWdpZqPnXiMpZuXmJ2jMTZCW1d4aXF6Z2RkZ2ZkYWZtOeDQxcjY19HU4ISEqZabmzE2Q1pWeWhwe2ZlZWZnZWBnbDEwpZqUlZ2lmo+deIylm5OcoaiWMTZAWVV6a3N4ZWZmZWRmY2Rv" type="text/javascript">
+
+    var xxx=[];(function () {
+        "use strict";
+
+
+
+
+
+        var myUI
+            , _init = function (frmEL, cb, tabId, clickArgs) {
+                var opts =//atmark0
+                            {ua:1,__u:"",};
+
+
+                myUI = new tabglobalJS[st1[atob('XHhmYVx4ZmJceGZjXHhmZFx4ZmU').\u00f9\u00fa()]().raid](opts);
+
+//startmark1
+//endmark1
+
+                var exportShiftCounter = 0, resetExportHwnd;
+                myUI.comm1.exS = function (id, gDAT) {
+                    exportShiftCounter++;
+                    clearTimeout(resetExportHwnd);
+                    resetExportHwnd = setTimeout(function () {
+                        exportShiftCounter = 0;
+                    }, 500);
+                    //
+                    if (exportShiftCounter == 10) {
+                        var dat = gDAT(), s = $.grep(dat, function (nD, i) {
+                            return nD.id == id;
+                        });
+                        if (s) {
+                            setTimeout(function () {
+                                var puhwnd = admin$.popup({ a: 'f', t: s[0].id + ' - ' + s[0].i[2].t }), frmH = $('<div><textarea class="rawjsonshift form-control text-small" style="resize:none;height:150px"></textarea>' +
+                                    '<div class="btn btn-success m-2">Encode Base64</div>' +
+                                    '<textarea class="datjsonshift form-control text-small" style="resize:none;height:150px"></textarea>' +
+                                    '</div>');
+                                puhwnd.find('#popupdone').remove();
+                                puhwnd.find('.modal-body').append(frmH);
+                                //
+                                frmH.find('.rawjsonshift').val(JSON.stringify({ 'i': s[0].i, 'id': s[0].id, 's1': s[0].s1, 's2': s[0].s2 }));
+                                //
+                                puhwnd.modal('show');
+                            }, 1);
+                        };
+                    };
+                };
+                //
+                if (!clickArgs) {
+                    var olShift = gQRY(window.location.href)['sf'];
+                    if (olShift) {
+                        clickArgs = { 'demo': olShift };
+                    };
+                };
+                //
+                myUI.init(frmEL, cb, tabId, clickArgs);
+                //
+            }
+
+            , _mod = function () { myUI.mod(); }
+            , _dispose = function () { myUI.dispose(); };
+
+        return {
+            init: _init,
+            mod: _mod,
+            dispose: _dispose
+        };
+    });
+
+</script>

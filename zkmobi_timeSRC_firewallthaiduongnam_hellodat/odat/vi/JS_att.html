@@ -1,0 +1,3222 @@
+﻿
+<div class='init_data' style='display:none'>eyJoZWFkREFUIjpudWxsLCJsYW4iOiJ7XCJqc18wMTRfMTBcIjpbXCJUaFxcdTFlZGRpIEdpYW4gVGhcXHUxZWYxY1wiLFwiWGVtIExcXHUxZWNiY2ggU1xcdTFlZWRcIixcIlRoXFx1MWVlZCBOZ2hpXFx1MWVjN20gTVxcdTFlYWJ1XCIsXCJDXFx1MWVhM25oIGJcXHUwMGUxbyAhXCIsXCJPb3BzLi4uIENoXFx1MDFiMGEgY1xcdTAwZjMgdGhpXFx1MWViZnQgYlxcdTFlY2Iga1xcdTFlYmZ0IG5cXHUxZWQxaS5cIixcIlZ1aSBsXFx1MDBmMm5nIGNoXFx1MWVjZG5cIixcIkhvXFx1MWViN2NcIixcIlxcdTAxMTFcXHUxZWMzIHRoYW8gdFxcdTAwZTFjIGRcXHUxZWVmIGxpXFx1MWVjN3UuXCIsXCJUXFx1MDBmNGkgXFx1MDExMVxcdTAwZTMgaGlcXHUxZWMzdVwiXX0ifQ==</div>
+<!--<script src="/media/js/JS_JS_att_Smoothie.js"></script>-->
+
+<div class="position-relative">
+
+    <div class="long-title d-flex align-items-center justify-content-center">
+
+
+        <div mnu="tuychon" class="btn ti-settings p-2 ml-2" style="font-size: 20px;" data-toggle="dropdown">
+
+            <ul class="dropdown-menu dropdown-light font_helo banh_rang" style="margin-top:10px">
+
+                <lo class="sample_xls dropdown-item d-flex align-items-center">
+                    <i class="fa fa-file-excel-o" style="font-size: 17px;margin: 0 10px 0 -5px;"></i>
+                    <span data-lang="js_013_7|3" class="mr-1">tai tiep mau</span> (.xlsx)
+                </lo>
+                <lo mnu="hed" class="system_monitor dropdown-item d-flex align-items-center">
+                    <i class="ti-palette" style="width:17px;font-size: 17px;margin: 0 10px 0 -5px;"></i>
+                    <span data-lang="js_013_7|4">Tthong so trai nghiem</span>
+                </lo>
+                <!--<lo mnu="fot" class="dropdown-item d-flex align-items-center">
+                        <i class="ti-check" style="width:17px;font-size: 17px;margin: 0 10px 0 -5px;"></i>Show Approved history
+                    </lo>-->
+            </ul>
+
+        </div>
+
+        <div class="realchart_opt_tmpl d-none">
+            <div tmpl="opt" class="p-2">
+
+                <div>
+                    <div class="d-flex align-items-center">
+                        <span class="mr-2" style="line-height:1">Hien thi do rong 1 gio</span>
+                        <div class="ml-auto">
+                            <div class="dropdown" opt="hourlen">
+                                <div type="button" class="dropdown-toggle form-control chonnam realevt_opt_sel csor-p pt-1" data-toggle="dropdown" aria-expanded="true">
+                                    <span data-lang="js_reglv_1" style="vertical-align:text-bottom">1x</span>
+                                    <span class="caret"></span>
+                                </div>
+                                <div class="dropdown-menu w-100 kytich" style="min-width: 50px; position: absolute; top: 0px; left: 0px; will-change: transform;" x-placement="bottom-start">
+                                    <a href="#" class="dropdown-item">1x</a>
+                                    <a href="#" class="dropdown-item">2x</a>
+                                    <a href="#" class="dropdown-item">3x</a>
+                                    <a href="#" class="dropdown-item">4x</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <hr class="hr my-2" />
+                    <div class="d-flex align-items-center">
+                        <span class="mr-2" style="line-height:1">Interpolation</span>
+                        <div class="ml-auto">
+                            <div class="dropdown" opt="maptpy">
+                                <div type="button" class="dropdown-toggle form-control chonnam realevt_opt_sel csor-p pt-1" data-toggle="dropdown" aria-expanded="true">
+                                    <span data-lang="js_reglv_1" style="vertical-align:text-bottom">step</span>
+                                    <span class="caret"></span>
+                                </div>
+                                <div class="dropdown-menu w-100 kytich" style="min-width: 50px; position: absolute;  top: 0px; left: 0px; will-change: transform;" x-placement="bottom-start">
+                                    <!--<a href="#" class="dropdown-item">2021</a>
+                                    <a href="#" class="dropdown-item">2020</a>-->
+                                    <a href="#" class="dropdown-item">bezier</a>
+                                    <a href="#" class="dropdown-item">linear</a>
+                                    <a href="#" class="dropdown-item">step</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <hr class="hr my-2" />
+                    <div class="d-flex align-items-center">
+                        <span class="mr-2" style="line-height:1">Che do</span>
+                        <div class="dropdown ml-auto">
+                            <div type="button" class="dropdown-toggle form-control chonnam realevt_opt_sel csor-p pt-1" data-toggle="dropdown" aria-expanded="true">
+                                <span data-lang="js_reglv_1" style="vertical-align:text-bottom">Thoi gian thuc</span>
+                                <span class="caret"></span>
+                            </div>
+                            <div class="dropdown-menu kytich wv-100" style="grid-template-columns: repeat(auto-fill, minmax(45px, 1fr));" x-placement="bottom-start">
+                                <!--<a href="#" class="dropdown-item">2021</a>
+                                <a href="#" class="dropdown-item">dropdown-item">2020</a>-->
+                                <a href="#" class="dropdown-item">01</a>
+                                <a href="#" class="dropdown-item">02</a>
+                                <a href="#" class="dropdown-item">03</a>
+                                <a href="#" class="dropdown-item">04</a>
+                                <a href="#" class="dropdown-item">05</a>
+                                <a href="#" class="dropdown-item">06</a>
+                                <a href="#" class="dropdown-item">07</a>
+                                <a href="#" class="dropdown-item">08</a>
+                                <a href="#" class="dropdown-item">09</a>
+                                <a href="#" class="dropdown-item">10</a>
+
+                                <a href="#" class="dropdown-item">11</a>
+                                <a href="#" class="dropdown-item">12</a>
+                                <a href="#" class="dropdown-item">13</a>
+                                <a href="#" class="dropdown-item">14</a>
+                                <a href="#" class="dropdown-item">15</a>
+                                <a href="#" class="dropdown-item">16</a>
+                                <a href="#" class="dropdown-item">17</a>
+                                <a href="#" class="dropdown-item">18</a>
+                                <a href="#" class="dropdown-item">19</a>
+                                <a href="#" class="dropdown-item">20</a>
+
+                                <a href="#" class="dropdown-item">21</a>
+                                <a href="#" class="dropdown-item">22</a>
+                                <a href="#" class="dropdown-item">23</a>
+                                <a href="#" class="dropdown-item">24</a>
+                                <a href="#" class="dropdown-item">25</a>
+                                <a href="#" class="dropdown-item">26</a>
+                                <a href="#" class="dropdown-item">27</a>
+                                <a href="#" class="dropdown-item">28</a>
+                                <a href="#" class="dropdown-item">29</a>
+                                <a href="#" class="dropdown-item">30</a>
+
+                                <a href="#" class="dropdown-item">31</a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <hr class="hr my-2" />
+                    <div class="d-flex align-items-center">
+                        <span class="mr-2" style="line-height:1">Series fill color:</span>
+                        <!--<span class="setting-switch ml-auto">
+                            <label class="tgl" style="margin:0!important">
+                                <input type="checkbox"/>
+                                <span class="tgl_body">
+                                    <span class="tgl_switch"></span>
+                                    <span class="tgl_track">
+                                        <span class="tgl_bgd"></span>
+                                        <span class="tgl_bgd tgl_bgd-negative"></span>
+                                    </span>
+                                </span>
+                            </label>
+                        </span>-->
+                        <div class="dropdown ml-auto">
+                            <div type="button" class="dropdown-toggle form-control chonnam realevt_opt_sel csor-p pt-1" data-toggle="dropdown" aria-expanded="true">
+                                <span data-lang="js_reglv_1" style="vertical-align:text-bottom">tu tren xuong</span>
+                                <span class="caret"></span>
+                            </div>
+                            <div class="dropdown-menu kytich wv-100" style="grid-template-columns: repeat(auto-fill, minmax(75px, 1fr));" x-placement="bottom-start">
+                                <!--<a href="#" class="dropdown-item">2021</a>
+                                <a href="#" class="dropdown-item">2020</a>-->
+                                <a href="#" class="dropdown-item">00:00</a>
+                                <a href="#" class="dropdown-item">00:30</a>
+
+                                <a href="#" class="dropdown-item">00:01</a>
+                                <a href="#" class="dropdown-item">01:30</a>
+
+                                <a href="#" class="dropdown-item">02:00</a>
+                                <a href="#" class="dropdown-item">02:30</a>
+
+                                <a href="#" class="dropdown-item">03:00</a>
+                                <a href="#" class="dropdown-item">03:30</a>
+
+                                <a href="#" class="dropdown-item">04:00</a>
+                                <a href="#" class="dropdown-item">04:30</a>
+
+                                <a href="#" class="dropdown-item">05:00</a>
+                                <a href="#" class="dropdown-item">05:30</a>
+
+                                <a href="#" class="dropdown-item">06:00</a>
+                                <a href="#" class="dropdown-item">06:30</a>
+
+                                <a href="#" class="dropdown-item">07:00</a>
+                                <a href="#" class="dropdown-item">07:30</a>
+
+                                <a href="#" class="dropdown-item">08:00</a>
+                                <a href="#" class="dropdown-item">08:30</a>
+
+                                <a href="#" class="dropdown-item">09:00</a>
+                                <a href="#" class="dropdown-item">09:30</a>
+
+                                <a href="#" class="dropdown-item">10:00</a>
+                                <a href="#" class="dropdown-item">10:30</a>
+
+                                <a href="#" class="dropdown-item">11:00</a>
+                                <a href="#" class="dropdown-item">11:30</a>
+
+                                <a href="#" class="dropdown-item">12:00</a>
+                                <a href="#" class="dropdown-item">12:30</a>
+
+                                <a href="#" class="dropdown-item">13:00</a>
+                                <a href="#" class="dropdown-item">13:30</a>
+
+                                <a href="#" class="dropdown-item">14:00</a>
+                                <a href="#" class="dropdown-item">14:30</a>
+
+                                <a href="#" class="dropdown-item">15:00</a>
+                                <a href="#" class="dropdown-item">15:30</a>
+
+                                <a href="#" class="dropdown-item">16:00</a>
+                                <a href="#" class="dropdown-item">16:30</a>
+
+                                <a href="#" class="dropdown-item">17:00</a>
+                                <a href="#" class="dropdown-item">17:30</a>
+
+                                <a href="#" class="dropdown-item">18:00</a>
+                                <a href="#" class="dropdown-item">18:30</a>
+
+                                <a href="#" class="dropdown-item">19:00</a>
+                                <a href="#" class="dropdown-item">19:30</a>
+
+                                <a href="#" class="dropdown-item">20:00</a>
+                                <a href="#" class="dropdown-item">20:30</a>
+
+                                <a href="#" class="dropdown-item">21:00</a>
+                                <a href="#" class="dropdown-item">21:30</a>
+
+                                <a href="#" class="dropdown-item">22:00</a>
+                                <a href="#" class="dropdown-item">22:30</a>
+
+                                <a href="#" class="dropdown-item">23:00</a>
+                                <a href="#" class="dropdown-item">23:30</a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div tmpl="mod" class="d-none">
+
+                <div style="max-width:500px;margin:auto">
+                    <div class="alert alert-danger m-5 text-center" role="alert" style="border-radius:30px;margin-top:0!important">
+                        <h4 class="alert-heading mb-3">
+                            <i class="ti-alert"></i>
+                            <span data-lang="js_014_10|3">Warning !</span>
+                        </h4>
+                        <span data-lang="js_014_10|4">Oops..., No attendant device.</span>
+                        <span class="mb-0">
+                            <span data-lang="js_014_10|5">Please switch mode</span>
+                            <a class="btn p-0" href=javascript:void(&#39;0&#39;)>
+                                <strong data-lang="js_014_10|1">History View</strong>
+                            </a>
+                            <span data-lang="js_014_10|6">Or</span>
+                            <a class="btn p-0" href=javascript:void(&#39;0&#39;)>
+                                <strong data-lang="js_014_10|2">Case For Testing</strong>
+                            </a>
+                            <span data-lang="js_014_10|7">for handle data.</span>
+                        </span>
+                        <hr />
+                        <div cmd="isee" type="button" class="btn btn-danger" data-lang="js_014_10|8">Yes, I see.</div>
+                    </div>
+                </div>
+
+            </div>
+            <div tmpl="inf">
+                <div class="m-4">
+
+                    <style type="text/css">
+                        .radius-10 {
+                            border-radius: 10px !important;
+                        }
+
+                        .border-info {
+                            border-left: 5px solid #0dcaf0 !important;
+                        }
+
+                        .border-danger {
+                            border-left: 5px solid #fd3550 !important;
+                        }
+
+                        .border-success {
+                            border-left: 5px solid #15ca20 !important;
+                        }
+
+                        .border-warning {
+                            border-left: 5px solid #ffc107 !important;
+                        }
+
+
+                        .real-card .card {
+                            position: relative;
+                            display: flex;
+                            flex-direction: column;
+                            min-width: 0;
+                            word-wrap: break-word;
+                            background-color: transparent !important;
+                            background-clip: border-box;
+                            border: 0px solid rgba(0, 0, 0, 0);
+                            border-radius: .25rem;
+                            margin-bottom: 1.5rem;
+                            box-shadow: 0 2px 6px 0 rgb(218 218 253 / 65%), 0 2px 6px 0 rgb(206 206 238 / 54%);
+                        }
+
+                        .bg-gradient-scooter {
+                            background: #17ead9;
+                            background: -webkit-linear-gradient( 45deg, #17ead9, #6078ea) !important;
+                            background: linear-gradient( 45deg, #17ead9, #6078ea) !important;
+                        }
+
+                        .widgets-icons-2 {
+                            width: 56px;
+                            min-width: 56px;
+                            height: 56px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            background-color: #ededed;
+                            font-size: 27px;
+                            border-radius: 10px;
+                        }
+
+                        .rounded-circle {
+                            border-radius: 50% !important;
+                        }
+
+                        .text-white {
+                            color: #fff !important;
+                        }
+
+                        .ms-auto {
+                            margin-left: auto !important;
+                        }
+
+                        .bg-gradient-bloody {
+                            background: #f54ea2;
+                            background: -webkit-linear-gradient( 45deg, #f54ea2, #ff7676) !important;
+                            background: linear-gradient( 45deg, #f54ea2, #ff7676) !important;
+                        }
+
+                        .bg-gradient-ohhappiness {
+                            background: #00b09b;
+                            background: -webkit-linear-gradient( 45deg, #00b09b, #96c93d) !important;
+                            background: linear-gradient( 45deg, #00b09b, #96c93d) !important;
+                        }
+
+                        .bg-gradient-blooker {
+                            background: #ffdf40;
+                            background: -webkit-linear-gradient( 45deg, #ffdf40, #ff8359) !important;
+                            background: linear-gradient( 45deg, #ffdf40, #ff8359) !important;
+                        }
+                    </style>
+                    <div class="container real-card">
+                        <div class="row row-cols-1 row-cols-md-2 row-cols-xl-4">
+
+                            <div class="col">
+                                <div class="card radius-10 border-start border-0 border-3 border-info">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-center">
+                                            <div>
+                                                <p class="mb-0 text-secondary">Total Orders</p>
+                                                <h4 class="my-1 text-info">4805</h4>
+                                                <p class="mb-0 font-13">+2.5% from last week</p>
+                                            </div>
+                                            <div class="widgets-icons-2 rounded-circle bg-gradient-scooter text-white ms-auto">
+                                                <i class="fa fa-shopping-cart"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <div class="card radius-10 border-start border-0 border-3 border-danger">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-center">
+                                            <div>
+                                                <p class="mb-0 text-secondary">Total Revenue</p>
+                                                <h4 class="my-1 text-danger">$84,245</h4>
+                                                <p class="mb-0 font-13">+5.4% from last week</p>
+                                            </div>
+                                            <div class="widgets-icons-2 rounded-circle bg-gradient-bloody text-white ms-auto">
+                                                <i class="fa fa-dollar"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <div class="card radius-10 border-start border-0 border-3 border-success">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-center">
+                                            <div>
+                                                <p class="mb-0 text-secondary">Bounce Rate</p>
+                                                <h4 class="my-1 text-success">34.6%</h4>
+                                                <p class="mb-0 font-13">-4.5% from last week</p>
+                                            </div>
+                                            <div class="widgets-icons-2 rounded-circle bg-gradient-ohhappiness text-white ms-auto">
+                                                <i class="fa fa-bar-chart"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <div class="card radius-10 border-start border-0 border-3 border-warning">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-center">
+                                            <div>
+                                                <p class="mb-0 text-secondary">Total Customers</p>
+                                                <h4 class="my-1 text-warning">8.4K</h4>
+                                                <p class="mb-0 font-13">+8.4% from last week</p>
+                                            </div>
+                                            <div class="widgets-icons-2 rounded-circle bg-gradient-blooker text-white ms-auto">
+                                                <i class="fa fa-users"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div tmpl="device_list" class="list-group">
+                <!--https://www.jquery-az.com/bootstrap4/demo2.php?ex=90.0_6 Starting list group here -->
+
+                <div class="list-group-item d-flex justify-content-between align-items-center">
+                    <span class="text-success">
+                        <i class="fa fa-circle"></i>
+                        <span>jQuery Tutorials</span>
+                    </span>
+                    <span class="badge badge-primary badge-pill">55</span>
+                </div>
+                <a href="https://www.jquery-az.com/javascript-tutorials/" class="list-group-item d-flex justify-content-between align-items-center list-group-item-action list-group-item-danger">
+                    JavaScript Tutorials
+                    <span class="badge badge-primary badge-pill">23</span>
+                </a>
+                <a href="https://www.jquery-az.com/bootstrap-tips-tutorials/" class="list-group-item d-flex justify-content-between align-items-center list-group-item-action list-group-item-success">
+                    Bootstrap 3 Tutorials
+                    <span class="badge badge-primary badge-pill">109</span>
+                </a>
+                <a href="https://www.jquery-az.com/html-tutorials/" class="list-group-item d-flex justify-content-between align-items-center list-group-item-action list-group-item-info">
+                    HTML Tutorials
+                    <span class="badge badge-primary badge-pill">10</span>
+                </a>
+                <a href="#" class="list-group-item d-flex justify-content-between align-items-center list-group-item-action list-group-item-secondary disabled">
+                    django Tutorials
+                    <span class="badge badge-primary badge-pill">0</span>
+                </a>
+            </div>
+
+            <div tmpl="shift_list">
+                <div class="list-group">
+                    <!--https://www.jquery-az.com/bootstrap4/demo2.php?ex=90.0_6 Starting list group here -->
+
+                    <div class="list-group-item d-flex justify-content-between align-items-center">
+                        <span style="width:100px;max-width:100px">
+                            <span>OH</span>
+                        </span>
+                        <span>
+                            <span class="badge badge-primary badge-pill">08:00</span>
+                            <span class="badge badge-success badge-pill">17:00</span>
+                        </span>
+                    </div>
+                    <div class="list-group-item d-flex justify-content-between align-items-center">
+                        <span style="width:100px;max-width:100px">
+                            <span>S1</span>
+                        </span>
+                        <span>
+                            <span class="badge badge-primary badge-pill">06:00</span>
+                            <span class="badge badge-success badge-pill">14:00</span>
+                        </span>
+                    </div>
+                    <div class="list-group-item d-flex justify-content-between align-items-center">
+                        <span style="width:100px;max-width:100px">
+                            <span>S2</span>
+                        </span>
+                        <span>
+                            <span class="badge badge-primary badge-pill">14:00</span>
+                            <span class="badge badge-success badge-pill">22:00</span>
+                        </span>
+                    </div>
+                    <div class="list-group-item d-flex justify-content-between align-items-center">
+                        <span style="width:100px;max-width:100px">
+                            <span>S3</span>
+                        </span>
+                        <span>
+                            <span class="badge badge-primary badge-pill">22:00</span>
+                            <span class="badge badge-success badge-pill">06:00</span>
+                        </span>
+                    </div>
+
+                </div>
+                <div class="pt-3 pb-2 text-center">
+                    <div class="btn btn-outline-primary btn-sm">
+                        <i class="fa fa-wrench"></i>
+                        <span>cai dat</span>
+                    </div>
+                </div>
+            </div>
+
+
+            <div tmpl="flick_msg" class="no-device-msg d-none row row-no-gutters" style="width:100%;max-width:60px;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);justify-items:center;align-items:center;margin:auto">
+                <div class="banner_rte">
+                    <div class="box_nodev align">
+                        <!--every difficulty up has another skull, starting with normal, with 0, ending with death sentence, 6-->
+                        <marquee id="mymarquee" behavior="scroll" direction="left" style="white-space: nowrap;width:100%;">No device ...</marquee>
+                        <span class="d-none">Study Case</span>
+                    </div>
+                </div>
+                <div class="indicator_rte">
+                    <svg height="50" width="50">
+                        <polygon points="25,10 40,40 10,40" style="fill:#FFEF00;stroke:#000;stroke-width:7"></polygon>
+                    </svg>
+                    <div class="btn btn-sm">
+                        <i style="font-size:30px;display:none" class="fa fa-times-circle text-danger"></i>
+                        <i style="font-size:50px;display:none" class="ti-help-alt text-info"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="frm_tieude ml-3" style="flex:1;display: inline-block;overflow: hidden; position: relative;text-align: center;">
+
+            <div class="mb-0 csor-p dume_dropdown">
+
+                <div class="dropdown-toggle" data-toggle="dropdown">
+                    <h4 class="my-2 d-inline-block" data-lang="js_014_10|0">Realtime Event</h4>
+                </div>
+
+                <ul class="dropdown-menu kytich lang-lst">
+                    <li>
+                        <a mnu="0" class="dropdown-item" style="border-top-left-radius: 7px;border-top-right-radius: 7px;">
+                            <i class="flag"></i>
+                            <span data-lang="js_014_10|0">Realtime Event</span>
+                            <i class="text-success ml-2"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <hr class="dropdown-divider" />
+                        <a mnu="1" class="dropdown-item">
+                            <i class="flag"></i>
+                            <span data-lang="js_014_10|1">History View</span>
+                            <i class="text-success ml-2"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <hr class="dropdown-divider" />
+                        <a mnu="2" class="dropdown-item" style="border-bottom-left-radius: 7px;border-bottom-right-radius: 7px;">
+                            <i class="flag"></i>
+                            <span data-lang="js_014_10|2">
+                                Case For Testing
+                            </span>
+                            <i class="text-success ml-2"></i>
+                        </a>
+                    </li>
+                </ul>
+
+
+            </div>
+
+            <div class="relatime_studycase_title">
+                <!--tieu de cua bliding study case-->
+            </div>
+
+        </div>
+
+
+
+
+        <span type="button" class="btn btn-outline-info btn-sm ml-auto mr-3">
+            <i class="ti-help"></i>
+            <span class="d-none d-sm-inline">Help</span>
+        </span>
+
+
+
+    </div>
+
+</div>
+
+<!--
+    https://demos.creative-tim.com/black-dashboard/examples/dashboard.html?_ga=2.184984041.1960729520.1536215798-961421528.1536215798
+
+    https://themewagon.com/themes/open-source-bootstrap-admin-template/
+    https://demos.creative-tim.com/now-ui-dashboard/examples/dashboard.html?_ga=2.182339490.464017141.1702691847-868333428.1702691847
+    https://themeforest.net/item/crypto-admin-responsive-bootstrap-4-admin-html-templates/21604673
+
+    https://codepen.io/nienkedekker/pen/JpEKaN
+
+-->
+
+
+
+<link href="http://192.168.1.91:10996/media/css/bubble_msg_demo.css" rel="stylesheet" />
+
+<div class="upload_test_attlog" style="display:none"></div>
+
+
+
+<div lazy="chartLIB" class="firstlook no-att-dev  csspinner">
+
+    <div class="rect_realtime">
+
+        <style type="text/css">
+            svg.dongho {
+                width: 128px;
+                height: 128px;
+                z-index: 1;
+                overflow: visible;
+                position: absolute;
+                top: 50%;
+            }
+
+                svg.dongho > g {
+                    transform: translate(64px, 64px);
+                }
+
+            .dongho circle {
+                /*stroke: white;
+                    stroke-width: 2px;*/
+            }
+
+            .dongho #numbers {
+                transform: translate(0, 6px);
+                background-color: red;
+            }
+
+                .dongho #numbers > text {
+                    fill: white;
+                    text-anchor: middle;
+                    font-size: 12px;
+                    font-weight: 100;
+                }
+
+            .dongho #ticks > line {
+                stroke: white;
+            }
+
+            .dongho #hands {
+                stroke: white;
+                stroke-width: 4px;
+                transform: rotate(-90deg);
+            }
+
+            .dongho line {
+                animation: handrotation infinite linear;
+                -webkit-animation: handrotation infinite linear;
+            }
+
+            .dongho #hour > line {
+                animation-duration: 86400s;
+                -webkit-animation-duration: 86400s;
+            }
+
+            .dongho #minute > line {
+                animation-duration: 3600s;
+                -webkit-animation-duration: 3600s;
+            }
+
+            .dongho #second > line {
+                animation-duration: 60s;
+                -webkit-animation-duration: 60s;
+                stroke: red;
+                stroke-width: 2px;
+            }
+
+
+            @-webkit-keyframes handrotation {
+                from {
+                    transform: rotate(0);
+                }
+
+                to {
+                    transform: rotate(359deg);
+                }
+            }
+
+            @keyframes handrotation {
+                from {
+                    transform: rotate(0);
+                }
+
+                to {
+                    transform: rotate(359deg);
+                }
+            }
+
+            .trungtam {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+            }
+
+            .no-att-dev .d-hide {
+                display: none !important;
+            }
+
+            .trial_opts {
+                display: none;
+            }
+
+            .no-att-dev .trial_opts {
+                display: block !important;
+            }
+
+            @media (min-width: 992px) and (max-width: 1199px) {
+                .no-att-dev .rmv_col_6 {
+                    max-width: none !important;
+                    flex: auto !important;
+                }
+            }
+
+
+            .navi-demo {
+                display: none;
+            }
+
+            .demo-realtime .navi-demo {
+                display: block !important;
+            }
+
+            .excls-pdoggy_w {
+                max-width: unset !important; /*popup shift not care width*/
+            }
+
+                .excls-pdoggy_w .list-group {
+                    overflow-y: auto;
+                    max-height: 300px;
+                    overflow-x: hidden;
+                }
+
+            .popover_theme {
+                box-shadow: rgba(0, 0, 0, 0.2) 0px 11px 15px -7px, rgba(0, 0, 0, 0.14) 0px 24px 38px 3px, rgba(0, 0, 0, 0.12) 0px 9px 46px 8px;
+                border-radius: 10px;
+                border-color: transparent !important;
+            }
+
+            .darkcolor .popover_theme {
+                background: #2a2a2a;
+                box-shadow: 0 11px 15px -7px rgba(0,0,0,.2), 0 24px 38px 3px rgba(0,0,0,.14), 0 9px 46px 8px rgba(0,0,0,.12) !important;
+            }
+
+                .darkcolor .popover_theme .popover-header {
+                    background-color: rgba(191, 191, 191, 0.15) !important;
+                    border-bottom-color: transparent !important;
+                }
+
+            .popover_theme .popover-header:before {
+                border-bottom-color: transparent !important;
+            }
+
+            .lightcolor .popover_theme.bs-popover-bottom .arrow:after {
+                border-bottom-color: #f7f7f7 !important;
+            }
+
+            .darkcolor .popover_theme.bs-popover-bottom .arrow:after {
+                border-bottom-color: #404040 !important;
+            }
+
+            .darkcolor .popover_theme.bs-popover-top .arrow::after {
+                border-top-color: #2a2a2a !important;
+            }
+
+            .popover_theme .list-group-item {
+                padding: 0.5rem !important;
+            }
+
+            .darkcolor .popover_theme .list-group-item {
+                background-color: transparent !important;
+                border-color: #4d4d4d !important;
+            }
+
+            .darkcolor .popover_theme .popover-body {
+                color: inherit !important;
+            }
+
+            .darkcolor .dropdown-divider {
+                border-top-color: #4d4d4d !important;
+            }
+        </style>
+
+        <div class="row px-4">
+
+
+            <div lazy="smoothie_realevt" class="col-lg-12 col-xl-8  csspinner load2">
+
+                <div class="realtime_tool_top" style="position:relative;height:60px;z-index:4;">
+
+                    <div style="position: absolute;right: 0px;top:28px">
+                        <div class="btn p-0 text-large text-success mr-3" tok="NEWTOK">
+                            <i class="fa fa-circle"></i>&nbsp;
+                            <span>(1) online</span>
+                        </div>
+                        <div pmnu="opt" class="btn btn-lg p-0 text-warning fa fa-area-chart realchart_opt">
+                            <!-- sr-only gives feature, hides elements from all devices except screen -->
+                            <span class="sr-only">Hamburger Menu</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <!-- icon-bar creates structure like triple equal -->
+                        </div>
+                        <div class="btn ti-angle-down" data-toggle="collapse" href=".collapse0"></div>
+                    </div>
+
+                    <div style="position: absolute;left:10px;top:30px" show="0" class="calendar_block">
+
+                        <div class="calen_cmd_0">
+
+                            <div mnu="blo" class="btn btn-lg p-0 text-warning fa fa-calendar">
+                                <!-- sr-only gives feature, hides elements from all devices except screen -->
+                                <span class="sr-only">Hamburger Menu</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <!-- icon-bar creates structure like triple equal -->
+                            </div>
+
+                            <div class="btn  p-0">
+                                <span mnu="thg" class="bg-info p-1 rounded">2023/12</span>
+                                <span mnu="nga" class="bg-primary p-1 rounded">1 - 31</span>
+                            </div>
+
+                            <div class="d-inline-block dropdown p-0">
+
+                                <div type="button" class="form-control chonnam realevt_opt_sel csor-p p-0 px-1" data-toggle="dropdown" aria-expanded="true">
+                                    <span data-lang="js_reglv_1" style="vertical-align:middle">10:30</span>
+                                    <span class="ti-time text-large" style="vertical-align:middle"></span>
+                                </div>
+
+                                <div class="dropdown-menu kytich wv-100" style="grid-template-columns: repeat(auto-fill, minmax(75px, 1fr));max-width:800px; position: absolute; transform: translate3d(0px, 35px, 0px); top: 0px; left: 0px; will-change: transform;" x-placement="bottom-start">
+                                    <!--<a href="#" class="dropdown-item">2021</a>
+                                    <a href="#" class="dropdown-item">2020</a>-->
+                                    <a href="#" class="dropdown-item">00:00</a>
+                                    <a href="#" class="dropdown-item">00:30</a>
+
+                                    <a href="#" class="dropdown-item">00:01</a>
+                                    <a href="#" class="dropdown-item">01:30</a>
+
+                                    <a href="#" class="dropdown-item">02:00</a>
+                                    <a href="#" class="dropdown-item">02:30</a>
+
+                                    <a href="#" class="dropdown-item">03:00</a>
+                                    <a href="#" class="dropdown-item">03:30</a>
+
+                                    <a href="#" class="dropdown-item">04:00</a>
+                                    <a href="#" class="dropdown-item">04:30</a>
+
+                                    <a href="#" class="dropdown-item">05:00</a>
+                                    <a href="#" class="dropdown-item">05:30</a>
+
+                                    <a href="#" class="dropdown-item">06:00</a>
+                                    <a href="#" class="dropdown-item">06:30</a>
+
+                                    <a href="#" class="dropdown-item">07:00</a>
+                                    <a href="#" class="dropdown-item">07:30</a>
+
+                                    <a href="#" class="dropdown-item">08:00</a>
+                                    <a href="#" class="dropdown-item">08:30</a>
+
+                                    <a href="#" class="dropdown-item">09:00</a>
+                                    <a href="#" class="dropdown-item">09:30</a>
+
+                                    <a href="#" class="dropdown-item">10:00</a>
+                                    <a href="#" class="dropdown-item">10:30</a>
+
+                                    <a href="#" class="dropdown-item">11:00</a>
+                                    <a href="#" class="dropdown-item">11:30</a>
+
+                                    <a href="#" class="dropdown-item">12:00</a>
+                                    <a href="#" class="dropdown-item">12:30</a>
+
+                                    <a href="#" class="dropdown-item">13:00</a>
+                                    <a href="#" class="dropdown-item">13:30</a>
+
+                                    <a href="#" class="dropdown-item">14:00</a>
+                                    <a href="#" class="dropdown-item">14:30</a>
+
+                                    <a href="#" class="dropdown-item">15:00</a>
+                                    <a href="#" class="dropdown-item">15:30</a>
+
+                                    <a href="#" class="dropdown-item">16:00</a>
+                                    <a href="#" class="dropdown-item">16:30</a>
+
+                                    <a href="#" class="dropdown-item">17:00</a>
+                                    <a href="#" class="dropdown-item">17:30</a>
+
+                                    <a href="#" class="dropdown-item">18:00</a>
+                                    <a href="#" class="dropdown-item">18:30</a>
+
+                                    <a href="#" class="dropdown-item">19:00</a>
+                                    <a href="#" class="dropdown-item">19:30</a>
+
+                                    <a href="#" class="dropdown-item">20:00</a>
+                                    <a href="#" class="dropdown-item">20:30</a>
+
+                                    <a href="#" class="dropdown-item">21:00</a>
+                                    <a href="#" class="dropdown-item">21:30</a>
+
+                                    <a href="#" class="dropdown-item">22:00</a>
+                                    <a href="#" class="dropdown-item">22:30</a>
+
+                                    <a href="#" class="dropdown-item">23:00</a>
+                                    <a href="#" class="dropdown-item">23:30</a>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="calen_cmd_1">
+
+                            <div mnu="blo" class="btn btn-lg p-0 text-warning fa fa-calendar">
+                                <!-- sr-only gives feature, hides elements from all devices except screen -->
+                                <span class="sr-only">Hamburger Menu</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <!-- icon-bar creates structure like triple equal -->
+                            </div>
+
+                            <div class="btn  p-0">
+                                <span mnu="thg" class="bg-info p-1 rounded">2023/12</span>
+                                <span mnu="nga" class="bg-primary p-1 rounded">1 - 31</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="position-relative">
+
+                    <canvas class="smoothie_realevt" style="width:100%;height:300px"></canvas>
+
+                </div>
+
+
+                <div class="position-absolute d-flex align-items-center" style="pointer-events: none;z-index: 6;bottom:5px;right: 0;opacity:0.7">
+
+                    <span style="max-width:100px;font-size:smaller;text-align:right">
+                        dang xem lich su tai
+                        <strong class="text-large">08:00:50</strong>
+                    </span>
+
+                    <span class="btn btn-sm btn-warning fa fa-play ml-1 play_realtime" style="font-size:20px; pointer-events: all!important"></span>
+
+                </div>
+
+            </div>
+
+
+
+
+            <div lazy="dog_radar1" class="col-lg-6 rmv_col_6 col-xl-4 p-0 m-0  csspinner load1" style="position:relative">
+
+                <div class="resp_menu border-secondary ml-3 ml-xl-0" style="position:absolute;border: 1px dotted;border-radius: 30px;">
+                    <!--https://www.codeply.com/p/yRugA2FB3I-->
+                    <div class="d-flex flex-column flex-xl-column flex-md-row flex-nowrap  align-items-center ">
+
+                        <div class="btn p-1"></div>
+
+                        <div pmnu="device_list" class="btn">
+                            <i class="ti-id-badge"></i>
+                        </div>
+
+                        <ul class="nav nav-pills nav-flush flex-column flex-xl-column flex-md-row text-center justify-content-between w-100  align-items-center">
+                            <li class="nav-item">
+                                <div excls="excls-pdoggy_w" pmnu="shift_list" class="btn">
+                                    <i class="fa fa-sliders"></i>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <div mnu="more_arrow" class="btn">
+                                    <i class="fa fa-caret-down"></i>
+                                </div>
+                            </li>
+                        </ul>
+                        <!--<div class="dropdown">
+                            <div class="btn  d-flex align-items-center justify-content-center" id="dropdownUser3" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fa fa-caret-down"></i>
+                            </div>
+                            <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser3" style="">
+                                <li>
+                                    <a class="dropdown-item" href="#">New project...</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">Settings</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">Profile</a>
+                                </li>
+                            </ul>
+                        </div>-->
+                        <!--<div class="btn p-1"></div>-->
+                    </div>
+                </div>
+
+
+                <canvas class="dog_radar1"></canvas>
+
+                <svg class="dongho center d-none" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                    <g>
+                        <circle r="70"></circle>
+                        <g id="numbers"></g>
+                        <g id="ticks"></g>
+                        <g id="hands">
+                            <g id="hour">
+                                <line x1="-6" y1="0" x2="60" y2="0"></line>
+                            </g>
+                            <g id="minute">
+                                <line x1="-9" y1="0" x2="90" y2="0"></line>
+                            </g>
+                            <g id="second">
+                                <line x1="-12" y1="0" x2="120" y2="0"></line>
+                            </g>
+                        </g>
+                        <circle r="4"></circle>
+                    </g>
+                </svg>
+
+            </div>
+
+            <div lazy="totalWork_hour" class="d-hide col-lg-6 col-xl-4 mt-4  csspinner load1">
+
+                <div class="panel-white h-100">
+                    <div class="panel-header">
+                        <h5 class="card-category">Pie chart total cong</h5>
+                        <h3 class="card-title">
+                            <i class="tim-icons icon-bell-55 text-primary"></i> 763,215
+                        </h3>
+                    </div>
+                    <div class="panel-body">
+                        <canvas class="totalWork_hour"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div lazy="custom_range_hour" class="d-hide col-lg-6 col-xl-4 mt-4  csspinner load1">
+                <div class="panel-white h-100">
+                    <div class="panel-header">
+                        <h5 class="card-category">Barchart move range work hour</h5>
+                        <h3 class="card-title">
+                            <i class="tim-icons icon-delivery-fast text-info"></i> 3,500￿
+                        </h3>
+                    </div>
+                    <div class="panel-body">
+                        <canvas class="custom_range_hour"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="d-hide col-lg-6 col-xl-4 mt-4">
+                <div class="panel-white h-100">
+                    <div class="panel-header">
+                        <h5 class="panel-category">Table workhour SL nhan vien</h5>
+                        <h3 class="panel-title">
+                            <i class="tim-icons icon-send text-success"></i> 12,100K
+                        </h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="table-responsive ps">
+                            <table class="table tablesorter " id="">
+                                <thead class=" text-primary">
+                                    <tr>
+                                        <th>
+                                            Name
+                                        </th>
+                                        <th>
+                                            Country
+                                        </th>
+                                        <th>
+                                            City
+                                        </th>
+                                        <th class="text-center">
+                                            Salary
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            Dakota Rice
+                                        </td>
+                                        <td>
+                                            Niger
+                                        </td>
+                                        <td>
+                                            Oud-Turnhout
+                                        </td>
+                                        <td class="text-center">
+                                            $36,738
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Minerva Hooper
+                                        </td>
+                                        <td>
+                                            Cura￿
+                                        </td>
+                                        <td>
+                                            Sinaai-Waas
+                                        </td>
+                                        <td class="text-center">
+                                            $23,789
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Sage Rodriguez
+                                        </td>
+                                        <td>
+                                            Netherlands
+                                        </td>
+                                        <td>
+                                            Baileux
+                                        </td>
+                                        <td class="text-center">
+                                            $56,142
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Philip Chaney
+                                        </td>
+                                        <td>
+                                            Korea, South
+                                        </td>
+                                        <td>
+                                            Overland Park
+                                        </td>
+                                        <td class="text-center">
+                                            $38,735
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Doris Greene
+                                        </td>
+                                        <td>
+                                            Malawi
+                                        </td>
+                                        <td>
+                                            Feldkirchen in K￿ten
+                                        </td>
+                                        <td class="text-center">
+                                            $63,542
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Mason Porter
+                                        </td>
+                                        <td>
+                                            Chile
+                                        </td>
+                                        <td>
+                                            Gloucester
+                                        </td>
+                                        <td class="text-center">
+                                            $78,615
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Jon Porter
+                                        </td>
+                                        <td>
+                                            Portugal
+                                        </td>
+                                        <td>
+                                            Gloucester
+                                        </td>
+                                        <td class="text-center">
+                                            $98,615
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="ps__rail-x" style="left: 0px; bottom: 0px;">
+                                <div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div>
+                            </div>
+                            <div class="ps__rail-y" style="top: 0px; right: 0px;">
+                                <div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 0px;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <div class="row px-4 d-hide ">
+            <div lazy="dog_radar" class="d-hide col-lg-6 col-md-12  pt-4 csspinner load1">
+                <div class="panel-white h-100">
+                    <div class="card-header panel-white">
+                        <h6 class="title d-inline">Polar week</h6>
+                        <p class="card-category d-inline">today</p>
+                    </div>
+                    <div class="card-body ">
+                        <canvas class="dog_radar"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div lazy="week_work_total" class="d-hide col-lg-6 col-md-12  pt-4 csspinner load1">
+                <div class="panel-white h-100">
+                    <div class="card-header panel-white">
+                        <h6 class="title d-inline">Total workhour in week</h6>
+                    </div>
+                    <div class="card-body">
+                        <canvas class="week_work_total"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="m-2 m-md-5 trial_opts">
+
+            <div style="margin:auto;max-width:500px;">
+
+                <div class="dothi-muiten mx-5" style="z-index:1"></div>
+
+                <div class="panel panel-white" style="border-radius: 30px">
+
+                    <div class="card-header panel-white text-center" style="-webkit-border-top-right-radius: 30px;-webkit-border-top-left-radius: 30px;">
+
+                        <h5 class="mb-0">Thong bao</h5>
+
+                    </div>
+                    <div class="card-body pb-0">
+                        <div class="alert" style="border-right: 1px solid #ffc107 !important;border-left: 1px solid #ffc107 !important;border-radius: 30px;">
+
+                            <p>Oops...Chua co ket noi may cham cong. Va bat ky du lieu cham cong de hien thi.</p>
+                            <hr class="hrx  m-2" />
+                            <p class="mb-0">Tuy nhien, ban co the thu nghiem bang viec upload du lieu cham cong hoac hoac chon xem demo.</p>
+
+                            <div class="text-center mt-3">
+                                <div type="button" class="btn btn-warning mr-2 upattdat">
+                                    <i class="ti-upload"></i>
+                                    <span>Upload</span>
+                                </div>
+                                <div type="button" class="btn btn-outline-warning xemmau">
+                                    <i class="ti-eye"></i>
+                                    <span>Xem Mau</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+            </div>
+
+        </div>
+
+
+        <div class="navi-demo">
+            <div class="text-center m-3 m-md-4 row">
+                <div class="col-6">
+                    <a mnu="exit_demo" class="btn btn-danger pull-right">
+                        <i class="ti-power-off"></i>
+                        <span data-lang="js_004_9">Thoat demo</span>
+                    </a>
+                </div>
+                <div class="col-6">
+                    <a mnu="back_demo" class="btn btn-primary pull-left">
+                        <i class="ti-bar-chart"></i>
+                        <span data-lang="js_004_9">Tiep tuc</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+        <div class="d-none">
+
+            <div class="btn btn-primary movecenter">dume may</div>
+
+
+            <div class="row" style="width:100%;height:500px">
+                <div class="col-6">
+                    <svg class="polar_area">
+                        <ellipse id="arc-shape" cx="0" cy="0" rx="0" ry="0"></ellipse>
+                        <path id="arc-path"></path>
+                    </svg>
+                </div>
+
+                <style type="text/css">
+                    .polar_area {
+                        /*position: fixed;*/
+                        width: 100%;
+                        height: 100%;
+                    }
+
+                    #arc-shape {
+                        fill: #eaeaea;
+                    }
+
+                    #arc-path {
+                        fill: #2196F3;
+                        stroke: #1565c0;
+                        stroke-width: 10;
+                        stroke-dasharray: 30,15;
+                        stroke-miterlimit: 10;
+                        stroke-linejoin: miter;
+                    }
+                </style>
+
+
+
+                <div class="col-6 d-flex justify-content-center align-items-center">
+
+                    <div class="col-lg-6 col-md-12">
+                        <div class="card panel-white">
+                            <div class="card-header panel-white">
+                                <h6 class="title d-inline">Polar week</h6>
+                                <p class="card-category d-inline">today</p>
+                            </div>
+                            <div class="card-body ">
+                                <div class="table-full-width table-responsive ps ps--active-y">
+                                    <table class="table">
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <div class="form-check">
+                                                        <label class="form-check-label">
+                                                            <input class="form-check-input" type="checkbox" value="" />
+                                                            <span class="form-check-sign">
+                                                                <span class="check"></span>
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <p class="title">Update the Documentation</p>
+                                                    <p class="text-muted">Dwuamish Head, Seattle, WA 8:47 AM</p>
+                                                </td>
+                                                <td class="td-actions text-right">
+                                                    <button type="button" rel="tooltip" title="" class="btn btn-link" data-original-title="Edit Task">
+                                                        <i class="tim-icons icon-pencil"></i>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="form-check">
+                                                        <label class="form-check-label">
+                                                            <input class="form-check-input" type="checkbox" value="" checked="" />
+                                                            <span class="form-check-sign">
+                                                                <span class="check"></span>
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <p class="title">GDPR Compliance</p>
+                                                    <p class="text-muted">The GDPR is a regulation that requires businesses to protect the personal data and privacy of Europe citizens for transactions that occur within EU member states.</p>
+                                                </td>
+                                                <td class="td-actions text-right">
+                                                    <button type="button" rel="tooltip" title="" class="btn btn-link" data-original-title="Edit Task">
+                                                        <i class="tim-icons icon-pencil"></i>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="form-check">
+                                                        <label class="form-check-label">
+                                                            <input class="form-check-input" type="checkbox" value="" />
+                                                            <span class="form-check-sign">
+                                                                <span class="check"></span>
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <p class="title">Solve the issues</p>
+                                                    <p class="text-muted">Fifty percent of all respondents said they would be more likely to shop at a company </p>
+                                                </td>
+                                                <td class="td-actions text-right">
+                                                    <button type="button" rel="tooltip" title="" class="btn btn-link" data-original-title="Edit Task">
+                                                        <i class="tim-icons icon-pencil"></i>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="form-check">
+                                                        <label class="form-check-label">
+                                                            <input class="form-check-input" type="checkbox" value="" />
+                                                            <span class="form-check-sign">
+                                                                <span class="check"></span>
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <p class="title">Release v2.0.0</p>
+                                                    <p class="text-muted">Ra Ave SW, Seattle, WA 98116, SUA 11:19 AM</p>
+                                                </td>
+                                                <td class="td-actions text-right">
+                                                    <button type="button" rel="tooltip" title="" class="btn btn-link" data-original-title="Edit Task">
+                                                        <i class="tim-icons icon-pencil"></i>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="form-check">
+                                                        <label class="form-check-label">
+                                                            <input class="form-check-input" type="checkbox" value="" />
+                                                            <span class="form-check-sign">
+                                                                <span class="check"></span>
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <p class="title">Export the processed files</p>
+                                                    <p class="text-muted">The report also shows that consumers will not easily forgive a company once a breach exposing their personal data occurs. </p>
+                                                </td>
+                                                <td class="td-actions text-right">
+                                                    <button type="button" rel="tooltip" title="" class="btn btn-link" data-original-title="Edit Task">
+                                                        <i class="tim-icons icon-pencil"></i>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="form-check">
+                                                        <label class="form-check-label">
+                                                            <input class="form-check-input" type="checkbox" value="" />
+                                                            <span class="form-check-sign">
+                                                                <span class="check"></span>
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <p class="title">Arival at export process</p>
+                                                    <p class="text-muted">Capitol Hill, Seattle, WA 12:34 AM</p>
+                                                </td>
+                                                <td class="td-actions text-right">
+                                                    <button type="button" rel="tooltip" title="" class="btn btn-link" data-original-title="Edit Task">
+                                                        <i class="tim-icons icon-pencil"></i>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <div class="ps__rail-x" style="left: 0px; bottom: 0px;">
+                                        <div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div>
+                                    </div>
+                                    <div class="ps__rail-y" style="top: 0px; height: 410px; right: 0px;">
+                                        <div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 390px;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+            <div class="content rect_realtime">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="panel panel-white">
+                            <div class="panel-header ">
+                                <div class="row">
+                                    <div class="col-sm-6 text-left">
+                                        <h5 class="card-category">Total Shipments</h5>
+                                        <h2 class="card-title">Performance</h2>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="btn-group btn-group-toggle float-right" data-toggle="buttons">
+                                            <label class="btn btn-sm btn-primary btn-simple active" id="0">
+                                                <input type="radio" name="options" checked="" />
+                                                <span class="d-none d-sm-block d-md-block d-lg-block d-xl-block">Accounts</span>
+                                                <span class="d-block d-sm-none">
+                                                    <i class="tim-icons icon-single-02"></i>
+                                                </span>
+                                            </label>
+                                            <label class="btn btn-sm btn-primary btn-simple" id="1">
+                                                <input type="radio" class="d-none d-sm-none" name="options" />
+                                                <span class="d-none d-sm-block d-md-block d-lg-block d-xl-block">Purchases</span>
+                                                <span class="d-block d-sm-none">
+                                                    <i class="tim-icons icon-gift-2"></i>
+                                                </span>
+                                            </label>
+                                            <label class="btn btn-sm btn-primary btn-simple" id="2">
+                                                <input type="radio" class="d-none" name="options" />
+                                                <span class="d-none d-sm-block d-md-block d-lg-block d-xl-block">Sessions</span>
+                                                <span class="d-block d-sm-none">
+                                                    <i class="tim-icons icon-tap-02"></i>
+                                                </span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel-body">
+                                <div class="chart-area">
+                                    <div class="chartjs-size-monitor" style="position: absolute; inset: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;">
+                                        <div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;">
+                                            <div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div>
+                                        </div>
+                                        <div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;">
+                                            <div style="position:absolute;width:200%;height:200%;left:0; top:0"></div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xxl-6 col-12 px-4"></div>
+                                        <div class="col-xxl-6 col-12 px-4">
+                                            <button type="button" class="btn">E-1</button>
+                                            <button type="button" class="btn btn-primary">E-2</button>
+                                            <button type="button" class="btn btn-secondary">E-3</button>
+                                            <button type="button" class="btn btn-success">E-4</button>
+                                            <button type="button" class="btn btn-info">E-5</button>
+                                            <button type="button" class="btn btn-warning">E-6</button>
+                                            <button type="button" class="btn btn-danger">E-7</button>
+                                            <button type="button" class="btn btn-dark">E-8</button>
+                                            <button type="button" class="btn btn-light">E-9</button>
+                                            <button type="button" class="btn btn-link">E-10</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="d-none rect_smoothie giaotiepevt">
+
+        <div class="row">
+
+            <div class="col-xxl-6 col-12 px-4">
+
+
+                <div class="position-relative">
+
+
+
+                    <style type="text/css">
+                        .smoothie_chart {
+                            position: absolute;
+                        }
+
+                        #range-slider {
+                            margin: auto;
+                            width: 100%;
+                            /*height: 100%;*/
+                            background: transparent;
+                            overflow: hidden;
+                            position: relative;
+                            /*top: 0;*/
+                            left: 0;
+                            right: 0;
+                        }
+
+                        .range-slider_draging {
+                            touch-action: auto !important;
+                        }
+
+
+                        #range-slider .range-slider__thumb {
+                            width: 18px;
+                            height: 38px;
+                            line-height: 38px;
+                            border-radius: 4px;
+                            /*background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' fill='rgb(191, 191, 191)' viewBox='0 0 24 24'%3E%3Cpath d='M12,16A2,2 0 0,1 14,18A2,2 0 0,1 12,20A2,2 0 0,1 10,18A2,2 0 0,1 12,16M12,10A2,2 0 0,1 14,12A2,2 0 0,1 12,14A2,2 0 0,1 10,12A2,2 0 0,1 12,10M12,4A2,2 0 0,1 14,6A2,2 0 0,1 12,8A2,2 0 0,1 10,6A2,2 0 0,1 12,4Z' /%3E%3C/svg%3E");*/
+                            background-repeat: no-repeat;
+                            background-position: center;
+                            /*background-color: rgba(191, 191, 191, 0.5);*/
+                        }
+
+                        .range-slider__thumb:before {
+                            font-family: themify;
+                            content: "\e6e1";
+                            font-size: 20px;
+                            margin-left: -2px;
+                            position: absolute;
+                            transform: rotate(90deg);
+                        }
+
+                        #range-slider .range-slider__range {
+                            /*border-radius: 4px;*/
+                            background: transparent;
+                            /*border: 4px solid rgba(191, 191, 191, 0.15);*/
+                            box-sizing: border-box;
+                            box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.75);
+                            /*box-shadow: 0 -99999px 0 99999px rgba(0, 0, 0, 0.75);*/
+                            /*pointer-events: none;
+                        touch-action: none;*/
+                        }
+
+                        .lightcolor #range-slider .range-slider__range {
+                            box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.5);
+                            /*box-shadow: 0 -99999px 0 99999px rgba(0, 0, 0, 0.5);*/
+                        }
+
+                        .range-slider__thumb[data-disabled] {
+                            display: none;
+                        }
+
+                        .mobi_drag_hwnd {
+                            height: 50px;
+                            width: 100%;
+                            position: absolute;
+                            top: 400px;
+                            background-color: 'red'; /*#2a2a2a;*/
+                            z-index: 99999999;
+                        }
+
+
+                        .dume_map .scale.hed {
+                            height: 0px !important;
+                            opacity: 0 !important;
+                        }
+
+                        .dume_map > .ps__rail-x {
+                            z-index: 7;
+                        }
+
+                        .dume_map_swip {
+                            position: absolute;
+                            bottom: -20px;
+                            transform: translateX(-50%);
+                            left: 50%;
+                            z-index: 5;
+                            pointer-events: none;
+                            text-align: center;
+                            opacity: 0.3;
+                        }
+
+
+
+                        .finger_draging:before {
+                            position: absolute;
+                            content: "\e662";
+                            font-family: themify;
+                            /*font-size: 20px;*/
+                            left: -5px;
+                        }
+
+                        .finger_draging:after {
+                            position: absolute;
+                            content: "\e661";
+                            font-family: themify;
+                            /*font-size: 20px;*/
+                            right: -5px;
+                        }
+                    </style>
+
+
+
+                    <!--<div class="justify-content-between align-items-center mb-4 row">
+                        <div class="col-auto">
+
+
+                            <p class="text-700 lh-sm mb-0">Payment received across all channels</p>
+                        </div>
+
+                        <div class="col-sm-4 col-8"></div>
+                    </div>-->
+
+
+                    <div>
+                        <!--https://codepen.io/trundle/pen/qqYmMY-->
+                        <div class="position-relative">
+
+
+                            <style type="text/css">
+                                .timesheet {
+                                    width: 100%;
+                                    /*height: 292px;*/
+                                    margin: 0 auto;
+                                }
+
+                                .timesheet {
+                                    border-top: 1px solid rgba(250,250,250,0.5);
+                                    /*background-color: #333;*/
+                                    position: relative;
+                                }
+
+                                    .timesheet.color-scheme-default .bubble-default {
+                                        background-color: RGBA(252, 70, 74, 1);
+                                    }
+
+                                    .timesheet.color-scheme-default .bubble-lorem {
+                                        background-color: RGBA(154, 202, 39, 1);
+                                    }
+
+                                    .timesheet.color-scheme-default .bubble-ipsum {
+                                        background-color: RGBA(60, 182, 227, 1);
+                                    }
+
+                                    .timesheet.color-scheme-default .bubble-dolor {
+                                        background-color: RGBA(244, 207, 48, 1);
+                                    }
+
+                                    .timesheet.color-scheme-default .bubble-sit {
+                                        background-color: RGBA(169, 105, 202, 1);
+                                    }
+
+                                    .timesheet.color-scheme-alternative .bubble-default {
+                                        background-color: #f3552e;
+                                    }
+
+                                    .timesheet.color-scheme-alternative .bubble-lorem {
+                                        background-color: #88c33a;
+                                    }
+
+                                    .timesheet.color-scheme-alternative .bubble-ipsum {
+                                        background-color: #436ae0;
+                                    }
+
+                                    .timesheet.color-scheme-alternative .bubble-dolor {
+                                        background-color: #f4d234;
+                                    }
+
+                                    .timesheet.color-scheme-alternative .bubble-sit {
+                                        background-color: #707d86;
+                                    }
+
+                                    .timesheet .scale {
+                                        height: 100%;
+                                        position: absolute;
+                                        top: 0;
+                                        left: 0;
+                                        white-space: nowrap;
+                                    }
+
+                                        .timesheet .scale section {
+                                            display: inline-block; /*float: left;*/
+                                            width: 59px;
+                                            max-width: 59px;
+                                            min-width: 59px;
+                                            text-align: center;
+                                            color: rgba(250,250,250,0.8);
+                                            font-family: "Signika Negative";
+                                            font-size: 13px;
+                                            line-height: 24px;
+                                            font-weight: lighter;
+                                            border-left: 1px dashed rgba(250,250,250,0.2);
+                                            /*height: 100%;*/
+                                            height: 0px;
+                                        }
+
+                                .chen_shift_map .hed section {
+                                    text-align: left !important;
+                                }
+
+                                .timesheet .data {
+                                    margin: 28px 0 0 0;
+                                    padding: 0;
+                                    text-align: left;
+                                    list-style-type: none;
+                                    color: rgba(250,250,250,0.8);
+                                    font-family: "Signika Negative";
+                                    font-size: 13px;
+                                    /*overflow: hidden;*/
+                                    z-index: 1;
+                                    position: absolute;
+                                    top: 0;
+                                    bottom: 0;
+                                    left: 0;
+                                    right: 0;
+                                }
+
+                                    .timesheet .data li {
+                                        margin: 0 0 3px 0;
+                                        line-height: 22px;
+                                        height: 21px;
+                                        display: block;
+                                        clear: both;
+                                        position: relative;
+                                        white-space: nowrap;
+                                    }
+
+                                        .timesheet .data li:hover .bubble {
+                                            opacity: 1;
+                                        }
+
+                                        .timesheet .data li .date {
+                                            color: #b5b5b5;
+                                            font-size: 14px;
+                                        }
+
+                                        .timesheet .data li .label {
+                                            font-weight: lighter;
+                                            font-size: 14px;
+                                            padding-left: 5px;
+                                            line-height: 21px;
+                                            color: #979796;
+                                            white-space: nowrap;
+                                        }
+
+                                        .timesheet .data li .bubble {
+                                            width: 24px;
+                                            height: 7px;
+                                            display: block;
+                                            float: left;
+                                            position: relative;
+                                            top: 7px;
+                                            border-radius: 4px;
+                                            margin: 0 10px 0 0;
+                                            opacity: 0.7;
+                                        }
+
+                                #timesheet-alternative {
+                                    background-color: RGBA(247, 247, 247, 1);
+                                    border-radius: 5px;
+                                }
+
+                                    #timesheet-alternative section {
+                                        color: RGBA(63, 68, 72, 1);
+                                        border-left: 1px dashed RGBA(63, 68, 72, 0.2);
+                                    }
+
+                                        #timesheet-alternative section:first-child {
+                                            border-left: 1px dashed transparent;
+                                        }
+
+                                    #timesheet-alternative .date {
+                                        display: none;
+                                    }
+
+                                    #timesheet-alternative .bubble {
+                                        margin-right: 7px;
+                                    }
+
+                                    #timesheet-alternative .label {
+                                        padding-left: 0px;
+                                        color: RGBA(48, 48, 48, 1);
+                                    }
+                            </style>
+
+                            <style type="text/css">
+                                /******************* Timeline Demo - 10 *****************/
+
+
+                                .hourtracker .disgio {
+                                    background: #3ebae7;
+                                    padding: 2px;
+                                    border-radius: 5px 5px 0px 5px;
+                                    font-family: "Signika Negative";
+                                    font-size: 13px;
+                                    font-weight: lighter;
+                                    /*font-weight: 700;*/
+                                    color: #fff;
+                                    z-index: 1;
+                                    position: relative;
+                                    text-align: center;
+                                    margin-right: 1px;
+                                }
+
+                                    .hourtracker .disgio:after {
+                                        content: "";
+                                        position: absolute;
+                                        bottom: -10px;
+                                        right: 1px;
+                                        border: 10px solid transparent;
+                                        border-top: 10px solid #3ebae7;
+                                        border-right: 10px solid #3ebae7;
+                                        pointer-events: none;
+                                        z-index: -1;
+                                    }
+
+                                .hourtracker {
+                                    --dynamic-cao: 200px;
+                                }
+
+                                    .hourtracker:after {
+                                        content: "";
+                                        position: absolute;
+                                        width: 1px;
+                                        height: var(--dynamic-cao);
+                                        background-color: red;
+                                        z-index: 3;
+                                        right: 1px;
+                                        margin-top: -1px;
+                                        /*top: calc(var(--dynamic-cao) * -1);*/
+                                    }
+                            </style>
+
+                            <div class="cha_dume_map" style="position:relative; overflow:hidden">
+
+
+                                <div class="dume_map" style="width:100%;position: relative;
+padding-bottom:50px;
+                                   overflow-x:scroll; overflow-y:hidden">
+
+                                    <div class="d-flex realtime_body_map" style="margin-top:59px;width:1440px;">
+
+                                        <canvas class="smoothie_chart" width="1440" height="400"></canvas>
+
+                                        <div id="range-slider" style="top:0px;height:400px"></div>
+
+                                        <div class="chen_shift_map overflow-hidden" style="overflow-x:auto;border:none!important;height:400px; position:absolute;left:0;width:1440px;"></div>
+
+                                    </div>
+
+                                    <div class="hourtracker" style="position: absolute;transform: translateX(-100%);z-index:5;top:0">
+                                        <div class="disgio px-2">
+                                            00:00
+                                        </div>
+                                    </div>
+
+
+                                </div>
+
+
+
+
+
+
+                            </div>
+
+                            <div class="position-absolute dume_map_swip" style="z-index: 6;bottom:-5px;transform: translateX(-50%);left: 50%;">
+
+                                <div class="finger_draging">
+                                    <!--<span class="ti-exchange-vertical" style="position: absolute;transform: rotate(90deg);top: -25px;font-size: 30px;"></span>-->
+                                    <span class="ti-hand-point-up" style="font-size: 30px;"></span>
+                                </div>
+
+                                <div class="badge badge-pill badge-info" style="margin-top: -10px;display: flex;">
+                                    Draging
+                                </div>
+
+                            </div>
+
+                            <div class="position-absolute d-flex align-items-center" style="pointer-events: none;z-index: 6;bottom:5px;right: 0;opacity:0.7">
+
+                                <span style="max-width:100px;font-size:smaller;text-align:right">
+                                    dang xem lich su tai
+                                    <strong class="text-large">08:00:50</strong>
+                                </span>
+
+                                <span class="btn btn-sm btn-warning fa fa-play ml-1 play_realtime" style="font-size:20px; pointer-events: all!important"></span>
+
+                            </div>
+
+                            <div class="realtime_tool_top" style="position:absolute;top:0;left:0;right:0;height:60px;z-index:4;">
+                                <div style="position: absolute;right: 0px;top:28px">
+                                    <div class="btn btn-lg p-0 text-warning fa fa-area-chart realchart_opt">
+                                        <!-- sr-only gives feature, hides elements from all devices except screen -->
+                                        <span class="sr-only">Hamburger Menu</span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <!-- icon-bar creates structure like triple equal -->
+                                    </div>
+                                    <div class="btn ti-angle-down" data-toggle="collapse" href=".collapse0"></div>
+                                </div>
+
+                                <div style="position: absolute;left:10px;top:30px" show="0" class="calendar_block">
+
+                                    <div class="calen_cmd_0">
+
+                                        <div mnu="blo" class="btn btn-lg p-0 text-warning fa fa-calendar">
+                                            <!-- sr-only gives feature, hides elements from all devices except screen -->
+                                            <span class="sr-only">Hamburger Menu</span>
+                                            <span class="icon-bar"></span>
+                                            <span class="icon-bar"></span>
+                                            <span class="icon-bar"></span>
+                                            <!-- icon-bar creates structure like triple equal -->
+                                        </div>
+
+                                        <div class="btn  p-0">
+                                            <span mnu="thg" class="bg-info p-1 rounded">2023/12</span>
+                                            <span mnu="nga" class="bg-primary p-1 rounded">1 - 31</span>
+                                        </div>
+
+                                        <div class="d-inline-block dropdown p-0">
+
+                                            <div type="button" class="form-control chonnam realevt_opt_sel csor-p p-0 px-1" data-toggle="dropdown" aria-expanded="true">
+                                                <span data-lang="js_reglv_1" style="vertical-align:middle">10:30</span>
+                                                <span class="ti-time text-large" style="vertical-align:middle"></span>
+                                            </div>
+
+                                            <div class="dropdown-menu kytich wv-100" style="grid-template-columns: repeat(auto-fill, minmax(75px, 1fr));max-width:800px; position: absolute; transform: translate3d(0px, 35px, 0px); top: 0px; left: 0px; will-change: transform;" x-placement="bottom-start">
+                                                <!--<a href="#" class="dropdown-item">2021</a>
+                                                <a href="#" class="dropdown-item">2020</a>-->
+                                                <a href="#" class="dropdown-item">00:00</a>
+                                                <a href="#" class="dropdown-item">00:30</a>
+
+                                                <a href="#" class="dropdown-item">00:01</a>
+                                                <a href="#" class="dropdown-item">01:30</a>
+
+                                                <a href="#" class="dropdown-item">02:00</a>
+                                                <a href="#" class="dropdown-item">02:30</a>
+
+                                                <a href="#" class="dropdown-item">03:00</a>
+                                                <a href="#" class="dropdown-item">03:30</a>
+
+                                                <a href="#" class="dropdown-item">04:00</a>
+                                                <a href="#" class="dropdown-item">04:30</a>
+
+                                                <a href="#" class="dropdown-item">05:00</a>
+                                                <a href="#" class="dropdown-item">05:30</a>
+
+                                                <a href="#" class="dropdown-item">06:00</a>
+                                                <a href="#" class="dropdown-item">06:30</a>
+
+                                                <a href="#" class="dropdown-item">07:00</a>
+                                                <a href="#" class="dropdown-item">07:30</a>
+
+                                                <a href="#" class="dropdown-item">08:00</a>
+                                                <a href="#" class="dropdown-item">08:30</a>
+
+                                                <a href="#" class="dropdown-item">09:00</a>
+                                                <a href="#" class="dropdown-item">09:30</a>
+
+                                                <a href="#" class="dropdown-item">10:00</a>
+                                                <a href="#" class="dropdown-item">10:30</a>
+
+                                                <a href="#" class="dropdown-item">11:00</a>
+                                                <a href="#" class="dropdown-item">11:30</a>
+
+                                                <a href="#" class="dropdown-item">12:00</a>
+                                                <a href="#" class="dropdown-item">12:30</a>
+
+                                                <a href="#" class="dropdown-item">13:00</a>
+                                                <a href="#" class="dropdown-item">13:30</a>
+
+                                                <a href="#" class="dropdown-item">14:00</a>
+                                                <a href="#" class="dropdown-item">14:30</a>
+
+                                                <a href="#" class="dropdown-item">15:00</a>
+                                                <a href="#" class="dropdown-item">15:30</a>
+
+                                                <a href="#" class="dropdown-item">16:00</a>
+                                                <a href="#" class="dropdown-item">16:30</a>
+
+                                                <a href="#" class="dropdown-item">17:00</a>
+                                                <a href="#" class="dropdown-item">17:30</a>
+
+                                                <a href="#" class="dropdown-item">18:00</a>
+                                                <a href="#" class="dropdown-item">18:30</a>
+
+                                                <a href="#" class="dropdown-item">19:00</a>
+                                                <a href="#" class="dropdown-item">19:30</a>
+
+                                                <a href="#" class="dropdown-item">20:00</a>
+                                                <a href="#" class="dropdown-item">20:30</a>
+
+                                                <a href="#" class="dropdown-item">21:00</a>
+                                                <a href="#" class="dropdown-item">21:30</a>
+
+                                                <a href="#" class="dropdown-item">22:00</a>
+                                                <a href="#" class="dropdown-item">22:30</a>
+
+                                                <a href="#" class="dropdown-item">23:00</a>
+                                                <a href="#" class="dropdown-item">23:30</a>
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="calen_cmd_1">
+
+                                        <div mnu="blo" class="btn btn-lg p-0 text-warning fa fa-calendar">
+                                            <!-- sr-only gives feature, hides elements from all devices except screen -->
+                                            <span class="sr-only">Hamburger Menu</span>
+                                            <span class="icon-bar"></span>
+                                            <span class="icon-bar"></span>
+                                            <span class="icon-bar"></span>
+                                            <!-- icon-bar creates structure like triple equal -->
+                                        </div>
+
+                                        <div class="btn  p-0">
+                                            <span mnu="thg" class="bg-info p-1 rounded">2023/12</span>
+                                            <span mnu="nga" class="bg-primary p-1 rounded">1 - 31</span>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+
+                        <style type="text/css">
+                            /* Opportunity dothis */
+                            .dothi-titles {
+                                display: inline-block;
+                                /*width: 200px;*/
+                                vertical-align: top;
+                                /*margin: 20px 0 20px;*/
+                                padding: 0;
+                            }
+
+                            .dothi-title {
+                                margin-bottom: 1em;
+                                width: 100%;
+                                line-height: 25px;
+                                overflow: hidden;
+                            }
+
+                            .dothi-muiten {
+                                /* padding-top: 50px; */
+                                position: relative;
+                                border-radius: 30px;
+                                padding: 0px 0 0px 40px;
+                            }
+
+
+                                .dothi-muiten:after {
+                                    font: normal normal normal 14px/1 FontAwesome;
+                                    content: "\f122";
+                                    position: absolute;
+                                    font-size: 50px;
+                                    transform: rotate(265deg);
+                                    left: 0;
+                                    bottom: -10px;
+                                    color: #ffc107 !important;
+                                }
+
+                            .dothi-toiuu {
+                                position: relative;
+                                border-radius: 30px;
+                                /*padding: 40px 0px 0px 0;*/
+                            }
+
+                                .dothi-toiuu:before {
+                                    font: normal normal normal 14px/1 FontAwesome;
+                                    content: "\f122";
+                                    position: absolute;
+                                    font-size: 50px;
+                                    transform: rotate(278deg) scalex(-1);
+                                    right: 10px;
+                                    top: 0;
+                                    color: #5cb85c !important;
+                                }
+
+                            .tinhgiolam.collapsed {
+                                color: transparent !important;
+                            }
+
+                            .dothi-title-name {
+                                float: left;
+                            }
+
+                            .dothi-title-count {
+                                float: right;
+                                padding: 0 10px;
+                                height: 25px;
+                                border-radius: 20px;
+                                /*color:#fff;*/
+                            }
+
+                            .dothi {
+                                display: inline-block;
+                                position: relative;
+                                /*margin: 20px 20px 20px 10px;*/
+                                padding: 0;
+                                /*width: 500px;*/
+                                flex: 1;
+                            }
+
+                            .dothi-bar {
+                                display: block;
+                                overflow: hidden;
+                                margin-bottom: 1em;
+                            }
+
+                            .dothi-bar-fragment {
+                                width: 0;
+                                height: 25px;
+                                float: left;
+                                background-color: #ccc;
+                                -webkit-transition: width .4s ease-in;
+                            }
+
+                            .dothi-bar-single {
+                                height: 25px;
+                                background-color: #ccc;
+                                -webkit-transition: width .4s ease-in;
+                                border-top-right-radius: 4px;
+                                border-bottom-right-radius: 4px;
+                            }
+
+                            .dothi-bar-fragment:last-child {
+                                border-top-right-radius: 4px;
+                                border-bottom-right-radius: 4px;
+                            }
+
+                            .urgent {
+                                background: #c9575e;
+                                background: -moz-linear-gradient(top, #c9575e 0%, #c12e41 100%);
+                                background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#c9575e), color-stop(100%,#c12e41));
+                                background: -webkit-linear-gradient(top, #c9575e 0%,#c12e41 100%);
+                                background: -o-linear-gradient(top, #c9575e 0%,#c12e41 100%);
+                                background: -ms-linear-gradient(top, #c9575e 0%,#c12e41 100%);
+                                background: linear-gradient(to bottom, #c9575e 0%,#c12e41 100%);
+                                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c9575e', endColorstr='#c12e41',GradientType=0 );
+                            }
+
+                            ._active {
+                                background: #d6ac6e;
+                                background: -moz-linear-gradient(top, #d6ac6e 0%, #cc9e52 100%);
+                                background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#d6ac6e), color-stop(100%,#cc9e52));
+                                background: -webkit-linear-gradient(top, #d6ac6e 0%,#cc9e52 100%);
+                                background: -o-linear-gradient(top, #d6ac6e 0%,#cc9e52 100%);
+                                background: -ms-linear-gradient(top, #d6ac6e 0%,#cc9e52 100%);
+                                background: linear-gradient(to bottom, #d6ac6e 0%,#cc9e52 100%);
+                                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d6ac6e', endColorstr='#cc9e52',GradientType=0 );
+                            }
+
+                            .newCount {
+                                background: #6db683;
+                                background: -moz-linear-gradient(top, #6db683 0%, #569b6d 100%);
+                                background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#6db683), color-stop(100%,#569b6d));
+                                background: -webkit-linear-gradient(top, #6db683 0%,#569b6d 100%);
+                                background: -o-linear-gradient(top, #6db683 0%,#569b6d 100%);
+                                background: -ms-linear-gradient(top, #6db683 0%,#569b6d 100%);
+                                background: linear-gradient(to bottom, #6db683 0%,#569b6d 100%);
+                                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6db683', endColorstr='#569b6d',GradientType=0 );
+                            }
+
+                            .newFromBatch {
+                                background: #7f8cc4;
+                                background: -moz-linear-gradient(top, #7f8cc4 0%, #6477ac 100%);
+                                background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#7f8cc4), color-stop(100%,#6477ac));
+                                background: -webkit-linear-gradient(top, #7f8cc4 0%,#6477ac 100%);
+                                background: -o-linear-gradient(top, #7f8cc4 0%,#6477ac 100%);
+                                background: -ms-linear-gradient(top, #7f8cc4 0%,#6477ac 100%);
+                                background: linear-gradient(to bottom, #7f8cc4 0%,#6477ac 100%);
+                                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7f8cc4', endColorstr='#6477ac',GradientType=0 );
+                            }
+
+                            .markers {
+                                position: absolute;
+                                top: 0;
+                                bottom: 0;
+                                left: 0;
+                                right: 0;
+                                opacity: 0;
+                                visibility: hidden;
+                                -webkit-transition: opacity .4s ease-in;
+                            }
+
+                                .markers.loaded {
+                                    visibility: visible;
+                                    opacity: 1;
+                                }
+
+                            .marker {
+                                -webkit-box-sizing: border-box;
+                                position: absolute;
+                                bottom: -2em;
+                                top: 0;
+                                border-left: 2px solid #e6e6e6;
+                            }
+
+                            .marker-number {
+                                position: absolute;
+                                padding-left: .5em;
+                                bottom: 0;
+                                text-align: right;
+                            }
+
+                            .marker:last-child .marker-number {
+                                right: 0;
+                                padding-left: 0;
+                                padding-right: .5em;
+                            }
+
+                            .dothi-key {
+                                margin: 20px 0 0 210px;
+                            }
+
+                            .dothi-key-item {
+                                display: inline-block;
+                                margin-right: 1.5em;
+                            }
+
+                            .dothi-key-dot {
+                                display: inline-block;
+                                width: 1em;
+                                height: 1em;
+                                border-radius: 50%;
+                                margin-right: .5em;
+                            }
+                        </style>
+
+                        <div class="px-2">
+
+                            <div class="btn ti-angle-down tinhgiolam" data-toggle="collapse" href=".dothi-muiten" style="position: absolute;z-index:1"></div>
+
+                            <div class="dothi-muiten collapse show">
+                                <!--https://prium.github.io/phoenix/v1.13.0/showcase.html-->
+                                <div class="alert" style="border-left: 1px solid #ffc107 !important;border-radius: 30px;">
+                                    <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
+                                    <hr class="hrx  m-2" />
+                                    <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+
+                                    <div class="text-center mt-3">
+                                        <div type="button" class="btn btn-warning mr-2">Take this action</div>
+                                        <div type="button" class="btn btn-outline-warning">Or do this</div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="dothi-container d-flex">
+
+                                <div class="dothi-titles">
+                                    <!-- Populated -->
+                                </div>
+
+                                <div class="dothi">
+
+                                    <div class="dothi-bars">
+                                        <!-- Populated -->
+                                    </div>
+
+                                    <div class="markers">
+                                        <!-- Populated -->
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+
+                            <div class="dothi-key">
+
+                                <div class="dothi-key-item">
+                                    <span class="dothi-key-dot urgent"></span>
+                                    <span id="urgent-title">Urgent</span>
+                                </div>
+                                <div class="dothi-key-item">
+                                    <span class="dothi-key-dot active"></span>
+                                    <span>Active</span>
+                                </div>
+                                <div class="dothi-key-item">
+                                    <span class="dothi-key-dot newCount"></span>
+                                    <span>New</span>
+                                </div>
+                                <div class="dothi-key-item">
+                                    <span class="dothi-key-dot newFromBatch"></span>
+                                    <span>New From Batch</span>
+                                </div>
+                            </div>
+
+                            <div class="btn ti-angle-down" data-toggle="collapse" href=".dothi-toiuu" style="position: absolute;z-index:1;margin-top: 2px;margin-left: -2px;"></div>
+
+                            <div class="dothi-toiuu collapse show">
+
+                                <!--https://prium.github.io/phoenix/v1.13.0/showcase.html-->
+                                <div class="alert text-right" style="border-right: 1px solid #5cb85c!important;border-radius: 30px;">
+
+                                    <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
+                                    <hr class="hrx  m-2" />
+                                    <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+
+                                    <div class="text-center mt-3">
+                                        <div type="button" class="btn btn-success mr-2">Take this action</div>
+                                        <div type="button" class="btn btn-outline-success">Or do this</div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="align-items-center  p-4 mb-6 row">
+                        <div class="col-md-auto col-12">
+                            <div class="align-items-center hstack">
+                                <span class="fa-layers" style="min-height: 46px; min-width: 46px;"></span>
+                                <div class="ms-3">
+                                    <h4 class="mb-0">57 new orders</h4>
+                                    <p class="text-800 fs-9 mb-0">Awating processing</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-auto col-12">
+                            <div class="align-items-center hstack">
+                                <span class="fa-layers" style="min-height: 46px; min-width: 46px;"></span>
+                                <div class="ms-3">
+                                    <h4 class="mb-0">5 orders</h4>
+                                    <p class="text-800 fs-9 mb-0">On hold</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-auto col-12">
+                            <div class="align-items-center hstack">
+                                <span class="fa-layers" style="min-height: 46px; min-width: 46px;"></span>
+                                <div class="ms-3">
+                                    <h4 class="mb-0">15 products</h4>
+                                    <p class="text-800 fs-9 mb-0">Out of stock</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+
+
+            </div>
+
+
+            <div class="pr-4 col-xxl-6 col-12">
+
+
+                <div class="row">
+
+                    <div class="col-md-6 col-12 p-2">
+                        <div class="h-100 card panel-white">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between">
+                                    <div>
+                                        <h5 class="mb-1">
+                                            Total orders
+                                            <span class="ms-2 badge-phoenix badge-phoenix-warning badge rounded-pill">-6.8%</span>
+                                        </h5>
+                                        <h6 class="text-700">Last 7 days</h6>
+                                    </div>
+                                    <h4>16,247</h4>
+                                </div>
+                                <div class="d-flex justify-content-center px-4 py-6">
+
+                                    <div class="test_manual_append btn btn-primary">Append point</div>
+                                    <div class="btn btn-danger">Continue Draw</div>
+                                    <input type="file" id="test_attlog_realtime" style="display:none" />
+                                    <label class="btn btn-success" for="test_attlog_realtime">
+                                        Att Logs
+                                    </label>
+                                    <!--<select class="form-select form-select-sm"><option value="mar">Mar 1 - 31, 2023</option><option value="apr">April 1 - 30, 2023</option><option value="may">May 1 - 31, 2023</option></select>-->
+
+                                    <button id="teamdothi">Team dothi</button>
+                                    <button id="userdothi">User dothi</button>
+                                </div>
+
+                                <div class="mt-2">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <div class="bullet-item bg-primary me-2"></div>
+                                        <h6 class="text-900 fw-semi-bold flex-1 mb-0">Completed</h6>
+
+                                        <h6 class="text-900 fw-semi-bold mb-0">52%</h6>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <div class="bullet-item bg-primary-100 me-2"></div>
+                                        <h6 class="text-900 fw-semi-bold flex-1 mb-0">Pending payment</h6>
+                                        <h6 class="text-900 fw-semi-bold mb-0">48%</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-6 col-12 p-2">
+                        <div class="h-100 card panel-white">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between">
+                                    <div>
+
+                                        <h5 class="mb-1">
+                                            New customers
+                                            <span class="ms-2 badge-phoenix badge-phoenix-warning badge rounded-pill">+26.5%</span>
+                                        </h5>
+                                        <h6 class="text-700">Last 7 days</h6>
+                                    </div>
+                                    <h4>356</h4>
+                                </div>
+
+                                <div class="pb-0 pt-4">
+                                    <div class="echarts-for-react " style="height: 180px; width: 100%; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;" _echarts_instance_="ec_1700096608968" size-sensor-id="3">
+
+                                        <div style="position: relative; width: 395px; height: 180px; padding: 0px; margin: 0px; border-width: 0px; cursor: default;">
+
+                                            <canvas data-zr-dom-id="zr_0" width="395" height="180" style="position: absolute; left: 0px; top: 0px; width: 395px; height: 180px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas>
+
+                                        </div>
+
+                                        <div class="" style="position: absolute; display: block; border-style: solid; white-space: nowrap; z-index: 9999999; box-shadow: rgba(0, 0, 0, 0.2) 1px 2px 10px; background-color: rgb(34, 40, 52); border-width: 1px; border-radius: 4px; color: rgb(239, 242, 246); font: 14px / 21px &quot;Microsoft YaHei&quot;; padding: 10px; top: 0px; left: 0px; transform: translate3d(62px, 87px, 0px); border-color: rgb(55, 62, 83); pointer-events: none; visibility: hidden; opacity: 0;">
+                                            <div class="ms-1">
+
+                                                <h6 class="text-700 false">
+                                                    <span class="d-inline-block rounded-circle me-2" style="height: 0.5rem; width: 0.5rem; background:#31374a"></span>
+                                                    May 02 : 100
+                                                </h6>
+                                                <h6 class="text-700 mb-0">
+                                                    <span class="d-inline-block rounded-circle me-2" style="height: 0.5rem; width: 0.5rem; background:#85a9ff"></span>
+                                                    Apr 02 : 150
+                                                </h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-12 p-2">
+                        <div class="h-100 card panel-white">
+
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between">
+                                    <div>
+                                        <h5 class="mb-2">Top coupons</h5>
+                                        <h6 class="text-700">Last 7 days</h6>
+                                    </div>
+                                </div>
+                                <div class="pb-4 pt-3">
+                                    <div class="echarts-for-react " style="height: 115px; width: 100%; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;"
+                                         _echarts_instance_="ec_1700096608969" size-sensor-id="4">
+                                        <div style="position: relative; width: 395px; height: 115px; padding: 0px; margin: 0px; border-width: 0px; cursor: default;">
+                                            <canvas data-zr-dom-id="zr_0" width="395" height="115" style="position: absolute; left: 0px; top: 0px; width: 395px; height: 115px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas>
+
+                                        </div>
+
+                                        <div class="" style="position: absolute; display: block; border-style: solid; white-space: nowrap; z-index: 9999999; box-shadow: rgba(0, 0, 0, 0.2) 1px 2px 10px; background-color: rgb(34, 40, 52); border-width: 1px; border-radius: 4px; color: rgb(239, 242, 246); font: 14px / 21px &quot;Microsoft YaHei&quot;; padding: 7px 10px; top: 0px; left: 0px; transform: translate3d(31px, 3px, 0px); border-color: rgb(55, 62, 83); pointer-events: none; visibility: hidden; opacity: 0;">
+                                            <strong>Percentage discount:</strong> 72%
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="d-flex align-items-center mb-2">
+                                        <div class="bullet-item bg-primary me-2"></div>
+                                        <h6 class="text-900 fw-semi-bold flex-1 mb-0">Percentage discount</h6>
+                                        <h6 class="text-900 fw-semi-bold mb-0">72%</h6>
+                                    </div>
+                                    <div class="d-flex align-items-center mb-2">
+                                        <div class="bullet-item bg-primary-200 me-2"></div>
+                                        <h6 class="text-900 fw-semi-bold flex-1 mb-0">Fixed card discount</h6>
+                                        <h6 class="text-900 fw-semi-bold mb-0">18%</h6>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <div class="bullet-item bg-info-500 me-2"></div>
+                                        <h6 class="text-900 fw-semi-bold flex-1 mb-0">Fixed product discount</h6>
+                                        <h6 class="text-900 fw-semi-bold mb-0">10%</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-12 p-2">
+                        <div class="h-100 card panel-white">
+                            <div class="d-flex flex-column card-body">
+                                <div class="d-flex justify-content-between">
+                                    <div>
+                                        <h5 class="mb-2">Paying vs non paying</h5>
+                                        <h6 class="text-700">Last 7 days</h6>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-center pt-3 flex-1">
+                                    <div class="echarts-for-react " style="height: 100%; width: 100%; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;" _echarts_instance_="ec_1700096608970" size-sensor-id="5">
+                                        <div style="position: relative; width: 395px; height: 144px; padding: 0px; margin: 0px; border-width: 0px; cursor: default;">
+                                            <canvas data-zr-dom-id="zr_0" width="395" height="144" style="position: absolute; left: 0px; top: 0px; width: 395px; height: 144px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas>
+                                        </div>
+                                        <div class=""></div>
+                                    </div>
+                                </div>
+                                <div class="mt-3">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <div class="bullet-item bg-primary me-2"></div>
+                                        <h6 class="text-900 fw-semi-bold flex-1 mb-0">Paying customer</h6>
+                                        <h6 class="text-900 fw-semi-bold mb-0">30%</h6>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <div class="bullet-item bg-primary-100 me-2"></div>
+                                        <h6 class="text-900 fw-semi-bold flex-1 mb-0">Non-paying customer</h6>
+                                        <h6 class="text-900 fw-semi-bold mb-0">70%</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <style type="text/css">
+                            .card .carousel-item {
+                                min-height: 190px;
+                            }
+
+                            .card .carousel-caption {
+                                padding: 0;
+                                right: 15px;
+                                left: 15px;
+                                top: 15px;
+                                color: #3d3d3d;
+                                border: 1px solid #ccc;
+                                min-height: 175px;
+                                padding: 15px;
+                            }
+
+                                .card .carousel-caption .col-sm-3 {
+                                    display: flex;
+                                    align-items: center;
+                                }
+
+                                .card .carousel-caption .col-sm-9 {
+                                    text-align: left;
+                                }
+
+                            .card .carousel-control-prev, .card .carousel-control-next {
+                                color: #3d3d3d !important;
+                                opacity: 1 !important;
+                            }
+
+                            .carousel-control-prev-icon, .carousel-control-next-icon {
+                                background-image: none;
+                                color: #fff;
+                                font-size: 14px;
+                                background-color: #cd3a54;
+                                height: 32px;
+                                line-height: 32px;
+                                width: 32px;
+                            }
+
+                                .carousel-control-prev-icon:hover, .carousel-control-next-icon:hover {
+                                    opacity: 0.85;
+                                }
+
+                            .carousel-control-prev {
+                                left: 40%;
+                                top: 110%;
+                            }
+
+                            .carousel-control-next {
+                                right: 40%;
+                                top: 110%;
+                            }
+
+                            .midline {
+                                width: 60px;
+                                border-top: 1px solid #d43025;
+                            }
+
+                            .carousel-caption h2 {
+                                font-size: 14px;
+                            }
+
+                                .carousel-caption h2 span {
+                                    color: #cd3a54;
+                                }
+                        </style>
+                        <section class="pt-5 pb-5">
+                            <div class="container">
+                                <h2 class="text-center">What other say for us</h2>
+                                <hr class="midline" />
+                                <h5 class="text-center mb-5">Our team created best opportunities for your business.</h5>
+
+
+                                <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="100000">
+                                    <div class="carousel-inner mb-5" role="listbox" style="max-width:1400px;margin:auto">
+                                        <div class="carousel-item active">
+
+
+                                            <div class="dothi-toiuu collapse show">
+
+                                                <!--https://prium.github.io/phoenix/v1.13.0/showcase.html-->
+                                                <div class="alert text-right" style="border-right: 1px solid #5cb85c!important;border-radius: 30px;">
+
+                                                    <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
+                                                    <hr class="hrx  m-2" />
+                                                    <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+
+                                                    <div class="text-center mt-3">
+                                                        <div type="button" class="btn btn-success mr-2">Take this action</div>
+                                                        <div type="button" class="btn btn-outline-success">Or do this</div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                        <div class="carousel-item">
+
+                                            <div class="dothi-muiten collapse show">
+                                                <!--https://prium.github.io/phoenix/v1.13.0/showcase.html-->
+                                                <div class="alert" style="border-left: 1px solid #ffc107 !important;border-radius: 30px;">
+                                                    <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
+                                                    <hr class="hrx  m-2" />
+                                                    <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+
+                                                    <div class="text-center mt-3">
+                                                        <div type="button" class="btn btn-warning mr-2">Take this action</div>
+                                                        <div type="button" class="btn btn-outline-warning">Or do this</div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true">
+                                            <i class="fas fa-chevron-left"></i>
+                                        </span>
+                                        <span class="sr-only">Previous</span>
+                                    </a>
+                                    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true">
+                                            <i class="fas fa-chevron-right"></i>
+                                        </span>
+                                        <span class="sr-only">Next</span>
+                                    </a>
+                                </div>
+
+                            </div>
+                        </section>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="d-none">
+
+        <div class="Smoothie-Charts-Builder">
+
+            <style type="text/css">
+                #controls a.default {
+                    margin-left: 1em;
+                    font-size: 10px;
+                    color: #444;
+                }
+
+                #controls {
+                    margin-top: 26px;
+                }
+
+                    #controls div.control {
+                        min-height: 26px;
+                    }
+
+                        #controls div.control input.opacity {
+                            margin: 0 12px;
+                        }
+
+                        #controls div.control input[type='checkbox'] {
+                            margin-top: 10px;
+                        }
+
+                        #controls div.control label.slider,
+                        #controls div.control label.color {
+                            display: inline-block;
+                            width: 150px;
+                        }
+
+                #code > div {
+                    margin-top: 14px;
+                }
+
+                #code textarea {
+                    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.45);
+                    padding: 8px;
+                    width: 700px;
+                    border: 1px solid black;
+                    box-sizing: border-box;
+                }
+
+                div.smoothie-chart-tooltip {
+                    background: #444;
+                    padding: 1em;
+                    margin-top: 20px;
+                    font-family: consolas;
+                    color: white;
+                    font-size: 10px;
+                    pointer-events: none;
+                }
+            </style>
+
+
+
+
+            <div id="controls"></div>
+
+            <h3>Code</h3>
+
+            <div id="code">
+                <div>
+                    <label for="html-code">HTML:</label>
+                    <br />
+                    <textarea readonly id="html-code" style="height:34px;"></textarea>
+                </div>
+                <div>
+                    <label for="javascript-code">JavaScript:</label>
+                    <br />
+                    <textarea readonly id="javascript-code" style="min-height:140px;"></textarea>
+                </div>
+                <div id="css-code">
+                    <label for="css-code">CSS:</label>
+                    <br />
+                    <textarea readonly id="css-code" style="min-height:160px;">
+                        div.smoothie-chart-tooltip {
+                        background: #444;
+                        padding: 1em;
+                        margin-top: 20px;
+                        font-family: consolas;
+                        color: white;
+                        font-size: 10px;
+                        pointer-events: none;
+                        }
+                    </textarea>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <div class="realtimeatt" style="width: 100%; height:300px">
+            <canvas style="width:100%;height:100%;position:relative"></canvas>
+            <button>Append point</button>
+            <button>Replay</button>
+            <button>Reset</button>
+        </div>
+
+
+        <div>
+            <style type="text/css">
+                .quiz-chartTip {
+                    padding: 5px 10px;
+                    border: 1px solid rgba(0,0,0,.1);
+                    border-radius: 4px;
+                    background-color: rgba(255,255,255,.9);
+                    box-shadow: 3px 3px 10px rgba(0,0,0,.1);
+                    position: absolute;
+                    z-index: 50;
+                    max-width: 250px;
+                }
+
+                .quiz-graph {
+                    padding: 10px;
+                    height: 370px;
+                    width: 100%;
+                }
+
+                    .quiz-graph .x-labels {
+                        text-anchor: middle;
+                    }
+
+                    .quiz-graph .y-labels {
+                        text-anchor: end;
+                    }
+
+                    .quiz-graph .quiz-graph-grid {
+                        stroke: #ccc;
+                        stroke-dasharray: 0;
+                        stroke-width: 1;
+                    }
+
+                .label-title {
+                    text-anchor: middle;
+                    text-transform: uppercase;
+                    font-size: 12px;
+                    fill: gray;
+                }
+
+                .quiz-graph-dot, .quiz-graph-start-dot {
+                    fill: rgba(0,112,210,1);
+                    stroke-width: 2;
+                    stroke: white;
+                }
+            </style>
+
+            <div class="slds-p-top--medium">
+                <div>
+                    <svg version="1.2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="quiz-graph">
+                        <defs>
+                            <pattern id="grid" width="50" height="50" patternunits="userSpaceOnUse">
+                                <path d="M 50 0 L 0 0 0 50" fill="none" stroke="#e5e5e5" stroke-width="1"></path>
+                            </pattern>
+                        </defs>
+                        <rect x="50" width="calc(100% - 50px)" height="300px" fill="url(#grid)" stroke="gray"></rect>
+
+                        <g class="label-title">
+                            <text x="-160" y="5" transform="rotate(-90)">Participants</text>
+                        </g>
+                        <g class="label-title">
+                            <text x="50%" y="350">Questions</text>
+                        </g>
+                        <g class="x-labels">
+                            <text x="150" y="320">Q1</text>
+                            <text x="250" y="320">Q2</text>
+                            <text x="350" y="320">Q3</text>
+                            <text x="450" y="320">Q4</text>
+                            <text x="550" y="320">Q5</text>
+                            <text x="650" y="320">Q6</text>
+                            <text x="750" y="320">Complited</text>
+                        </g>
+                        <g class="y-labels">
+                            <text x="42" y="5">300</text>
+                            <text x="42" y="55">250</text>
+                            <text x="42" y="105">200</text>
+                            <text x="42" y="155">150</text>
+                            <text x="42" y="205">100</text>
+                            <text x="42" y="255">50</text>
+                            <text x="42" y="305">0</text>
+                        </g>
+                        <lineargradient id="grad" x1="0%" y1="0%" x2="0%" y2="100%">
+                            <stop offset="0%" style="stop-color:rgba(99,224,238,.5);stop-opacity:1"></stop>
+                            <stop offset="100%" style="stop-color:white;stop-opacity:0"></stop>
+                        </lineargradient>
+                        <polyline fill="url(#grad)" stroke="#34becd" stroke-width="0" points="
+                                  50,300
+                                  51,0
+                                  150,100
+                                  250,80
+                                  350,160
+                                  450,100
+                                  550,100
+                                  650,150
+                                  750,200
+                                  750,300
+                                  "></polyline>
+
+                        <polyline fill="none" stroke="#34becd" stroke-width="2" points="
+                                  50,0
+                                  150,100
+                                  250,80
+                                  350,160
+                                  450,100
+                                  550,100
+                                  650,150
+                                  750,200
+                                  "></polyline>
+                        <g>
+                            <circle class="quiz-graph-start-dot" cx="50" cy="0" data-value="7.2" r="6"></circle>
+                            <circle class="quiz-graph-dot" cx="150" cy="100" data-value="8.1" r="6" q-title="Q1" answer-count="200" percent-value="66%"></circle>
+                            <circle class="quiz-graph-dot" cx="250" cy="80" data-value="7.7" r="6" q-title="Q2" answer-count="220" percent-value="73%"></circle>
+                            <circle class="quiz-graph-dot" cx="350" cy="160" data-value="6.8" r="6" q-title="Q3" answer-count="140" percent-value="46%"></circle>
+                            <circle class="quiz-graph-dot" cx="450" cy="100" data-value="6.7" r="6" q-title="Q4" answer-count="200" percent-value="66%"></circle>
+                            <circle class="quiz-graph-dot" cx="550" cy="100" data-value="6.7" r="6" q-title="Q5" answer-count="200" percent-value="66%"></circle>
+                            <circle class="quiz-graph-dot" cx="650" cy="150" data-value="6.7" r="6" q-title="Q6" answer-count="150" percent-value="50%"></circle>
+                            <circle class="quiz-graph-dot" cx="750" cy="200" data-value="6.7" r="6" q-title="Complited Quiz" answer-count="100" percent-value="33%"></circle>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+</div>
+
+
+
+
+<template class="home-page__content messages-page">
+    <div class="container-fluid h-100">
+        <div class="row px-0 h-100">
+            <!-- start message list section  -->
+            <div class="col-12 col-md-4 col-lg-5 col-xl-3 px-0 messages-page__list-scroll">
+
+
+
+                <div class="messages-page__list pb-5 px-1 px-md-3"></div>
+
+
+
+
+                <!-- end message list section  -->
+                <!-- start content section  -->
+                <div class="chat col-12 col-md-8 col-lg-7 col-xl-6 px-0 pl-md-1" style="height: 100%;display:block">
+                    <div class="chat__container">
+
+                        <div class="chat__wrapper pt-2 pt-mb-2 pb-md-3">
+                            <div class="chat__messaging messaging-member--online pb-2 pb-md-2 pl-2 pl-md-4 pr-2">
+                                <div class="chat__previous d-flex d-md-none">
+                                    <i class="ti-arrow-left mr-2"></i>
+                                </div>
+                                <div class="chat__notification d-flex d-md-none chat__notification--new">
+                                    <span>1</span>
+                                </div>
+                                <div class="chat__infos pl-2 pl-md-0">
+                                    <div class="chat-member__wrapper" data-online="true">
+                                        <div class="chat-member__avatar">
+                                            <img src="https://randomuser.me/api/portraits/thumb/women/56.jpg" alt="Jenny Smith" loading="lazy" />
+                                            <div class="user-status user-status--large"></div>
+                                        </div>
+                                        <div class="chat-member__details">
+                                            <span class="chat-member__name">Jenny Smith</span>
+                                            <span class="chat-member__status">Online</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="chat__actions mr-2 ">
+                                    <ul class="m-0">
+                                        <li>
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon" viewbox="0 0 48 48">
+                                                <path d="M38.4,48c-2.1,0-5.1-.8-9.5-3.2a62.9,62.9,0,0,1-14.6-11A61.7,61.7,0,0,1,3.2,19C-.9,11.8-.3,8.5.7,6.4A9.7,9.7,0,0,1,4.8,2,21.1,21.1,0,0,1,7.8.4h.3c1.8-.7,3-.3,4.9,1.5h.1a40.1,40.1,0,0,1,5.4,8.2c1.3,2.6,1.6,4.3-.2,6.9l-.5.6c-.8,1-.8,1.2-.8,1.6s1.9,3.4,5.2,6.7S28,30.8,28.8,31s.6,0,1.6-.8l.7-.4c2.5-1.9,4.2-1.6,6.8-.3A40.6,40.6,0,0,1,46.1,35h.1c1.8,1.9,2.2,3.1,1.5,4.9v.2h0a21.1,21.1,0,0,1-1.6,3,10,10,0,0,1-4.3,4.1A7.7,7.7,0,0,1,38.4,48ZM9.5,4.1H9.2L6.9,5.4H6.8A6.3,6.3,0,0,0,4.3,8.1c-.3.7-1.2,2.6,2.4,9A58.9,58.9,0,0,0,17.1,30.9,58.2,58.2,0,0,0,30.9,41.3c6.4,3.6,8.4,2.7,9.1,2.4a6.7,6.7,0,0,0,2.5-2.5.1.1,0,0,0,.1-.1c.5-.8.9-1.6,1.3-2.4v-.2l-.5-.6a35.4,35.4,0,0,0-7.3-4.8c-1.7-.8-1.8-.8-2.7-.1l-.6.4A5.3,5.3,0,0,1,28,34.9c-2.9-.6-7.4-4.9-8.7-6.2s-5.6-5.8-6.2-8.7.6-3.6,1.5-4.8l.4-.6c.7-.9.8-1-.1-2.7a35.4,35.4,0,0,0-4.8-7.3Z" fill="#f68b3c"></path>
+                                            </svg>
+                                        </li>
+                                        <li>
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon" viewbox="0 0 46.8 47.4">
+                                                <path d="M35.8,47.4H11a11,11,0,0,1-11-11V11.6A11,11,0,0,1,11,.6h8.8a2,2,0,1,1,0,4H11a7,7,0,0,0-7,7V36.4a7,7,0,0,0,7,7H35.8a7,7,0,0,0,7-7v-9a2,2,0,1,1,4,0v9A11,11,0,0,1,35.8,47.4Z" fill="#f68b3c"></path>
+                                                <path d="M36.6,20.4A10.2,10.2,0,1,1,46.8,10.2,10.2,10.2,0,0,1,36.6,20.4ZM36.6,4a6.2,6.2,0,1,0,6.2,6.2A6.2,6.2,0,0,0,36.6,4Z" fill="#f68b3c"></path>
+                                            </svg>
+                                        </li>
+                                        <li class="chat__details d-flex d-xl-none">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon" viewbox="0 0 42.2 11.1">
+                                                <g>
+                                                    <circle cx="5.6" cy="5.6" r="5.6" fill="#d87232"></circle>
+                                                    <circle cx="21.1" cy="5.6" r="5.6" fill="#d87232"></circle>
+                                                    <circle cx="36.6" cy="5.6" r="5.6" fill="#d87232"></circle>
+                                                </g>
+                                            </svg>
+                                        </li>
+                                    </ul>
+
+                                </div>
+                            </div>
+                            <div class="chat__content pt-4 px-3"></div>
+
+
+
+                        </div>
+
+                    </div>
+                </div>
+                <!-- end content section  -->
+                <!-- start infos section  -->
+                <div class="col-12 col-md-5 col-lg-4 col-xl-3 px-4 px-sm-5 px-lg-4 user-profile">
+                    <div class="user-profile__close d-flex d-xl-none">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon" viewbox="0 0 38.8 38.9">
+                            <g>
+                                <path d="M2,38.9a1.9,1.9,0,0,1-1.4-.5,2.1,2.1,0,0,1,0-2.9L35.4.6a1.9,1.9,0,0,1,2.8,0,1.9,1.9,0,0,1,0,2.8L3.4,38.4A1.9,1.9,0,0,1,2,38.9Z" fill="#d87232"></path>
+                                <path d="M36.8,38.9a1.9,1.9,0,0,1-1.4-.5L.6,3.4A1.9,1.9,0,0,1,.6.6,1.9,1.9,0,0,1,3.4.6L38.2,35.5a2.1,2.1,0,0,1,0,2.9A1.9,1.9,0,0,1,36.8,38.9Z" fill="#d87232"></path>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="user-profile__wrapper">
+                        <div class="user-profile__avatar">
+                            <img src="https://randomuser.me/api/portraits/women/56.jpg" alt="Jenny Smith" loading="lazy" />
+                        </div>
+                        <div class="user-profile__details mt-1">
+                            <span class="user-profile__name">Jenny Smith</span>
+                            <span class="user-profile__phone">(025) 015-234-567</span>
+                            <span class="user-profile__location">New York, United States</span>
+                        </div>
+                        <div class="user-profile__description">
+                            <p>Fly me to the moon If you feel like your life is a routine, step back and take a deep breath.</p>
+                        </div>
+                        <div class="user-profile__learning mt-4">
+                            <span class="user-profile__label">Social Medias</span>
+                            <ul class="user-profile__tags user-profile__tags--primary mt-2">
+                                <li>
+                                    <a href="https://www.instagram.com/tiantsoa_sh/" target="_blank">Instagram</a>
+                                </li>
+                                <li>
+                                    <a href="https://www.linkedin.com/in/tiantsoa-rabemananjara-254655152/" target="_blank">Linkedin</a>
+                                </li>
+                                <li>
+                                    <a href="https://codepen.io/tiantsoa" target="_blank">Codepen</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="user-profile__hobbies">
+                            <span class="user-profile__label">Activities</span>
+                            <ul class="user-profile__tags user-profile__tags--secondary mt-2">
+                                <li>Biking</li>
+                                <li>Cooking</li>
+                                <li>Traveling</li>
+                                <li>Grahic design</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- end infos section  -->
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+
+        function dog(){
+            const $chat = $(".chat");
+            const $profile = $(".user-profile");
+
+            /* ===================================
+                Screen resize handler
+            ====================================== */
+            const smallDevice = window.matchMedia("(max-width: 767px)");
+            const largeScreen = window.matchMedia("(max-width: 1199px)");
+            smallDevice.addEventListener("change", handleDeviceChange);
+            largeScreen.addEventListener("change", handleLargeScreenChange);
+
+            handleDeviceChange(smallDevice);
+            handleLargeScreenChange(largeScreen);
+
+            function handleDeviceChange(e) {
+                if (e.matches) chatMobile();
+                else chatDesktop();
+            }
+
+            function handleLargeScreenChange(e) {
+                if (e.matches) profileToogleOnLarge();
+                else profileExtraLarge();
+            }
+
+            function chatMobile() {
+                $chat.addClass("chat--mobile");
+            }
+
+            function chatDesktop() {
+                $chat.removeClass("chat--mobile");
+            }
+
+            function profileToogleOnLarge() {
+                $profile.addClass("user-profile--large");
+            }
+
+            function profileExtraLarge() {
+                $profile.removeClass("user-profile--large");
+            }
+
+            /* ===================================
+                Events
+            ====================================== */
+
+            $(".messaging-member").click(function () {
+                $chat.fadeIn();
+                $chat.addClass("chat--show");
+            });
+
+            $(".chat__previous").click(function () {
+                $chat.removeClass("chat--show");
+            });
+
+            $(".chat__details").click(function () {
+                $profile.fadeIn();
+                $profile.addClass("user-profile--show");
+            });
+
+            $(".user-profile__close").click(function () {
+                $profile.removeClass("user-profile--show");
+            });
+
+            $(".messages-page__dark-mode-toogler").click(function () {
+                $("body").toggleClass("dark-mode");
+            });
+        }
+    </script>
+</template>
+
+
+
+
+
+
+
+<script type="text/javascript">
+    //id="M6WalJWdpZqPnXiMpZuTl6WomDA5SVBcZ2Z1amBmNKWalJWdpZqPnXiMpZuUmaWhlDA5TldbYGFybWdhNe7Mw9rV0JDRzbG454/GzOIwOU9WWmFgc2xmYDbuzMPa1dCQxdqugerPMDlMVVliY3BvZWM="
+    (function (a) {
+        //debugger;
+        if (!tabglobalJS.hasOwnProperty('JS_att')) tabglobalJS['JS_att'] = a();//pass pubArgs later if need
+    })(function () {
+        "use strict";
+        var myUI
+            , _init = function (frmEL, cb, tabId, clickArgs, tabProps) {
+
+                //debugger;
+
+                var opts =//atmark0
+                            {ua:1,__u:"",};
+
+                myUI = new tabglobalJS['JS_JS_att'](opts);
+
+                if (!clickArgs) {
+                    if (qryU.sfO) {
+                        clickArgs = { 'demo': qryU.sfO.demo };
+                    };
+                };
+                //
+                w0w['_gsC'](srcpf$ + '/media/js/smoothie.js' + src$id, 'js', function () {
+
+                    myUI.init(frmEL, cb, tabId, clickArgs, tabProps);
+
+                }, 'smoothie.js.js');
+                //
+            }
+            , _dispose = function () { myUI.dispose(); };
+
+        return {
+            init: _init,
+            dispose: _dispose
+        };
+    });
+
+</script>
+

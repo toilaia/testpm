@@ -1,0 +1,1274 @@
+
+
+<div class="dx-viewport dx-device-desktop dx-device-generic dx-theme-generic dx-theme-generic-typography dx-color-scheme-dark">
+    <div class="cssprofile initloading">
+        <div id="drawer_devJS_empprofile">
+            <div style="padding:10px">
+                <div id="toolbar_devJS_empprofile"></div>
+                <div class='nutimg'>
+                    <div class='nutimgx'></div>
+                    <div class='fa fa-times fuckcam' style="display:none"></div>
+                </div>
+                <div id="form_devJS_empprofile" class="devex"></div>
+            </div>
+        </div>
+        <div style="text-align:center">
+            <ul class="pagination modal-5">
+                <lo class="textonly">
+                    <a href="javascript:void(0)" class="prev fa fa-arrow-left"></a>
+                </lo>
+                <lo class="textonly">
+                    <a href="javascript:void(0)">Nhân viên</a>
+                </lo>
+                <lo>
+                    <a href="javascript:void(0)" class="active">
+                        0 / 0
+                    </a>
+                </lo>
+                <lo class="textonly">
+                    <a href="javascript:void(0)">
+                        Tổng số                    </a>
+                </lo>
+                <lo class="textonly">
+                    <a href="javascript:void(0)" class="next fa fa-arrow-right"></a>
+                </lo>
+            </ul>
+            <div class="editcmdbottom" style="text-align:center;display:none">
+                <button type="button" class="btn btn-primary nutsave">
+                    <i class="fa fa-floppy-o"></i>                 </button>
+                <button type="button" class="btn btn-secondary nutcancel">
+                    <i class="fa fa-undo"></i>                 </button>
+            </div>
+        </div>
+    </div>
+    <style type="text/css">
+    </style>
+    <script type="text/javascript">
+        //tabglobalJS['JS_devJS_empprofile'] = (function () {
+        //    "use strict";
+        //    function privateSharedFunction() {
+        //    }
+        //    function MyObj(opts) { // constructor
+        //        var _, drawer, $frm, cmds = { bNEW_dis: true, bUPT_dis: true, bDEL_dis: true }, saveHWND = null, isEdit = false, $mainO, thatD = this,
+        //             db = opts.db, jdat = opts.jdat, $list = opts.$list, lan = opts.lan;
+        //        this.init = function (frmEL, cb, tabId) {
+        //            //
+        //            var _, app_containerW = app_container.innerWidth(), withCountByDEV = 0
+        //                , DynFormContentReady
+        //                , DynBeforeSend
+        //                , DynGridContentReady = function (e) {
+        //                    DynGridContentReady = null;
+        //                    $list.option('focusedRowIndex', 0);// first load set focus row 0
+        //                    frmEL.find('.cssprofile').removeClass('initloading');
+        //                    //
+        //                    if (cb) cb();
+        //                }
+        //                , addNew = function () {
+        //                    //
+        //                    frmEdit(true);
+        //                    //
+        //                    var ds = {};
+        //                    $frm._bkDS = $frm.option('formData');
+        //                    $.each($frm._bkDS, function (n, v) {
+        //                        ds[n] = '';
+        //                    });
+        //                    ds['birthday'] = new Date('2000/1/1');// DevExpress.localization.formatDate(new Date('2000/1/1'), "yyyy-MM-dd");
+        //                    ds['hireday'] = new Date();//DevExpress.localization.formatDate(new Date(), "yyyy-MM-dd");
+        //                    ds['gender'] = 1;
+        //                    ds['marital'] = 10;
+        //                    ds['secid'] = 1006;
+        //                    ds['posid'] = 2003;
+        //                    ds['pid'] = 0;
+        //                    $frm.option('formData', ds);
+        //                    //
+        //                    var result = $frm.validate();
+        //                    //
+        //                    saveHWND = doIns;
+        //                    srclocked(false);
+        //                    isEdit = true;
+        //                }
+        //                , Edit = function () {
+        //                    srclocked(true);
+        //                    //
+        //                    drawer.hide();
+        //                    cmds.drawer_toggle.option('disabled', true);
+        //                    var ds = {};
+        //                    $frm._bkDS = $.extend({}, $frm.option('formData'));
+        //                    var result = $frm.validate();
+        //                    //
+        //                    isEdit = true;
+        //                    frmEL.find('.cssprofile').addClass('editmode');
+        //                    saveHWND = doUpt;
+        //                    editorRO(false);
+        //                    srclocked(false);
+        //                    //
+        //                };
+
+        //            function ValidateAfterDB() {
+        //                if ($list._lastestERR) {//da dem ve gan vao bien nay
+        //                    $.each($list._lastestERR.dataerr, function (i, v) {
+        //                        var va = $frm.getEditor(v['F']).element().dxValidator("instance");
+        //                        if (va) {
+        //                            var cusAC = va._validationRules[0];
+        //                            cusAC.message = lan['js_007_' + v['F']];
+        //                            cusAC.isValid = false;
+        //                            va.validate();
+        //                            cusAC.isValid = true;
+        //                            $frm._hasERR = true;
+        //                        };
+        //                    });
+        //                };
+        //                $list._lastestERR = null;//reset
+        //                toastMsg(lan.js_007_11, 'error');
+        //                srclocked(false);
+        //            }
+
+        //            function DefDateVal(e) {
+        //                var __ = function (d) {
+        //                    return DevExpress.localization.formatDate(d, "yyyy-MM-dd");
+        //                }
+        //                if (isEdit) {
+        //                    var isValid = e.value;
+        //                    if (isValid) {
+        //                        try {
+        //                            isValid = new Date(e.value);
+        //                            isValid = is$Date(__(isValid).split('-'));
+        //                        } catch (err) {
+        //                            isValid = false;
+        //                        }
+        //                    };
+        //                    if (!isValid) {
+        //                        var dogV = new Date(e.previousValue);
+        //                        if (!dogV || !is$Date(__(dogV).split('-'))) {
+        //                            dogV = new Date();
+        //                        };
+        //                        e.component.option('value', __(dogV));
+        //                    };
+        //                }
+        //            };
+
+        //            function editorRO(state) {
+        //                $.each($frm._itemsRunTimeInfo.getItems(), (function (i, a) {
+        //                    if (a.widgetInstance) {
+        //                        a.widgetInstance.option('readOnly', state);
+        //                    }
+        //                }));
+        //            }
+        //            function cmdState(rowCount, frmMode) {
+        //                frmMode = true;
+        //                cmds.bNEW_dis = !frmMode; cmds.btnNEW.option('disabled', !frmMode);
+        //                cmds.bUPT_dis = !(frmMode && rowCount); cmds.btnUPT.option('disabled', cmds.bUPT_dis);
+        //                cmds.bDEL_dis = !(frmMode && rowCount); cmds.btnDEL.option('disabled', cmds.bDEL_dis);
+        //                cmds.btnIMG.option('visible', !cmds.bDEL_dis);
+        //            }
+        //            function frmEdit(mode) {
+        //                if (mode) drawer.hide();
+        //                frmEL.find('.cssprofile')[(mode ? 'add' : 'remove') + 'Class']('editmode');
+        //                cmds.drawer_toggle.option('disabled', mode);
+        //                editorRO(!mode);
+        //            }
+
+        //            frmEL.find('.pagination.modal-5').on('click', 'a', function (e) {
+        //                if ($(this).hasClass('next')) {
+        //                    doNavigate(1);
+        //                } else if ($(this).hasClass('prev')) {
+        //                    doNavigate(-1);
+        //                };
+        //            });
+
+        //            function doNavigate(offset) {
+        //                var I = $list.option('focusedRowIndex'), pageS = $list.pageSize(), pageI = $list.pageIndex(), totalR = $list.totalCount(),
+        //                    diffPage = function (focusRow) {
+        //                        $list.isPreventFocusedRowChanged = true;//1. prevent
+        //                        DynGridContentReady = function (e) {
+        //                            DynGridContentReady = null;//reset
+        //                            $list.isPreventFocusedRowChanged = false; //2. allow
+        //                            $list.option('focusedRowIndex', focusRow);
+        //                        };
+        //                    };
+        //                if (offset == 1) {
+        //                    if (I == pageS - 1 && pageI < $list.pageCount() - 1) {
+        //                        diffPage(0);
+        //                        $list.pageIndex(pageI + 1);
+        //                    } else if (pageS * pageI + I < totalR - 1) {
+        //                        $list.option('focusedRowIndex', I + 1);
+        //                    };
+        //                } else {
+        //                    if (I == 0 && pageI > 0) {
+        //                        diffPage(pageS - 1);
+        //                        $list.pageIndex(pageI - 1);
+        //                    } else if (I > 0) {
+        //                        $list.option('focusedRowIndex', I - 1);
+        //                    };
+        //                };
+        //            };
+        //            function doDEL(e) {
+        //                $list.option('loadPanel.enabled', false);
+        //                var dxDialogPromise = devDlg(4, lan.js_007_031, lan.js_007_31);
+        //                e.cancel = $.Deferred(function (deferred) {
+        //                    dxDialogPromise.show().done(function (rst) {
+        //                        if (rst == 6) {//ok
+        //                            srclocked(true);
+        //                            setTimeout(function () {
+        //                                var dataSource = $list.getDataSource();
+        //                                dataSource.store().remove(e.key).then(function (res) {
+        //                                    var cachItems = $list._controllers.data._dataSource._cachedStoreData;
+        //                                    if (cachItems) {
+        //                                        cachItems = $.grep(cachItems, function (el, i) {
+        //                                            return el.id != e.key;
+        //                                        });
+        //                                        DynBeforeSend = function (operation, ajaxSettings) { DynBeforeSend = null; ajaxSettings.iniDAT = cachItems; };
+        //                                    };
+        //                                    DynGridContentReady = function (e) {
+        //                                        DynGridContentReady = null;
+        //                                        _onContentReady(e);
+        //                                        toastMsg(lan.js_007_32, 'success');
+        //                                        $list.option('loadPanel.enabled', true);
+        //                                        srclocked(false);
+        //                                    }
+        //                                    dataSource.reload();
+        //                                });
+        //                            }, 50);
+        //                        };
+        //                        deferred.resolve(true);
+        //                    });
+        //                }).promise();
+        //                srclocked(false);
+        //            }
+        //            function doUpt_DB(fkey, datUPT) {
+        //                var dogK = {}, dataSource = $list.getDataSource();
+        //                dogK[$list.getDataSource().key()] = fkey;
+        //                //
+
+        //            }
+        //            function doUpt(onlyImgUrl, fuckCB) {
+        //                var dogK = {}
+        //                    , datUPT = {}//$.extend({}, $frm.option('formData'));
+        //                    , oldV
+        //                    , needUPT = false
+        //                    , afterUPT = function () {
+        //                        frmEdit(false);
+        //                        toastMsg(lan.js_007_34, 'success');
+        //                        srclocked(false);
+        //                    }
+        //                    , exeUPT = function () {
+        //                        var dataSource = $list.getDataSource();
+        //                        dataSource.store().update(dogK, datUPT).then(function (res) {
+        //                            var atRow = $.grep(dataSource.items(), function (el, i) { return el.id == fkey; });
+        //                            $.extend(atRow[0], datUPT);
+        //                            //
+        //                            if (fuckCB && typeof fuckCB === "function") {
+        //                                fuckCB(res);
+        //                            } else {
+        //                                DynGridContentReady = function (e) {
+        //                                    DynGridContentReady = null;
+        //                                    afterUPT();
+        //                                };
+        //                                isEdit = false;
+        //                                $list.repaintRows([$list.getRowIndexByKey(fkey)]);
+        //                            }
+        //                        }, function () {
+        //                            ValidateAfterDB();
+        //                        })
+        //                    }
+        //                    , result;
+        //                if (onlyImgUrl == undefined) {
+        //                    result = $frm.validate();
+        //                } else {
+        //                    datUPT['img'] = onlyImgUrl;
+        //                }
+        //                if (onlyImgUrl != undefined || result.isValid) {
+        //                    var fkey = $list.option("focusedRowKey");
+        //                    if (fkey) {
+        //                        dogK[$list.getDataSource().key()] = fkey;
+        //                        if (onlyImgUrl == undefined) {
+        //                            oldV = $frm._bkDS
+        //                            $.each($frm.option('formData'), function (n, v) {
+        //                                if (oldV.hasOwnProperty(n) && oldV[n] != v) {
+        //                                    if (['offdate', 'ngaycap'].indexOf(n) != -1) {
+        //                                        datUPT[n] = validNGAY(v, cmds[n]);
+        //                                    } else {
+        //                                        datUPT[n] = v;
+        //                                    };
+        //                                    needUPT = true;
+        //                                };
+        //                            });
+        //                        } else {
+        //                            $frm.option('formData')['img'] = onlyImgUrl;
+        //                            needUPT = true;
+        //                        }
+        //                        //
+        //                        if (needUPT) {
+        //                            exeUPT();
+        //                        } else {
+        //                            afterUPT();
+        //                        }
+        //                    };
+        //                } else {
+        //                    toastMsg(lan.js_007_35, 'warning');
+        //                    srclocked(false);
+        //                }
+        //            }
+        //            function doIns() {
+        //                srclocked(true);
+        //                var result = $frm.validate();
+        //                if (result.isValid) {
+        //                    var datUPT = $.extend({}, $frm.option('formData'));
+        //                    datUPT['hireday'] = DevExpress.localization.formatDate(datUPT['hireday'], "yyyy-MM-dd");
+        //                    datUPT['birthday'] = DevExpress.localization.formatDate(datUPT['birthday'], "yyyy-MM-dd");
+        //                    datUPT['offdate'] = validNGAY(datUPT['offdate'], cmds.offdate);
+        //                    datUPT['ngaycap'] = validNGAY(datUPT['ngaycap'], cmds.ngaycap);
+
+        //                    var dataSource = $list.getDataSource();
+        //                    dataSource.store().insert(datUPT).then(function (res) {
+        //                        var cachItems = $list._controllers.data._dataSource._cachedStoreData;
+        //                        if (cachItems) {
+        //                            cachItems.push(res);
+        //                            DynBeforeSend = function (operation, ajaxSettings) { DynBeforeSend = null; ajaxSettings.iniDAT = cachItems; };
+        //                        };
+        //                        //
+        //                        $list.isPreventFocusedRowChanged = true;//1. prevent
+        //                        //
+        //                        isEdit = false;
+        //                        //
+        //                        DynGridContentReady = function (e) {
+        //                            DynGridContentReady = null;//reset
+        //                            $list._controllers.focus._navigateToRow(res.id, true).done(function (a, b, c) {
+        //                                $list.isPreventFocusedRowChanged = false; //2. allow
+        //                                if ($list.peddingFocusedRowChangedArg) {
+        //                                    _onFocusedRowChanged($list.peddingFocusedRowChangedArg);
+        //                                    $list.peddingFocusedRowChangedArg = null; // reset
+        //                                };
+        //                                frmEdit(false);
+        //                                toastMsg(lan.js_007_34, 'success');
+        //                                srclocked(false);
+        //                            });
+        //                        };
+        //                        //
+        //                        if ($list.getCombinedFilter()) {
+        //                            $list.clearFilter();
+        //                        } else {
+        //                            dataSource.reload();
+        //                        };
+        //                    }, function () {
+        //                        ValidateAfterDB();
+        //                    });
+        //                } else {
+        //                    toastMsg(lan.js_007_35, 'warning');
+        //                    srclocked(false);
+        //                }
+        //            }
+
+
+        //            $mainO = cb('dbEngine');
+        //            if (!DevExpress.data.AspNet && typeof window.aspnetdata === "function") aspnetdata($mainO);
+        //            var dburl = '/api/empprofile';
+        //            db = DevExpress.data.AspNet.createStore($.extend({
+        //                key: "id",
+        //                loadUrl: dburl,
+        //                insertUrl: dburl,
+        //                updateUrl: dburl,
+        //                deleteUrl: dburl,
+        //                onBeforeSend: function (a, b) {
+        //                    if (DynBeforeSend && typeof DynBeforeSend === "function") DynBeforeSend(a, b);
+        //                },
+        //                onAjaxError: function (e) {
+        //                    $list._lastestERR = $.extend({}, e);
+        //                    e = 'con khi ne !!!!';
+        //                },
+        //                tabId: tabId
+        //            }, db));
+
+        //            _ = new DevExpress.myUI();
+        //            var cardLayout = { state: 1, relayout: false }, doLayoutHWND = function () {
+        //                if (cardLayout.state == 1) {
+        //                    $frm.option('items', cardFields());
+        //                    cardLayout.relayout = false;
+        //                } else {
+        //                    cardLayout.relayout = true;
+        //                };
+        //            }
+        //            , $emppic = $("<img />")
+        //            , $empbg
+        //            , givemeImg = function (data) {
+        //                var imgURL = '';
+        //                if (data && data.hasOwnProperty('img') && data['img']) {
+        //                    imgURL = data['img'];
+        //                };
+        //                $emppic.attr("src", imgURL);
+        //            },
+        //            rmvImg = frmEL.find('.fuckcam');
+
+        //            $emppic.on("error", function (e) {
+        //                rmvImg.css('display', 'none');
+        //                $empbg.css({ "background-image": (!cmds.bDEL_dis) ? 'url(' + srcpf$ + '/media/images/default-user.jpg?t=' + new Date().getTime() + ')' : '' });
+        //            }).on("load", function (e) {
+        //                $empbg.css({ "background-image": 'url(' + this.src + ')' });
+        //                rmvImg.css('display', '');
+        //            });
+
+        //            frmEL.on('onActived', function (a, b) {
+        //                cardLayout.state = b.state;
+        //                if (b.state == 1 && cardLayout.relayout) {
+        //                    setTimeout(doLayoutHWND, 200);
+        //                };
+        //            });
+        //            $('#app').on('sidebar', function (a, b) {
+        //                setTimeout(function () {
+        //                    var oldCol = grpFIRST_C[_screenByW(app_containerW)], newCol = grpFIRST_C[_screenByW(app_container.innerWidth())];
+        //                    if (oldCol != newCol) {
+        //                        screenByW(app_container.innerWidth());
+        //                        doLayoutHWND();
+        //                    };
+        //                }, 10);
+        //            });
+        //            $(window).resize(function () {
+        //                var oldCol = grpFIRST_C[_screenByW(app_containerW)], newCol = grpFIRST_C[_screenByW(app_container.innerWidth())];
+        //                if (oldCol != newCol) {
+        //                    screenByW(app_container.innerWidth());
+        //                    doLayoutHWND();
+        //                };
+        //            });
+        //            var grpFIRST_C = { xs: 1, sm: 2, md: 2, lg: 3, scr: 0 }
+        //            , offDayField = function () {
+        //                return _.a({ text: lan.js_007_18 }, "offdate", _oDate(!isEdit, null), "dxDateBox", null);
+        //            }
+        //            , _oDate = function (r, v) {
+        //                var __ = {
+        //                    readOnly: r,
+        //                    calendarOptions: { min: new Date('1900/1/1'), max: new Date('2100/1/1') },
+        //                    onContentReady: function (e) { cmds[e.element.parent().data().dxFormItem.dataField] = e.component; }
+        //                };
+        //                if (v) __.onValueChanged = v;
+        //                return __;
+        //            }
+        //            , __S = function (b, os, ov, c) {
+        //                if (c) b.colSpan = c;
+        //                if (os) b.editorOptions.searchEnabled = os;
+        //                if (ov) b.editorOptions.onValueChanged = ov;
+        //                return b;
+        //            }
+        //            , grpFIRST_F = function () {
+        //                var re = {
+        //                    itemType: "group",
+        //                    colCountByScreen: grpFIRST_C,
+        //                    items: [
+        //                            _.a({ text: lan.js_007_1 }, "acno", _.o(!isEdit, null, '1 - 99999', 1, 99999), "dxNumberBox",
+        //                                    [_.v("custom", null, function () { return true; }), _.v("required", lan.js_007_2)])
+        //                            , _.a({ text: lan.js_007_3 }, "empcode", _.o(!isEdit, 20), null,
+        //                                    [_.v("custom", null, function () { return true; }), _.v("required", lan.js_007_4)])
+        //                            ,
+        //                            _.a({ text: lan.js_007_5 }, "ho", _.o(!isEdit, 50), null, [_.v("required", lan.js_007_6)])
+        //                            ,
+        //                            _.a({ text: lan.js_007_7 }, "ten", _.o(!isEdit, 50), null, [_.v("required", lan.js_007_8)])
+        //                            ,
+        //                            _.a({ text: lan.js_007_9 }, "birthday", _oDate(!isEdit, DefDateVal), "dxDateBox", null)
+        //                            ,
+        //                            _.a({ text: lan.js_007_10 }, "hireday", _oDate(!isEdit, DefDateVal), "dxDateBox", null)
+        //                            ,
+        //                            _.a({ text: lan.js_007_12 }, "gender", _.o(!isEdit, null, null, null, null, jdat.gender, 'dis', 'id'), "dxSelectBox", null)
+        //                            ,
+        //                            _.a({ text: lan.js_007_17 }, "marital", _.o(!isEdit, null, null, null, null, jdat.marr, 'dis', 'id'), "dxSelectBox", null)
+        //                    ]
+        //                };
+
+        //                grpFIRST_C.scr = grpFIRST_C[_screenByW(app_containerW)];
+        //                if (grpFIRST_C.scr != 2) {
+        //                    re.items.push(offDayField());
+        //                }
+
+        //                return re;
+        //            }
+        //            , grpSND_C = { xs: 1, sm: 2, md: 3, lg: 4, scr: 0 }
+        //            , grpSND_F = function () {
+        //                grpSND_C.scr = grpSND_C[_screenByW(app_containerW)];
+        //                var re = {
+        //                    itemType: "group",
+        //                    colCountByScreen: grpSND_C,
+        //                    items: [
+        //                        //    {//https://github.com/DevExpress-Examples/dropdownbox-how-to-filter-data-of-a-nested-widget-when-a-user-types-text-into-the-editor-t519278/blob/19.2.3%2B/jQuery/src/index.js
+        //                        //        colSpan: 2,
+        //                        //        dataField: "secid",
+        //                        //        editorType: "dxDropDownBox",
+        //                        //        editorOptions: {
+        //                        //            acceptCustomValue: true,
+        //                        //            openOnFieldClick: false,
+        //                        //            readOnly:!isEdit,
+        //                        //            valueExpr: "id",
+        //                        //            displayExpr: "dis",
+        //                        //            placeholder: "Select a value...",
+        //                        //            //showClearButton: true,
+        //                        //            dataSource: jdat.secs,
+        //                        //            contentTemplate: function (e) {
+        //                        //                var value = e.component.option("value"),
+        //                        //                    $treeView = $("<div>").dxTreeView({
+        //                        //                        dataSource: e.component.getDataSource(),
+        //                        //                        parentIdExpr: "pid",
+        //                        //                        keyExpr: "id",
+        //                        //                        displayExpr: "dis",
+        //                        //                        expandedExpr: "expa",
+        //                        //                        dataStructure: "plain",
+        //                        //                        focusStateEnabled: true,
+        //                        //                        rootValue: 0,
+        //                        //                        selectByClick: true,
+        //                        //                        selectionMode: 'single',
+        //                        //                        onContentReady: function (args) {
+        //                        //                            //syncTreeViewSelection(args.component, value);
+        //                        //                        },
+        //                        //                        //onItemClick: function (e) {
+        //                        //                        //    e.component.selectItem(e.itemData);
+        //                        //                        //},
+        //                        //                        selectNodesRecursive: false,
+        //                        //                        onItemSelectionChanged: function (args) {
+        //                        //                            var selectedKeys = args.component.getSelectedNodeKeys();
+        //                        //                            e.component.option("value", selectedKeys);
+        //                        //                        }
+        //                        //                    });
+        //                        //                //treeView = $treeView.dxTreeView("instance");
+        //                        //                e.component.on("valueChanged", function (args) {
+        //                        //                    //syncTreeViewSelection(treeView, args.value);
+        //                        //                    e.component.close();
+        //                        //                });
+        //                        //                return $treeView;
+        //                        //            }
+        //                        //            , onOpened: function (e) {
+        //                        //                e.component._popup._$popupContent.parent().addClass('frameworkpopupsel');
+        //                        //            }
+        //                        //        }
+        //                        //    }
+        //                        __S(_.a({ text: lan.js_007_14 }, "secid", _.o(!isEdit, null, null, null, null, jdat.secs, 'dis', 'id'), "dxSelectBox", null), true, function (e) {//https://js.devexpress.com/Demos/WidgetsGallery/Demo/DropDownBox/SingleSelection/jQuery/Light/
+        //                            if (isEdit && !e.value) e.component.option('value', e.previousValue);
+        //                        }, 2)
+        //                        ,
+        //                        __S(_.a({ text: lan.js_007_15 }, "posid", _.o(!isEdit, null, null, null, null, jdat.poss, 'dis', 'id'), "dxSelectBox", null), true, function (e) {
+        //                            if (isEdit && !e.value) e.component.option('value', e.previousValue);
+        //                        }, null)
+        //                        ,
+        //                        _.a({ text: "Email" }, "email", _.o(!isEdit, 45), null, null)
+        //                        ,
+        //                        _.a({ text: lan.js_007_19 }, "phone", _.o(!isEdit, 45), null, null)
+        //                        ,
+        //                        _.a({ text: lan.js_007_20 }, "cmnd", _.o(!isEdit, 20), null, null)
+        //                        ,
+        //                        _.a({ text: lan.js_007_21 }, "ngaycap", _oDate(!isEdit), "dxDateBox", null)
+        //                        ,
+        //                        _.a({ text: lan.js_007_22 }, "noicap", _.o(!isEdit, 50), null, null)
+        //                        ,
+        //                        _.a({ text: lan.js_007_16 }, "degree", _.o(!isEdit, 50, null, null, null, null, null, null), null, null)
+        //                    ]
+        //                }
+
+        //                var addrCol = (grpSND_C.scr == 4) ? 3 : 2;
+        //                if (grpFIRST_C.scr == 2) {
+        //                    re.items.push(offDayField());
+        //                }
+        //                re.items.push({
+        //                    colSpan: addrCol,
+        //                    label: { text: lan.js_007_23 },
+        //                    dataField: "address",
+        //                    editorOptions: { readOnly: !isEdit, maxLength: 200 },
+        //                })
+        //                return re;
+        //            }
+        //            , cardFields = function () {
+        //                return [{
+        //                    itemType: "group",
+        //                    cssClass: "first-group",
+        //                    colCountByScreen: {
+        //                        xs: 1,
+        //                        sm: 1, md: 4, lg: 4
+        //                    },
+        //                    items: [{
+        //                        template: function (data, $EL) {
+        //                            var div = $("<div class='row emppicleft'><div class='col-6'><div class='form-avatar'></div></div><div class='col-6 align-self-center' style='max-width:150px'><div id='btnNEW'></div><div id='btnUPT' style='margin: 10px 0px;'></div><div id='btnDEL'></div></div></div>");
+        //                            $empbg = div.find('.form-avatar');
+        //                            if (data.component._isReady) {
+        //                                givemeImg(data.component.option('formData'));
+        //                            };
+        //                            $EL.append($("<div/>").attr("class", "summary").dxValidationSummary({
+        //                                validationGroup: 'customerData'
+        //                            }), $('<div class="editcmdtop" style="margin:15px 0 0"><button type="button" class="btn btn-primary btn-sm nutsave"><i class="fa fa-floppy-o"></i> ' + lan.js_007_29 + '</button><button type="button" class="btn btn-secondary btn-sm nutcancel"><i class="fa fa-undo"></i> ' + lan.js_007_30 + '</button></div>')
+        //                            , div);
+
+        //                            div.find("#btnNEW").dxButton({
+        //                                text: lan.js_007_25, width: 100,
+        //                                disabled: cmds.bNEW_dis,
+        //                                onClick: function (e) {
+        //                                    srclocked(true);
+        //                                    setTimeout(addNew, 50);
+        //                                }, onContentReady: function (e) {
+        //                                    cmds.btnNEW = e.component;
+        //                                }
+        //                            });
+        //                            div.find("#btnUPT").dxButton({
+        //                                stylingMode: "outlined",
+        //                                type: "default",
+        //                                text: lan.js_007_26, width: 100,
+        //                                disabled: cmds.bUPT_dis,
+        //                                onClick: function (e) {
+        //                                    srclocked(true);
+        //                                    setTimeout(Edit, 50);
+        //                                }, onContentReady: function (e) {
+        //                                    cmds.btnUPT = e.component;
+        //                                }
+        //                            });
+        //                            div.find("#btnDEL").dxButton({
+        //                                stylingMode: "outlined",
+        //                                type: "danger",
+        //                                text: lan.js_007_27, width: 100,
+        //                                disabled: cmds.bDEL_dis,
+        //                                onClick: function (e) {
+        //                                    var I = $list.option('focusedRowIndex');
+        //                                    if (I >= 0) {
+        //                                        srclocked(true);
+        //                                        setTimeout(function () { $list.deleteRow(I); }, 10);
+        //                                    };
+        //                                }, onContentReady: function (e) {
+        //                                    cmds.btnDEL = e.component;
+        //                                }
+        //                            });
+
+
+        //                            //contentElement.append(
+        //                            //    $("<p />").text("Static Content"),
+        //                            //    $("<div />").attr("id", "buttonContainer").dxButton({
+        //                            //        text: "Click me",
+        //                            //        onClick: function (e) {
+        //                            //            // ...
+        //                            //        }
+        //                            //    })
+        //                            //)
+
+        //                        }
+        //                    }
+        //                    , {
+        //                        itemType: "group",
+        //                        colSpan: 3,
+        //                        items: [grpFIRST_F()]
+        //                    }]
+        //                }
+
+        //                , {
+        //                    itemType: "group",
+        //                    cssClass: "second-group",
+        //                    items: [grpSND_F()
+        //                     , {
+        //                         label: { text: lan.js_007_24 },
+        //                         dataField: "notes",
+        //                         editorType: "dxTextArea",
+        //                         editorOptions: {
+        //                             height: 70,
+        //                             readOnly: !isEdit,
+        //                             maxLength: 300
+        //                         }
+        //                     }]
+        //                }]
+
+        //            }
+        //            , screenByW = function (width) {
+        //                if (withCountByDEV != width) {
+        //                    withCountByDEV = width;
+        //                    app_containerW = app_container.innerWidth();
+        //                };
+        //                return _screenByW(app_containerW);
+        //            }
+        //            , _screenByW = function (width) {
+        //                if (width < 540) return "xs";
+        //                if (width < 800) return "sm";
+        //                if (width < 1200) return "md";
+        //                return "lg";
+        //            };
+        //            $frm = frmEL.find("#form_" + tabId).dxForm({
+        //                screenByWidth: screenByW
+        //                //formData: employee,
+        //                //showValidationSummary: true,
+        //                , validationGroup: "customerData"
+        //                , items: cardFields()
+        //                , onContentReady: function (e) {
+        //                    e.element.find('input').attr('autocomplete', 'new-password');
+        //                    if (isEdit) $frm.validate();
+        //                    if (DynFormContentReady && typeof DynFormContentReady === "function") DynFormContentReady(e);
+        //                }, onOptionChanged: function (e) {
+        //                    if (e.name === "formData") {
+        //                        givemeImg(e.value);
+        //                    }
+        //                }
+        //            }).dxForm("instance");
+
+        //            frmEL.find('.cssprofile').on('click', '[class^="editcmd"] button', function () {
+        //                if ($(this).hasClass('nutcancel')) {
+        //                    isEdit = false;
+        //                    srclocked(true);
+        //                    setTimeout(function () {
+        //                        $frm.resetValues();
+        //                        //var grp = DevExpress.validationEngine.validateGroup($frm._getValidationGroup());
+        //                        DevExpress.validationEngine.resetGroup($frm._getValidationGroup());
+
+        //                        //grp.brokenRules.forEach(function (a, i) {
+        //                        //    //a.isValid = true;
+        //                        //    //a.validator.validate();
+        //                        //    a.validator.reset();
+        //                        //});
+        //                        $frm.option('formData', $frm._bkDS);
+        //                        //$frm.validate();
+        //                        frmEdit(false);
+        //                        srclocked(false);
+        //                    }, 100);
+        //                } else if ($(this).hasClass('nutsave')) {
+        //                    if (saveHWND && typeof saveHWND === "function") { srclocked(true); setTimeout(saveHWND, 50); }
+        //                };
+        //            }).on('click', '.fuckcam', function (e) {
+        //                devDlg(4, lan.js_007_33).show().done(function (rst) {
+        //                    if (rst == 6) {
+        //                        srclocked(true);
+        //                        setTimeout(function () {
+        //                            doUpt('', function (res) {
+        //                                $emppic.attr("src", '');
+        //                                toastMsg(lan.js_007_34, 'success');
+        //                                srclocked(false);
+        //                            });
+        //                        }, 50);
+        //                    };
+        //                });
+        //            });
+
+        //            drawer = frmEL.find("#drawer_" + tabId).dxDrawer({
+        //                opened: false,
+        //                position: "top",
+        //                //height:'100%',
+        //                openedStateMode: "shrink",
+        //                closeOnOutsideClick: false,
+        //                template: function () {
+        //                    var fuck = $("<div>").dxDataGrid($.extend({
+        //                        dataSource: {
+        //                            store: db
+        //                        },
+        //                        showBorders: true,
+        //                        filterRow: { visible: true },
+        //                        focusedRowEnabled: true,
+        //                        pager: {
+        //                            showPageSizeSelector: true,
+        //                            allowedPageSizes: [20, 50, 100, 200]
+        //                        },
+        //                        loadPanel: {
+        //                            showPane: false
+        //                        },
+        //                        columns: [{
+        //                            caption: lan.js_007_1,
+        //                            dataField: "acno",
+        //                            dataType: "number",
+        //                            width: 60
+        //                        }, {
+        //                            caption: lan.js_007_3,
+        //                            dataField: "empcode",
+        //                            dataType: "string",
+        //                            width: 80
+        //                        }, {
+        //                            caption: lan.js_007_5,
+        //                            dataField: "ho",
+        //                            dataType: "string",
+        //                            width: 100
+        //                        }, {
+        //                            caption: lan.js_007_7,
+        //                            dataField: "ten",
+        //                            dataType: "string",
+        //                            width: 100
+        //                        }, {
+        //                            caption: lan.js_007_14,
+        //                            dataField: "secid",
+        //                            lookup: {
+        //                                dataSource: jdat.secs,
+        //                                displayExpr: "dis",
+        //                                valueExpr: "id"
+        //                            },
+        //                            hidingPriority: 4,
+        //                        }, {
+        //                            caption: lan.js_007_12,
+        //                            dataField: "gender",
+        //                            lookup: {
+        //                                dataSource: jdat.gender,
+        //                                displayExpr: "dis",
+        //                                valueExpr: "id"
+        //                            },
+        //                            hidingPriority: 1,
+        //                            width: 100
+        //                        }, {
+        //                            caption: lan.js_007_9,
+        //                            dataField: "birthday",
+        //                            dataType: "date",
+        //                            allowFiltering: false,
+        //                            hidingPriority: 0,
+        //                            width: 100
+        //                        }, {
+        //                            caption: lan.js_007_10,
+        //                            dataField: "hireday",
+        //                            dataType: "date",
+        //                            allowFiltering: false,
+        //                            hidingPriority: 2,
+        //                            width: 100
+        //                        }, {
+        //                            caption: lan.js_007_15,
+        //                            dataField: "posid",
+        //                            lookup: {
+        //                                dataSource: jdat.poss,
+        //                                displayExpr: "dis",
+        //                                valueExpr: "id"
+        //                            },
+        //                            hidingPriority: 3
+        //                        }]
+        //                    , editing: {
+        //                        texts: {
+        //                            confirmDeleteMessage: ''
+        //                        }
+        //                    }
+        //                    , onRowRemoving: doDEL
+        //                    , onContentReady: function (e) {
+        //                        cmdState($list.totalCount() > 0);
+        //                        cmds.clear_filter.option('visible', $list.getCombinedFilter());
+        //                        //
+        //                        //
+        //                        if (!$list._fuckContentReady) {
+        //                            $list._fuckContentReady = '1';
+        //                            setTimeout(function () {
+        //                                if (DynGridContentReady && typeof DynGridContentReady === "function") {
+        //                                    DynGridContentReady(e);
+        //                                } else {
+        //                                    _onContentReady(e);
+        //                                };
+        //                                $list._fuckContentReady = null;
+        //                            }, 50);
+        //                        };
+        //                    }
+        //                    , onFocusedRowChanged: function (e) {
+        //                        _onFocusedRowChanged(e);
+        //                    }
+        //                    }, $list));
+        //                    //
+        //                    $list = fuck.dxDataGrid("instance");
+        //                    //
+        //                    return fuck;
+        //                }
+        //            }).dxDrawer("instance");
+
+        //            function pageDIS(i, t) {
+        //                var a = frmEL.find('.pagination a.active'), p = a.closest('.modal-5').find('.prev').parent(), n = a.closest('.modal-5').find('.next').parent();
+        //                p[(t == 0 || i == 1 ? 'add' : 'remove') + 'Class']('textonly');
+        //                n[(t == 0 || i == t ? 'add' : 'remove') + 'Class']('textonly');
+        //                a.html(i + ' / ' + t);
+        //            }
+
+        //            function _onContentReady(e) {
+        //                if ($list.totalCount() == 0) {
+        //                    pageDIS(0, 0);
+        //                    $frm.option('formData', {});
+        //                } else if (!e.component.isPreventFocusedRowChanged) {
+        //                    var focusI = $list.option('focusedRowIndex');
+        //                    if (!focusI || focusI == -1) {
+        //                        $list.option('focusedRowIndex', 0);
+        //                    };
+        //                }
+        //            }
+        //            function _onFocusedRowChanged(e) {
+        //                try {
+        //                    if (e.component.isPreventFocusedRowChanged === true) {
+        //                        //console.log('peddingFocusedRowChanged: ' + new Date().getTime());
+        //                        if (e.row.key) {
+        //                            e.component.peddingFocusedRowChangedArg = e;
+        //                        };
+        //                    } else {
+        //                        //console.log('onFocusedRowChanged: ' + new Date().getTime());
+        //                        pageDIS((e.rowIndex > -1) ? (1 + e.rowIndex + ($list.pageSize() * $list.pageIndex())) : 0, $list.totalCount());
+        //                        var data = e.row.data, ds = {};
+        //                        if (data) {
+        //                            $.each(data, function (n, v) {
+        //                                if (['id', 'pid'].indexOf(n) == -1) {
+        //                                    ds[n] = v;
+        //                                };
+        //                            });
+        //                        };
+        //                        $frm.option('formData', ds);
+        //                        $list._lastkey = e.row.key;
+        //                        if ($frm._hasERR === true) $frm.validate();
+        //                    }
+        //                } catch (err) { }
+        //            }
+
+        //            frmEL.find("#toolbar_" + tabId).dxToolbar({
+        //                items: [
+        //                     {
+        //                         location: "center",
+        //                         html: "<h2>" + lan.js_007_13 + "</h2>"
+        //                         //template: function(){
+        //                         //       return $('<div class="long-title">' +
+        //                         //           '<h3>' +
+        //                         //               '<span data-lang="js_006_1"></span>' +
+        //                         //               '<span type="button" class="btn btn-outline-info btn-sm pull-right margin-left-10">' +
+        //                         //                   '<i class="ti-help"></i>' +
+        //                         //               '</span>' +
+        //                         //           '</h3>' +
+        //                         //       '</div>');
+        //                         //       }
+        //                     },
+        //                    {
+        //                        widget: "dxButton",
+        //                        location: "after",
+        //                        options: {
+        //                            visible: false,
+        //                            type: 'danger',
+        //                            stylingMode: "outlined",
+        //                            icon: "filter",
+        //                            onClick: function () {
+        //                                srclocked(true);
+        //                                setTimeout(function () {
+        //                                    DynGridContentReady = function (e) {
+        //                                        DynGridContentReady = null;//reset
+        //                                        srclocked(false);
+        //                                    };
+        //                                    $list.clearFilter();
+        //                                }, 50);
+        //                            }
+        //                            , onContentReady: function (e) {
+        //                                cmds.clear_filter = e.component;
+        //                            }
+        //                        }
+        //                    },
+        //                    {
+        //                        widget: "dxButton",
+        //                        location: "after",
+        //                        options: {
+        //                            icon: "tableproperties",
+        //                            onClick: function () {
+        //                                drawer.toggle();
+        //                            }
+        //                            , onContentReady: function (e) {
+        //                                cmds.drawer_toggle = e.component;
+        //                            }
+        //                            , elementAttr: {
+        //                                class: "showlistborder"
+        //                            }
+        //                        }
+        //                    },
+        //                    {
+        //                        location: "after",
+        //                        html: '<span type="button" class="btn btn-outline-info btn-sm pull-right margin-left-10"><i class="ti-help"></i><span class="d-none d-sm-inline">Help</span></span>'
+        //                    }
+        //                ]
+        //            });
+
+
+        //            var fileUploader = frmEL.find(".nutimgx").dxFileUploader({
+        //                multiple: false,
+        //                selectButtonText: lan.js_007_28,
+        //                showFileList: false,
+        //                accept: (Main.isMobile() ? "image/*;capture=camera" : '.png, .jpg, .jpeg'),
+        //                value: [],
+        //                uploadMode: "instantly",
+        //                onValueChanged: function (e) {
+        //                    if (e.value.length > 0) {
+        //                        cardLayout.state = 0;//disable resize card
+        //                        thatD.comm1(e.value[0], function (rst) {
+        //                            $emppic.attr("src", rst.res.data.link + '?t=' + new Date().getTime());
+        //                            doUpt(rst.res.data.link, rst._cb$);
+        //                        });
+        //                        e.component.reset();
+        //                    };
+        //                }
+        //                , onContentReady: function (e) {
+        //                    cmds.btnIMG = e.component;
+        //                }
+        //                , elementAttr: {
+        //                    class: "takeimgbtn"
+        //                }
+        //            }).dxFileUploader("instance");
+
+        //        };
+
+        //        this.dispose = function (param) {
+        //            $list.dispose(); drawer.dispose(); $frm.dispose();
+        //        };
+        //    }
+        //    MyObj.prototype.comm1 = 'quux';
+        //    return MyObj;
+        //})();
+    </script>
+    <script type="text/javascript">
+        tabglobalJS['devJS_empprofile'] = function () {
+            "use strict";
+            var myUI, jdat={
+  "secs": [
+    {
+      "id": 1002,
+      "oid": 1,
+      "pid": -1,
+      "expa": true,
+      "dis": "Ban Giám đốc"
+    },
+    {
+      "id": 1003,
+      "oid": 2,
+      "pid": 1,
+      "expa": true,
+      "dis": "Phòng kinh doanh"
+    },
+    {
+      "id": 1004,
+      "oid": 3,
+      "pid": 2,
+      "expa": true,
+      "dis": "Bộ phận Bán hàng"
+    },
+    {
+      "id": 1005,
+      "oid": 4,
+      "pid": 2,
+      "expa": true,
+      "dis": "Bộ phận Quảng cáo"
+    },
+    {
+      "id": 1006,
+      "oid": 5,
+      "pid": 1,
+      "expa": true,
+      "dis": "Phòng Điều hành"
+    },
+    {
+      "id": 1007,
+      "oid": 6,
+      "pid": 4,
+      "expa": true,
+      "dis": "Bộ phận Sản xuất"
+    },
+    {
+      "id": 1008,
+      "oid": 7,
+      "pid": 4,
+      "expa": true,
+      "dis": "Bộ phận Dịch vụ Khách hàng"
+    },
+    {
+      "id": 1009,
+      "oid": 8,
+      "pid": 1,
+      "expa": true,
+      "dis": "Phòng Hành chính"
+    },
+    {
+      "id": 1010,
+      "oid": 9,
+      "pid": 8,
+      "expa": true,
+      "dis": "Bộ phận Kế toán"
+    },
+    {
+      "id": 1011,
+      "oid": 10,
+      "pid": 9,
+      "expa": true,
+      "dis": "Bộ phận Nhân sự"
+    }
+  ],
+  "poss": [
+    {
+      "id": 2000,
+      "dis": "T.P Nhân sự"
+    },
+    {
+      "id": 2001,
+      "dis": "T.P CNTT"
+    },
+    {
+      "id": 2002,
+      "dis": "Tổng Giám đốc"
+    },
+    {
+      "id": 2003,
+      "dis": "Nhân viên"
+    },
+    {
+      "id": 2004,
+      "dis": "G.Đ Kinh doanh"
+    },
+    {
+      "id": 1005,
+      "dis": "Bộ phận Quảng cáo"
+    },
+    {
+      "id": 2006,
+      "dis": "N.V Kinh doanh"
+    }
+  ],
+  "gender": [
+    {
+      "id": 0,
+      "dis": "Nữ"
+    },
+    {
+      "id": 1,
+      "dis": "Nam"
+    }
+  ],
+  "marr": [
+    {
+      "id": 10,
+      "dis": "Độc thân"
+    },
+    {
+      "id": 11,
+      "dis": "Kết hôn"
+    },
+    {
+      "id": 12,
+      "dis": "Ly dị"
+    },
+    {
+      "id": 13,
+      "dis": "Khác"
+    }
+  ]
+},db = { }
+
+                , lan = JSON.parse(atob("eyJqc18wMDdtYXhfMzciOiIifQ==")), $list = { height: '300px',remoteOperations:false,paging:{pageSize:20}}
+
+                ,_init = function (frmEL, cb, tabId) {
+                    if (jdat) masterdat = jdat;
+                    myUI = new tabglobalJS['JS_devJS_empprofile']({ jdat: masterdat, db: db, $list: $list, lan: lan });
+                    myUI.init(frmEL, cb, tabId);
+
+                    //https://www.the-art-of-web.com/javascript/escape/
+                    myUI.comm1 = function ($IMG, deme) {
+
+                        function dosave_img(a) {
+                            var pos = $pwImg.getPos, canvas = document.createElement("canvas"), context = canvas.getContext('2d')
+                            , width = pos.w * $pwImg.scalex
+                            , height = pos.h * $pwImg.scaley
+                            , x = pos.x * $pwImg.scalex
+                            , y = pos.y * $pwImg.scaley;
+
+                            canvas.width = previewW;
+                            canvas.height = previewH;
+                            //
+                            context.drawImage($pwImg[0], x, y, width, height, 0, 0, previewW, previewH);
+                            sav_e_i(canvas.toDataURL('image/jpeg', 0.8), function (rst) {
+                                if (rst.type = 'success') {
+                                    rst._cb$ = function (res) {
+                                        puhwnd.modal('hide');
+                                        toastMsg(lan.js_007_34, 'success');
+                                    };
+                                    deme(rst);
+                                } else {
+                                    toastMsg(rst.msg, rst.type);
+                                    $(a).css('opacity', 1);
+                                };
+                            });
+                        }
+                        //
+                        srclocked(true);
+                        //
+                        var puhwnd = admin$.popup({ a: 'f', fw: 1, t: '' })
+                            , $img, $pwImg
+                            , destroyCrop, previewW = 126, previewH = 126, divaddto = puhwnd.find('.modal-body');
+
+                        divaddto.css({ 'padding': '0px', 'overflow': 'hidden', 'background-color': '#2a2a2a', 'border': 'none' }),
+                        puhwnd.find('.modal-header').remove(); puhwnd.find('.modal-footer').remove(); puhwnd.find('.modal-content').css({ 'border': 'none' });
+                        puhwnd.find('.modal-dialog').addClass('modal-dialog-centered modal-dialog-zoom');
+                        //
+                        //
+                        function cropHWND() {
+                            var jcp, ScaleREC, doPreview = function () {
+                                var pos = jcp.active.pos;
+                                var rx = previewW / pos.w;
+                                var ry = previewH / pos.h;
+                                $pwImg.css({
+                                    width: Math.round(rx * ScaleREC.w), height: Math.round(ry * ScaleREC.h),
+                                    left: -(rx * pos.x), top: -(ry * pos.y)
+                                });
+                                $pwImg.getPos = jcp.active.pos;
+                                $pwImg.scalex = jcp.scalex;
+                                $pwImg.scaley = jcp.scaley;
+                            };
+                            Jcrop.load($img[0]).then(function (img) {
+                                jcp = Jcrop.attach(img, { multi: false, handles: ['sw', 'nw', 'ne', 'se'], aspectRatio: 1 });
+                                ScaleREC = Jcrop.Rect.sizeOf(jcp.el);
+                                var dog = new Jcrop.Rect();
+                                dog.w = img.naturalWidth; dog.h = img.naturalHeight;
+                                var iniS = (dog.w > dog.h) ? dog.h : dog.w;
+                                dog.w = iniS * 0.5; dog.h = iniS * 0.5;
+                                //
+                                jcp.newWidget(dog.center(img.naturalWidth, img.naturalHeight));
+                                jcp.focus();
+                                //
+                                jcp.listen('crop.update', function (w, e) {
+                                    ScaleREC.w = w.stage.el.clientWidth;
+                                    ScaleREC.h = w.stage.el.clientHeight
+                                    doPreview();
+                                });
+                                //
+                                srclocked(false);
+                            });
+                            destroyCrop = function () {
+                                jcp.destroy();
+                            };
+                        };
+                        var def1 = new $.Deferred(),def2 = new $.Deferred();
+                        $.when(def1, def2).then(function (v1) {
+                            setTimeout(cropHWND, 1);
+                        });
+                        //
+                        puhwnd.one('shown.bs.modal', function () {
+                            var loadJscop = function () {
+                                _gsC(srcpf$ + "/media/vendor/jcrop/jcrop.js", 'js', function () {
+                                    def2.resolve('jcrop.js');
+                                }, 'jcrop.js');
+                            }
+                            if (GetIEVersion() == 11) {
+                                _gsC('https://cdn.polyfill.io/v2/polyfill.min.js', 'js', loadJscop, 'polyfill.min.js')
+                            } else {
+                                loadJscop();
+                            };
+                            //
+                            _gsC(srcpf$ + "/media/vendor/jcrop/jcrop.css", 'css', function () { });
+                        }).one('hidden.bs.modal', function (e) {
+                            if (destroyCrop && typeof destroyCrop === "function") destroyCrop(e);
+                            frmEL.trigger('onActived', { state: 1 });
+                            srclocked(false);
+                        });
+                        //
+                        var reader = new FileReader();
+                        reader.onloadend = function () {
+                            divaddto.append('<div id="editpic_container"><img/>' +
+                              '</div>' +
+                              '<div id="editgui_controls">' +
+                                '<button id="switchCameraButton" class="editpic_button" type="button" aria-pressed="false" style="display: block;"><i class="fa fa-floppy-o"></i></button>' +
+                                '<div id="takePhotoButton"><div class="form-avatar" style="margin:0"><img/></div></div>' +
+                                '<button id="toggleFullScreenButton" class="editpic_button" type="button" aria-pressed="false" style="display: block;"><i class="fa fa-times"></i></button>' +
+                              '</div>');
+                            $img = divaddto.find('#editpic_container img');
+                            $img.attr('src', reader.result).on("load", function (e) {
+                                def1.resolve('imgload');
+                            });
+                            puhwnd.modal('show');
+                            divaddto.on('click', '.editpic_button', function (e) {
+                                if (this.id == 'toggleFullScreenButton') {
+                                    puhwnd.modal('hide');
+                                } else if (this.id == 'switchCameraButton') {
+                                    srclocked(true);
+                                    var that = this;
+                                    $(that).css('opacity', 0.2);
+                                    setTimeout(function () { dosave_img(that); }, 50);
+                                }
+                            });
+                            $pwImg = divaddto.find('#takePhotoButton img');
+                            $pwImg.attr('src', reader.result)
+                        }
+                        reader.readAsDataURL($IMG);
+                    }
+
+                }
+                , _dispose = function () {
+                    myUI.dispose();
+                };
+            return { init: _init, dispose: _dispose };
+        }();
+    </script>
+
+</div>

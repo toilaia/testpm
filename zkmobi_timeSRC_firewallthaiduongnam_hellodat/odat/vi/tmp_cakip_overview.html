@@ -1,0 +1,302 @@
+﻿
+<div class="d-none">
+    <h1 id="stat_upt">cordova-plugin-inappupdates demo</h1>
+    <fieldset>
+        <legend>Methods</legend>
+        <button type="button" id="getUpdateAvailability">getUpdateAvailability</button><hr />
+        <button type="button" id="updateFlexible">updateFlexible</button>
+        <button type="button" id="updateImmediate">updateImmediate</button><hr />
+        <label>Snackbar label text:</label>
+        <input type="text" id="snackbarText" value="Actualización lista para instalar." placeholder="Snackbar text" /><br />
+        <label>Snackbar button text:</label>
+        <input type="text" id="snackbarButton" value="REINICIAR" placeholder="Button label" /><br />
+        <label>Snackbar button color</label>
+        <input type="text" id="snackbarButtonColor" value="#00E5FF" placeholder="#00E5FF" maxlength="7" /><br />
+        <button type="button" id="setSnackbarOptions">setSnackbarOptions</button>
+    </fieldset>
+
+    <fieldset>
+        <legend>Status</legend>
+        <textarea id="status" rows="5"></textarea>
+    </fieldset>
+
+    <fieldset id="versions">
+        <legend>Versions</legend>
+        <img alt="" class="info" src="img/outline_info_black_36dp.png" />
+        <label id="app_version" class="blue">App version</label>
+        <label id="plugin_version" class="blue">Plugin version</label>
+    </fieldset>
+
+    <fieldset>
+        <legend>About Plugin</legend>
+        <label>Created by Andres Zsögön. Refer to README for details.</label>
+        <hr />
+        <button type="button" id="btnGitHub">GitHub</button>
+    </fieldset>
+
+    <fieldset>
+        <legend>About Demo App</legend>
+        <label>Visit website for demo app reference.</label>
+        <hr />
+        <button type="button" id="btnWebsite">Website</button>
+        <button type="button" id="btnPluginDemos">Plugin Demos</button>
+        <button type="button" id="btnPlayStore">Play Store</button>
+    </fieldset>
+
+    <script type="text/javascript">
+
+
+            var inAPP_UPT = {
+                /* informative variables manually updated */
+                plugin_version: '2.0.5',
+                getVersion: function () {
+                    if (typeof (cordova.getAppVersion) != 'undefined') {
+                        // cordova-plugin-inAPP_UPT-version present
+                        var onSuccess = function (version) {
+                            $('#app_version').html('App version: ' + version);
+                        };
+                        cordova.getAppVersion.getVersionNumber(onSuccess);
+                        $('#plugin_version').html('Plugin version ' + inAPP_UPT.plugin_version);
+                    } else {
+                        // cordova-plugin-inAPP_UPT-version missing
+                        $('#versions').hide();
+                    }
+                },
+                init: function () {
+                    $('#status').prepend('Device is ready' + '\r\n');
+
+                    $('#getUpdateAvailability').on('click', inAPP_UPT.getUpdateAvailability);
+                    $('#setSnackbarOptions').on('click', inAPP_UPT.setSnackbarOptions);
+                    $('#updateFlexible').on('click', inAPP_UPT.updateFlexible);
+                    $('#updateImmediate').on('click', inAPP_UPT.updateImmediate);
+
+                    // Bind sample inAPP_UPT own methods
+                    $('#btnGitHub').on('click', function () {
+                        window.open('http://github.com/andreszs/cordova-plugin-in-inAPP_UPT-updates', '_system');
+                    });
+                    $('#btnWebsite').on('click', function () {
+                        window.open('https://www.andreszsogon.com/cordova-in-inAPP_UPT-update-plugin-demo-inAPP_UPT/', '_system');
+                    });
+                    $('#btnPlayStore').on('click', function () {
+                        window.open('https://play.google.com/store/apps/details?id=com.andreszs.inappupdate.demo', '_system');
+                    });
+                    $('#btnPluginDemos').on('click', function () {
+                        window.open('https://github.com/andreszs/cordova-plugin-demos', '_system');
+                    });
+                },
+                getUpdateAvailability: function () {
+
+                    debugger;
+
+                    $('#status').html('getUpdateAvailability\r\n');
+
+                    var onSuccess = function (strSuccess) {
+                        $('#status').prepend('onSuccess:' + strSuccess + '\r\n');
+                    };
+                    var onFail = function (strError) {
+                        $('#status').prepend('onError:' + strError + '\r\n');
+                    };
+
+
+                    cordova.exec(
+                        onSuccess,
+                        onFail,
+                        "InAppUpdate",
+                        "getUpdateAvailability",
+                        ["echo"]);
+
+                    //cordova.plugins.InAppUpdate.getUpdateAvailability(onSuccess, onFail);
+                },
+                setSnackbarOptions: function () {
+                    $('#status').html('setSnackbarOptions\r\n');
+
+                    var onSuccess = function (strSuccess) {
+                        $('#status').prepend('onSuccess:' + strSuccess + '\r\n');
+                    };
+                    var onFail = function (strError) {
+                        $('#status').prepend('onError:' + strError + '\r\n');
+                    };
+                    var snackbarText = $('#snackbarText').val();
+                    var snackbarButton = $('#snackbarButton').val();
+                    var snackbarButtonColor = $('#snackbarButtonColor').val();
+
+                    cordova.exec(
+                            onSuccess,
+                            onFail,
+                            "InAppUpdate",
+                            "setSnackbarOptions",
+                            [snackbarText, snackbarButton, snackbarButtonColor]);
+
+
+                },
+                updateFlexible: function () {
+                    $('#status').html('updateFlexible\r\n');
+
+                    var onSuccess = function (strSuccess) {
+                        $('#status').prepend('onSuccess:' + strSuccess + '\r\n');
+                    };
+                    var onFail = function (strError) {
+                        $('#status').prepend('onError:' + strError + '\r\n');
+                    };
+                    cordova.exec(
+                        onSuccess,
+                        onFail,
+                        "InAppUpdate",
+                        "updateFlexible",
+                        ["echo"]);
+                    //cordova.plugins.InAppUpdate.updateFlexible(onSuccess, onFail);
+                },
+                updateImmediate: function () {
+                    $('#status').html('updateImmediate\r\n');
+
+                    var onSuccess = function (strSuccess) {
+                        $('#status').prepend('onSuccess:' + strSuccess + '\r\n');
+                    };
+                    var onFail = function (strError) {
+                        $('#status').prepend('onError:' + strError + '\r\n');
+                    };
+                    cordova.exec(
+                       onSuccess,
+                       onFail,
+                       "InAppUpdate",
+                       "updateImmediate",
+                       ["echo"]);
+                    //cordova.plugins.InAppUpdate.updateImmediate(onSuccess, onFail);
+                }
+            };
+
+            /* Cordova has been loaded. Perform any initialization that requires Cordova here. */
+            //document.addEventListener('deviceready', function () {
+
+            //    inAPP_UPT.getVersion();
+            //}, false);
+
+
+    </script>
+</div>
+
+<div class="container keepbs position-relative">
+
+
+    <!-- ======= Gallery Section ======= -->
+    <section id="gallery" class="gallery pt-0 pb-3 pb-lg-4">
+
+        <div class="container-fluid">
+            <div class="gallery-slider swiper">
+                <!-- khi chạy scroll auto nó cà giật vertical scroll -->
+                <div class="swiper-wrapper">
+
+                    <div class="swiper-slide"><img lzy-img="assets/img/emp1_vn.png" class="img-fluid" alt=""></div>
+
+                    <div class="swiper-slide"><img lzy-img="assets/img/device_vn.png" class="img-fluid" alt=""></div>
+
+                    <div class="swiper-slide"><img lzy-img="assets/img/emp2_vn.png" class="img-fluid" alt=""></div>
+
+                    <div class="swiper-slide"><img lzy-img="assets/img/hol_vn.png" class="img-fluid" alt=""></div>
+
+                    <div class="swiper-slide"><img lzy-img="assets/img/ot_vn.png" class="img-fluid" alt=""></div>
+
+                    <div class="swiper-slide"><img lzy-img="assets/img/dvt_vn.png" class="img-fluid" alt=""></div>
+
+
+                    <div class="swiper-slide"><img lzy-img="assets/img/kichhoat_vn.png" class="img-fluid" alt=""></div>
+
+
+                    <div class="swiper-slide"><img lzy-img="assets/img/kichhoat1_vn.png" class="img-fluid" alt=""></div>
+
+                    <div class="swiper-slide"><img lzy-img="assets/img/kichhoat2_vn.png" class="img-fluid" alt=""></div>
+
+                    <div class="swiper-slide"><img lzy-img="assets/img/kichhoat3_vn.png" class="img-fluid" alt=""></div>
+
+                    <div class="swiper-slide"><img lzy-img="assets/img/shiftmap.png" class="img-fluid" alt=""></div>
+
+                    <div class="swiper-slide"><img lzy-img="assets/img/Untitled_black.png" class="img-fluid" alt=""></div>
+
+                    <div class="swiper-slide"><img lzy-img="assets/img/Untitled.png" class="img-fluid" alt=""></div>
+
+
+
+                </div>
+                <div class="swiper-pagination mt-lg-5"></div>
+            </div>
+
+        </div>
+    </section><!-- End Gallery Section -->
+
+
+
+
+    <style type="text/css">
+        .credit-card-inputs__fields {
+            display: flex;
+            justify-content: space-between;
+        }
+
+            .credit-card-inputs__fields input {
+                border: none;
+                outline: none;
+                background: transparent;
+                box-sizing: border-box;
+                border-bottom: 2px solid #ccc;
+                /*font-size: 1rem;*/
+                width: 23.5%;
+                text-align: center;
+                letter-spacing: 0.45rem;
+                color: #a19f9f;
+                font-family: monospace;
+                /*padding: 0.5rem 0;*/
+                transition: all 0.3s;
+            }
+
+                .credit-card-inputs__fields input:focus {
+                    border-color: lightseagreen;
+                }
+
+
+
+
+
+
+
+
+
+        .gallery {
+            overflow: hidden;
+        }
+
+            .gallery .swiper-slide {
+                transition: 0.3s;
+            }
+
+            .gallery .swiper-pagination {
+                margin-top: 20px;
+                position: relative;
+            }
+
+                .gallery .swiper-pagination .swiper-pagination-bullet {
+                    width: 12px;
+                    height: 12px;
+                    background-color: #fff;
+                    opacity: 1;
+                    border: 1px solid #5777ba;
+                }
+
+                .gallery .swiper-pagination .swiper-pagination-bullet-active {
+                    background-color: #5777ba;
+                }
+
+            .gallery .swiper-slide-active {
+                text-align: center;
+            }
+
+        #tabBODY_tmp_cakip_overview .service-grid {
+            padding-top: 2rem;
+        }
+    </style>
+    <script type="text/javascript">
+        //
+
+tabglobalJS.hasOwnProperty("tmp_cakip_overview")||(tabglobalJS.tmp_cakip_overview=function(e){"use strict";var t=function(e,t,i,o,s){function c(e,t){var n=$(e.$el);setTimeout((function(){c.lastH=n.height(),n.parent().height(c.lastH)}),t)}var a=function(e){e.stopPropagation(),e.preventDefault();var t=0;const n=e.currentTarget,i=function(){a.doggy.some((function(e,i){if(n.src==e.href)return t=i,!0}))};a.galleryLightbox?(i(),a.galleryLightbox.open(null,t),srclocked(!1)):_gsC("https://cdnjs.cloudflare.com/ajax/libs/glightbox/3.2.0/js/glightbox.min.js","js",(function(e){_gsC("https://cdnjs.cloudflare.com/ajax/libs/glightbox/3.2.0/css/glightbox.min.css","css",(function(e){a.doggy=[].slice.call(a.doggy),a.galleryLightbox=GLightbox({elements:a.doggy}),i(),a.galleryLightbox.open(null,t),srclocked(!1)}),"glightbox.min.css")}),"glightbox.min.js")};function r(e){a.doggy=e.find("[lzy-img]").map((function(e,t){t=$(t);const n=src$pf+"/odat/"+apisvr.a$.selected_language+"/"+t.attr("lzy-img");return t.attr("a"==this.tagName.toLowerCase()?"href":"src",n),{id:e,href:n,type:"image"}})),new Swiper(e,{speed:400,loop:!0,centeredSlides:!0,slidesPerView:"auto",pagination:{el:".swiper-pagination",type:"bullets",clickable:!0},breakpoints:{320:{slidesPerView:2,spaceBetween:30},640:{slidesPerView:3,spaceBetween:30},992:{slidesPerView:4,spaceBetween:30},1200:{slidesPerView:5,spaceBetween:30}},on:{init:function(e){c(this,1e3)}}}).on("click",(function(e){})).on("breakpoint",(function(e){c(this,300),c(this,500)})).on("resize",(function(){c(this,300),c(this,500)})).on("beforeTransitionStart",(function(e){})).on("slideChangeTransitionEnd",(function(e){})),e.on("click","img",(function(e){srclocked(!0),setTimeout((function(){a(e)}),100)}))}_gsC("https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css","css",(function(e){_gsC("https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/js/swiper.min.js","js",(function(e){const t=w0w.app_container.find("#tabBODY_"+elTAB[0].__actTAB),i=t.find(".gallery-slider");$.get("https://hellohrm.github.io/utils/media/utils/tikestep_s4.js.html?t="+src$id,(function(e){const i=$("<div>"+e+"</div>"),o=i.find(".customer_infor").removeClass("d-none");t.append(i),o.prependTo(t),n(o)})),setTimeout((function(){window.__copyright&&t.appendTo($(document.body)),r(i),srclocked(!1)}),300)}),"swiper.min.js")}),"swiper-min-css")},n=function(e){var t=0,n=e.find(".credit-card-inputs__fields input");n.closest(".customer_infor").removeClass("d-none");let i=window._cordovaNative&&window._cordovaNative.hasOwnProperty("hieu_comjs")?"keyup":(t=1,"keydown"),o=16,s=4;const c=function(e,i,o){(i.length>s-t||!0===o)&&($(e).index()<n.length-1&&$(e).next().focus().val(i.slice(-1)),event.preventDefault()),e.value=i.slice(0,s)},a=function(e,t,n){0!=e.selectionStart&&0!=t.length&&!0!==n||$(e).index()>0&&$(e).prev().focus()};function r(e){var t=new RegExp(".{1,"+s+"}","g"),i=e.match(t);$(i).each((function(e){$(n[e]).val(i[e])}))}n.on(i,(function(e){var t=this,i=e.which||e.charCode,o=t.value;0!=i&&229!=i||(i=o.charCodeAt(o.length-1));const s=i;if(s>=48&&s<=57||s>=96&&s<=105)c(t,o);else if(s>=65&&s<=90)c(t,o);else{if(s>=97&&s<=122)return c(t,o);8==i?a(t,o):9==i||(37==i?a(t,o,0===t.selectionEnd):39==i&&$(t).index()<n.length-1&&$(t).next().focus())}})),n.on("paste",(function(e){var t=$(this);t.val(),t.val(""),r(e.originalEvent.clipboardData.getData("text"))}));const l=function(){w0w._cordovaNative&&w0w._cordovaNative.hieu_comjs&&w0w._cordovaNative.hieu_comjs([].slice.apply(arguments,[0]))},d=function(e){var t="";try{qryU.ckey=e,t="?"+$.map(qryU,(function(e,t){return t+"="+qryU[t]})).join("&").split("#")[0]}catch(e){}window.location.replace(location.href.split("?")[0]+t)},u=n.closest(".customer_infor").on("click",".makh",(function(e){var t=$.Deferred(),i=$.Deferred(),s=setTimeout((function(){t.reject("1"),i.reject("2")}),5e3),c=n.map((function(){return this.value})).get().join("");o===c.length?(srclocked(!0),$.when(t,i).done((function(e,t){clearTimeout(s),"1"==e.rst&&l("CUSTOMER_KEY",e.dat),Swal.fire({icon:"success",text:"Kích hoạt thành công !"}).then((function(t){const n=JSON.parse(atob(decodeURIComponent(e.dat)).split(String.fromCharCode(31))[0]);d(n.ckey)})),srclocked(!1)})).fail((function(e,t){srclocked(!1),devDlg(0,_La$N("khoa|6",aLAN.___KHOA)||"Mã kích hoạt không hợp lệ!").show()})),t.promise(),i.promise(),$.post("https://lwsignin.dnd.vn/android_HRM/firebase_msg.php?XDEBUG_SESSION_START=154A53",{CUSTOMER_KEY:c},(function(e){t.resolve(e)})).fail((function(){t.reject("1")})).always((function(){})),_gsC("https://cdn.jsdelivr.net/npm/sweetalert2@10/dist/sweetalert2.min.js","js",(function(){_gsC("https://cdn.jsdelivr.net/npm/sweetalert2@10/dist/sweetalert2.min.css","css",(function(){i.resolve("sweetalert2")}),"sweetalert2.min.css")}),"sweetalert2.min.js")):devDlg(0,_La$N("khoa|6",aLAN.___KHOA)||"Mã kích hoạt không hợp lệ!").show()}));window.__copyright&&(u.find(".makh").parent().append('<a class="input-group-text btn  btn-danger resetkey  mx-1">Reset</a><a class="btn  btn-secondary thoat  mx-1">'+(_La$N("khoa|4",aLAN.___KHOA)||"Thoát")+"</a>"),u.on("click",".thoat",(function(){window.location.replace(location.href.split("#")[0])})).on("click",".resetkey",(function(e){devDlg(1,_La$N("khoa|5",aLAN.___KHOA)||"Vui lòng xác nhận trước khi Reset trở về Phần mềm dùng chung ?").show().done((function(e){"1"==e&&(l("CUSTOMER_KEY"),window.location.replace(location.href.split("?")[0]))}))}))),$("#stat_upt").on("click",(function(e){window.cordova||_gsC("file:///android_asset/www/cordova.js","js",(function(){inAPP_UPT.init()}),"cordova.js")}))};return{init:t,dispose:function(){}}}());
+    </script>
+
+</div>

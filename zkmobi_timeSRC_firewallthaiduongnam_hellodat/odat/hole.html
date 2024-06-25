@@ -1,0 +1,590 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script type="text/javascript">
+        history.pushState(null, null, 'no-back-button');
+        window.addEventListener('popstate', function (event) {
+            history.pushState(null, null, 'no-back-button');
+        });//    &lt;script src=&quot;srcpfmedia/js/admin.min.js&quot;&gt;&lt;/script&gt;
+    </script>
+</head>
+<body>
+    <div id='demo' name="demoapp" data-rawhtml="&lt;script type=&quot;text/javascript&quot;&gt;
+    //debugger;
+    var rmv = document.querySelector('.current-user');
+    rmv.parentNode.removeChild(rmv);
+
+    rmv = document.querySelector('div.wrapper');
+    rmv.parentNode.removeChild(rmv);
+
+    &lt;/script&gt;
+
+    &lt;script type=&quot;text/javascript&quot;&gt;&quot;use strict&quot;;apisvr.a$.mainHolePath='zkdev2.dnd.vn';apisvr.a$.deftab='no_def_tab';apisvr.a$.selected_language=apisvr.a$.selected_language||'vi';var aLAN=JSON.parse(atob('eyJqc18wMDNfMSI6Ilx1MDExMFx1MDBmM25nIiwianNfMDAzX29rIjoiVGhhbyB0XHUwMGUxYyBob1x1MDBlMG4gdFx1MWVhNXQuIiwianNfMDAzX2VyciI6Ilx1MDExMFx1MDBlMyBjXHUwMGYzIGxcdTFlZDdpLCB2dWkgbFx1MDBmMm5nIHRoXHUxZWVkIGxcdTFlYTFpICEiLCJqc18wMDNfaGVscCI6IlRyXHUxZWUzIGdpXHUwMGZhcCIsImpzXzAwM19jIjpbeyJpZCI6NCwiZGlzIjoiVFx1MDEwM25nIGNhIn0seyJpZCI6MzEsImRpcyI6IkNhIGtcdTAwZWRwIn0seyJpZCI6MzQsImRpcyI6IkhcdTFlYTFuIG1cdTFlZTVjIENcdTAwZjRuZyBoXHUxZWM3IHRoXHUxZWQxbmcifV0sImpzXzAwMV8xNSI6IjxiclwvPjxhIGhyZWY9amF2YXNjcmlwdDp2b2lkKCYjMzk7MCYjMzk7KT48c3Ryb25nPlBoaVx1MDBlYW4gYlx1MWVhM24gY1x1MDBlMGkgXHUwMTExXHUxZWI3dCBXaW5kb3dzIFwvPFwvc3Ryb25nPjxcL2E+IDxhIGhyZWY9amF2YXNjcmlwdDp2b2lkKCYjMzk7MCYjMzk7KT5UaGlcdTFlYmZ0IGtcdTFlYmYgZ2lcdTFlYTNpIHBoXHUwMGUxcCAmYW1wOyBQaFx1MWVhN24gbVx1MWVjMW0gXC88XC9hPiA8YSBocmVmPWphdmFzY3JpcHQ6dm9pZCgmIzM5OzAmIzM5Oyk+VGhpXHUxZWJmdCBiXHUxZWNiIGNoXHUxZWE1bSBjXHUwMGY0bmc8XC9hPiIsImpzXzAwMV8xNiI6IlRcdTAwZWFuIG5oXHUwMGUybiB2aVx1MDBlYW4iLCJqc18wMDFfMTciOiJNXHUxZWRmIHJhIGhcdTFlYmZ0IiwianNfMDAxXzE4IjoiVGh1IGdcdTFlY2RuIGxcdTFlYTFpIiwianNfMDAxXzE5IjoiVFx1MWVkNW5nIHNcdTFlZDEiLCJqc18wMDFfMjAiOiJcdTAxMTBhbmcgdFx1MWVhM2kiLCJqc18wMDFfMjEiOlsiTlx1MWVlZiIsIk5hbSJdLCJqc18wMDFfMjIiOiJOXHUwMTAzbSIsImpzXzAwMV8yMyI6Ilx1MDExMFx1MDEwM25nIEtcdTAwZmQgQ2hcdTFlYTVtIENcdTAwZjRuZyIsImpzXzAwMV8yNCI6Ik5oXHUwMGYzbSB0aGVvIiwianNfMDAxXzI1IjoiVnVpIGxcdTAwZjJuZyB4XHUwMGUxYyBuaFx1MWVhZG4gYlx1MWVhMW4gdGhcdTFlYWR0IHNcdTFlZjEgbXVcdTFlZDFuIHhcdTAwZjNhID8iLCJqc18wMDFfMjYiOiJUXHUxZWEzaSBsXHUxZWExaSIsImpzXzAwMV8yNyI6IlZ1aSBsXHUwMGYybmcgeFx1MDBlMWMgbmhcdTFlYWRuIHRyXHUwMWIwXHUxZWRiYyBraGkgdGlcdTFlYmZwIHRcdTFlZTVjIHRoXHUxZWYxYyBoaVx1MWVjN24uIiwianNfMDAxXzI4IjoiXHUxZWQyICEgXHUwMTEwXHUxZWNibmggZFx1MWVhMW5nIFx1MWVhM25oIGtoXHUwMGY0bmcgaFx1MWVlM3AgbFx1MWVjNy4iLCJqc18wMDFfMjkiOiJYXHUwMGYzYSB0XHUxZWE1dCBjXHUxZWEzIFx1MDExMWFuZyBjaFx1MWVjZG4iLCJqc18wMDFfMzAiOiJRdVx1MWVhM24gbFx1MDBmZCBcdTAxMTBcdTAxMDNuZyBuaFx1MWVhZHAiLCJqc18wMDdfMSI6Ik1cdTAwZTMgQUMiLCJqc18wMDdfMiI6IkNcdTFlYTduIG5oXHUxZWFkcCBtXHUwMGUzIEFDIiwianNfMDA3X2Fjbm8iOiJUclx1MDBmOW5nIG1cdTAwZTMgQUMiLCJqc18wMDdfMyI6Ik1cdTAwZTMgTi52aVx1MDBlYW4iLCJqc18wMDdfNCI6IkNcdTFlYTduIG5oXHUxZWFkcCBtXHUwMGUzIE5oXHUwMGUybiB2aVx1MDBlYW4iLCJqc18wMDdfZW1wY29kZSI6IlRyXHUwMGY5bmcgbVx1MDBlMyBOaFx1MDBlMm4gdmlcdTAwZWFuIiwianNfMDA3XzUiOiJIXHUxZWNkICYgbFx1MDBmM3QiLCJqc18wMDdfNiI6IkNcdTFlYTduIG5oXHUxZWFkcCBIXHUxZWNkICYgbFx1MDBmM3QiLCJqc18wMDdfNyI6IlRcdTAwZWFuIE4udmlcdTAwZWFuIiwianNfMDA3XzgiOiJDXHUxZWE3biBuaFx1MWVhZHAgVFx1MDBlYW4gbmhcdTAwZTJuIHZpXHUwMGVhbiIsImpzXzAwN185IjoiTmdcdTAwZTB5IHNpbmgiLCJqc18wMDdfMTAiOiJOZ1x1MDBlMHkgdlx1MDBlMG8iLCJqc18wMDdfMTEiOiJcdTAxMTBcdTAwZTMgY1x1MDBmMyBsXHUxZWQ3aSwgdnVpIGxcdTAwZjJuZyBraVx1MWVjM20gdHJhIGxcdTFlYTFpICEiLCJqc18wMDdfMTIiOiJHaVx1MWVkYmkgdFx1MDBlZG5oIiwianNfMDA3XzEzIjoiSFx1MWVkMyBTXHUwMWExIE5oXHUwMGUybiBWaVx1MDBlYW4iLCJqc18wMDdfMTQiOiJQaFx1MDBmMm5nIGJhbiIsImpzXzAwN18xNSI6IkNoXHUxZWU5YyB2XHUxZWU1IiwianNfMDA3XzE2IjoiQlx1MWViMW5nIGNcdTFlYTVwIiwianNfMDA3XzE3IjoiSFx1MDBmNG4gbmhcdTAwZTJuIiwianNfMDA3XzE4IjoiVGhcdTAwZjRpIHZpXHUxZWM3YyIsImpzXzAwN18xOSI6Ilx1MDExMGlcdTFlYzduIHRob1x1MWVhMWkiLCJqc18wMDdfMjAiOiJTXHUxZWQxIENNTkQiLCJqc18wMDdfMjEiOiJOZ1x1MDBlMHkgY1x1MWVhNXAiLCJqc18wMDdfMjIiOiJOXHUwMWExaSBjXHUxZWE1cCIsImpzXzAwN18yMyI6Ilx1MDExMFx1MWVjYmEgY2hcdTFlYzkiLCJqc18wMDdfMjQiOiJHaGkgY2hcdTAwZmEiLCJqc18wMDdfMjUiOiJUXHUxZWExbyBtXHUxZWRiaSIsImpzXzAwN18yNiI6IlNcdTFlZWRhIiwianNfMDA3XzI3IjoiWFx1MDBmM2EiLCJqc18wMDdfMjgiOiJIXHUwMGVjbmggXHUxZWEzbmgiLCJqc18wMDdfMjkiOiJMXHUwMWIwdSB0clx1MWVlZiIsImpzXzAwN18zMCI6IkJcdTFlY2YgcXVhIiwianNfMDA3XzMxIjoiWFx1MDBlMWMgbmhcdTFlYWRuIHhcdTAwZjNhIE5oXHUwMGUybiB2aVx1MDBlYW4iLCJqc18wMDdfMDMxIjoiTFx1MDFiMHUgXHUwMGZkIGxcdTAwZTAgYlx1MWVhMW4ga2hcdTAwZjRuZyB0aFx1MWVjMyBwaFx1MWVlNWMgaFx1MWVkM2kgbmhcdTAwZTJuIHZpXHUwMGVhbiBiXHUxZWNiIHhcdTAwZjNhICEiLCJqc18wMDdfMzIiOiJIb1x1MDBlMG4gdFx1MWVhNXQgeFx1MDBmM2EgbmhcdTAwZTJuIHZpXHUwMGVhbiAhIiwianNfMDA3XzMzIjoiQlx1MWVhMW4gY2hcdTFlYWZjIGNoXHUxZWFmbiBsXHUwMGUwIG11XHUxZWQxbiB4XHUwMGYzYSBoXHUwMGVjbmggTmhcdTAwZTJuIHZpXHUwMGVhbj8iLCJqc18wMDdfMzQiOiJUaGFvIHRcdTAwZTFjIGhvXHUwMGUwbiB0XHUxZWE1dC4iLCJqc18wMDdfMzUiOiJWdWkgbFx1MDBmMm5nIFx1MDExMWlcdTFlYzFuIFx1MDExMVx1MWVhN3kgXHUwMTExXHUxZWU3IHRyXHUwMWIwXHUxZWRkbmcgY1x1MWVhN24gdGhpXHUxZWJmdC4iLCJqc18wMDdfMzYiOiJDaFx1MWVjZG4gbmhcdTAwZTJuIHZpXHUwMGVhbiIsImpzXzAwN18zNyI6Ilx1MDExMFx1MDBmM25nIiwianNfdSRyX2luZm8iOiIifQ==')),tabglobalJS={};st(&quot;removeItem&quot;,&quot;IWKFHTBZ&quot;);&lt;/script&gt;
+    &lt;script src=&quot;srcpfmedia/js/admin.min.js&quot;&gt;&lt;/script&gt;
+    &lt;div class=&quot;settings panel panel-default&quot; id=&quot;settings&quot; style=&quot;display:none&quot;&gt;
+    &lt;button ct-toggle=&quot;toggle&quot; data-toggle-class=&quot;active&quot; data-toggle-target=&quot;#settings&quot; class=&quot;btn btn-default&quot;&gt;
+    &lt;i class=&quot;fa fa-spin fa-gear&quot;&gt;&lt;/i&gt;
+    &lt;/button&gt;
+    &lt;div class=&quot;panel-heading&quot;&gt;Style Selector&lt;/div&gt;
+    &lt;div class=&quot;panel-body&quot;&gt;
+    &lt;div class=&quot;setting-box clearfix&quot;&gt;
+    &lt;span class=&quot;setting-title float-left&quot;&gt;Fixed header&lt;/span&gt;
+    &lt;span class=&quot;setting-switch float-right&quot;&gt;
+    &lt;label class=&quot;tgl&quot;&gt;
+    &lt;input type=&quot;checkbox&quot; id=&quot;fixed-header&quot; /&gt;
+    &lt;span class=&quot;tgl_body&quot;&gt;
+    &lt;span class=&quot;tgl_switch&quot;&gt;&lt;/span&gt;
+    &lt;span class=&quot;tgl_track&quot;&gt;
+    &lt;span class=&quot;tgl_bgd&quot;&gt;&lt;/span&gt;
+    &lt;span class=&quot;tgl_bgd tgl_bgd-negative&quot;&gt;&lt;/span&gt;
+    &lt;/span&gt;
+    &lt;/span&gt;
+    &lt;/label&gt;
+    &lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;setting-box clearfix&quot;&gt;
+    &lt;span class=&quot;setting-title float-left&quot;&gt;Fixed sidebar&lt;/span&gt;
+    &lt;span class=&quot;setting-switch float-right&quot;&gt;
+    &lt;label class=&quot;tgl&quot;&gt;
+    &lt;input type=&quot;checkbox&quot; id=&quot;fixed-sidebar&quot; /&gt;
+    &lt;span class=&quot;tgl_body&quot;&gt;
+    &lt;span class=&quot;tgl_switch&quot;&gt;&lt;/span&gt;
+    &lt;span class=&quot;tgl_track&quot;&gt;
+    &lt;span class=&quot;tgl_bgd&quot;&gt;&lt;/span&gt;
+    &lt;span class=&quot;tgl_bgd tgl_bgd-negative&quot;&gt;&lt;/span&gt;
+    &lt;/span&gt;
+    &lt;/span&gt;
+    &lt;/label&gt;
+    &lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;setting-box clearfix&quot;&gt;
+    &lt;span class=&quot;setting-title float-left&quot;&gt;Closed sidebar&lt;/span&gt;
+    &lt;span class=&quot;setting-switch float-right&quot;&gt;
+    &lt;label class=&quot;tgl&quot;&gt;
+    &lt;input type=&quot;checkbox&quot; id=&quot;closed-sidebar&quot; /&gt;
+    &lt;span class=&quot;tgl_body&quot;&gt;
+    &lt;span class=&quot;tgl_switch&quot;&gt;&lt;/span&gt;
+    &lt;span class=&quot;tgl_track&quot;&gt;
+    &lt;span class=&quot;tgl_bgd&quot;&gt;&lt;/span&gt;
+    &lt;span class=&quot;tgl_bgd tgl_bgd-negative&quot;&gt;&lt;/span&gt;
+    &lt;/span&gt;
+    &lt;/span&gt;
+    &lt;/label&gt;
+    &lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;setting-box clearfix&quot;&gt;
+    &lt;span class=&quot;setting-title float-left&quot;&gt;Fixed footer&lt;/span&gt;
+    &lt;span class=&quot;setting-switch float-right&quot;&gt;
+    &lt;label class=&quot;tgl&quot;&gt;
+    &lt;input type=&quot;checkbox&quot; id=&quot;fixed-footer&quot; /&gt;
+    &lt;span class=&quot;tgl_body&quot;&gt;
+    &lt;span class=&quot;tgl_switch&quot;&gt;&lt;/span&gt;
+    &lt;span class=&quot;tgl_track&quot;&gt;
+    &lt;span class=&quot;tgl_bgd&quot;&gt;&lt;/span&gt;
+    &lt;span class=&quot;tgl_bgd tgl_bgd-negative&quot;&gt;&lt;/span&gt;
+    &lt;/span&gt;
+    &lt;/span&gt;
+    &lt;/label&gt;
+    &lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;colors-row setting-box&quot;&gt;
+    &lt;div class=&quot;color-theme theme-1&quot;&gt;
+    &lt;div class=&quot;color-layout&quot;&gt;
+    &lt;label&gt;
+    &lt;input type=&quot;radio&quot; name=&quot;setting-theme&quot; value=&quot;theme-1&quot; /&gt;
+    &lt;span class=&quot;ti-check&quot;&gt;&lt;/span&gt;
+    &lt;span class=&quot;split header&quot;&gt;
+    &lt;span class=&quot;color th-header&quot;&gt;&lt;/span&gt;
+    &lt;span class=&quot;color th-collapse&quot;&gt;&lt;/span&gt;
+    &lt;/span&gt;
+    &lt;span class=&quot;split&quot;&gt;
+    &lt;span class=&quot;color th-sidebar&quot;&gt;
+    &lt;i class=&quot;element&quot;&gt;&lt;/i&gt;
+    &lt;/span&gt;
+    &lt;span class=&quot;color th-body&quot;&gt;&lt;/span&gt;
+    &lt;/span&gt;
+    &lt;/label&gt;
+    &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;color-theme theme-2&quot;&gt;
+    &lt;div class=&quot;color-layout&quot;&gt;
+    &lt;label&gt;
+    &lt;input type=&quot;radio&quot; name=&quot;setting-theme&quot; value=&quot;theme-2&quot; /&gt;
+    &lt;span class=&quot;ti-check&quot;&gt;&lt;/span&gt;
+    &lt;span class=&quot;split header&quot;&gt;
+    &lt;span class=&quot;color th-header&quot;&gt;&lt;/span&gt;
+    &lt;span class=&quot;color th-collapse&quot;&gt;&lt;/span&gt;
+    &lt;/span&gt;
+    &lt;span class=&quot;split&quot;&gt;
+    &lt;span class=&quot;color th-sidebar&quot;&gt;
+    &lt;i class=&quot;element&quot;&gt;&lt;/i&gt;
+    &lt;/span&gt;
+    &lt;span class=&quot;color th-body&quot;&gt;&lt;/span&gt;
+    &lt;/span&gt;
+    &lt;/label&gt;
+    &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;colors-row setting-box&quot;&gt;
+    &lt;div class=&quot;color-theme theme-3&quot;&gt;
+    &lt;div class=&quot;color-layout&quot;&gt;
+    &lt;label&gt;
+    &lt;input type=&quot;radio&quot; name=&quot;setting-theme&quot; value=&quot;theme-3&quot; /&gt;
+    &lt;span class=&quot;ti-check&quot;&gt;&lt;/span&gt;
+    &lt;span class=&quot;split header&quot;&gt;
+    &lt;span class=&quot;color th-header&quot;&gt;&lt;/span&gt;
+    &lt;span class=&quot;color th-collapse&quot;&gt;&lt;/span&gt;
+    &lt;/span&gt;
+    &lt;span class=&quot;split&quot;&gt;
+    &lt;span class=&quot;color th-sidebar&quot;&gt;
+    &lt;i class=&quot;element&quot;&gt;&lt;/i&gt;
+    &lt;/span&gt;
+    &lt;span class=&quot;color th-body&quot;&gt;&lt;/span&gt;
+    &lt;/span&gt;
+    &lt;/label&gt;
+    &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;color-theme theme-4&quot;&gt;
+    &lt;div class=&quot;color-layout&quot;&gt;
+    &lt;label&gt;
+    &lt;input type=&quot;radio&quot; name=&quot;setting-theme&quot; value=&quot;theme-4&quot; /&gt;
+    &lt;span class=&quot;ti-check&quot;&gt;&lt;/span&gt;
+    &lt;span class=&quot;split header&quot;&gt;
+    &lt;span class=&quot;color th-header&quot;&gt;&lt;/span&gt;
+    &lt;span class=&quot;color th-collapse&quot;&gt;&lt;/span&gt;
+    &lt;/span&gt;
+    &lt;span class=&quot;split&quot;&gt;
+    &lt;span class=&quot;color th-sidebar&quot;&gt;
+    &lt;i class=&quot;element&quot;&gt;&lt;/i&gt;
+    &lt;/span&gt;
+    &lt;span class=&quot;color th-body&quot;&gt;&lt;/span&gt;
+    &lt;/span&gt;
+    &lt;/label&gt;
+    &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;colors-row setting-box&quot;&gt;
+    &lt;div class=&quot;color-theme theme-5&quot;&gt;
+    &lt;div class=&quot;color-layout&quot;&gt;
+    &lt;label&gt;
+    &lt;input type=&quot;radio&quot; name=&quot;setting-theme&quot; value=&quot;theme-5&quot; /&gt;
+    &lt;span class=&quot;ti-check&quot;&gt;&lt;/span&gt;
+    &lt;span class=&quot;split header&quot;&gt;
+    &lt;span class=&quot;color th-header&quot;&gt;&lt;/span&gt;
+    &lt;span class=&quot;color th-collapse&quot;&gt;&lt;/span&gt;
+    &lt;/span&gt;
+    &lt;span class=&quot;split&quot;&gt;
+    &lt;span class=&quot;color th-sidebar&quot;&gt;
+    &lt;i class=&quot;element&quot;&gt;&lt;/i&gt;
+    &lt;/span&gt;
+    &lt;span class=&quot;color th-body&quot;&gt;&lt;/span&gt;
+    &lt;/span&gt;
+    &lt;/label&gt;
+    &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;color-theme theme-6&quot;&gt;
+    &lt;div class=&quot;color-layout&quot;&gt;
+    &lt;label&gt;
+    &lt;input type=&quot;radio&quot; name=&quot;setting-theme&quot; value=&quot;theme-6&quot; /&gt;
+    &lt;span class=&quot;ti-check&quot;&gt;&lt;/span&gt;
+    &lt;span class=&quot;split header&quot;&gt;
+    &lt;span class=&quot;color th-header&quot;&gt;&lt;/span&gt;
+    &lt;span class=&quot;color th-collapse&quot;&gt;&lt;/span&gt;
+    &lt;/span&gt;
+    &lt;span class=&quot;split&quot;&gt;
+    &lt;span class=&quot;color th-sidebar&quot;&gt;
+    &lt;i class=&quot;element&quot;&gt;&lt;/i&gt;
+    &lt;/span&gt;
+    &lt;span class=&quot;color th-body&quot;&gt;&lt;/span&gt;
+    &lt;/span&gt;
+    &lt;/label&gt;
+    &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div id=&quot;app&quot; style=&quot;display:none&quot; class=&quot;app-navbar-fixed app-sidebar-fixed app-sidebar-closed&quot;&gt;
+    &lt;div class=&quot;modal fade popuphwnd&quot; id=&quot;popuphwnd&quot; tabindex=&quot;-1&quot; role=&quot;dialog&quot; data-backdrop=&quot;static&quot; data-keyboard=&quot;false&quot;&gt;
+    &lt;div class=&quot;modal-dialog modal-lg&quot; role=&quot;document&quot;&gt;
+    &lt;div class=&quot;modal-content&quot;&gt;
+    &lt;div class=&quot;modal-header-full-width modal-header&quot;&gt;
+    &lt;h5 class=&quot;modal-title w-100&quot;&gt;Title&lt;/h5&gt;
+    &lt;button type=&quot;button&quot; class=&quot;close &quot; data-dismiss=&quot;modal&quot; aria-label=&quot;Close&quot;&gt;
+    &lt;span style=&quot;font-size: 1.3em;&quot; aria-hidden=&quot;true&quot;&gt;&amp;times;&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;modal-body&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;modal-footer-full-width  modal-footer&quot;&gt;
+    &lt;button id=&quot;popupdone&quot; type=&quot;button&quot; class=&quot;btn btn-primary btn-md btn-rounded&quot;&gt;Save changes&lt;/button&gt;
+    &lt;button type=&quot;button&quot; class=&quot;btn btn-secondary btn-md btn-rounded&quot; data-dismiss=&quot;modal&quot; lanf=&quot;f_003_1&quot;&gt;
+    Đ&oacute;ng                    &lt;/button&gt;
+    &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;sidebar app-aside&quot; id=&quot;sidebar&quot;&gt;
+    &lt;div class=&quot;sidebar-container perfect-scrollbar&quot;&gt;
+    &lt;nav&gt;
+    &lt;div class=&quot;search-form&quot;&gt;
+    &lt;a class=&quot;s-open&quot; href=&quot;#&quot;&gt;
+    &lt;i class=&quot;ti-search&quot;&gt;&lt;/i&gt;
+    &lt;/a&gt;
+    &lt;form class=&quot;navbar-form&quot; role=&quot;search&quot;&gt;
+    &lt;a class=&quot;s-remove&quot; href=&quot;#&quot; target=&quot;.navbar-form&quot;&gt;
+    &lt;i class=&quot;ti-close&quot;&gt;&lt;/i&gt;
+    &lt;/a&gt;
+    &lt;div class=&quot;form-group&quot;&gt;
+    &lt;input type=&quot;text&quot; class=&quot;form-control&quot; lanf=&quot;placeholderf_003_5&quot; placeholder=&quot;T&igrave;m kiếm ...&quot; /&gt;
+    &lt;button class=&quot;btn search-button&quot; type=&quot;submit&quot;&gt;
+    &lt;i class=&quot;ti-search&quot;&gt;&lt;/i&gt;
+    &lt;/button&gt;
+    &lt;/div&gt;
+    &lt;/form&gt;
+    &lt;/div&gt;
+    &lt;!--&lt;div class=&quot;navbar-title&quot;&gt;
+    &lt;span&gt;Main Navigation&lt;/span&gt;
+    &lt;/div&gt;--&gt;
+
+
+
+
+
+    &lt;ul class=&quot;main-navigation-menu&quot; style=&quot;margin:0px;&quot;&gt;
+    &lt;li&gt;
+    &lt;a id=&quot;JS_nhapxuat&quot;&gt;
+    &lt;div class=&quot;item-content&quot;&gt;
+    &lt;div class=&quot;item-media&quot;&gt;
+    &lt;i class=&quot;ti-home&quot;&gt;&lt;/i&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;item-inner&quot;&gt;
+    &lt;span class=&quot;title&quot;&gt;Overview&lt;/span&gt;
+    &lt;/div&gt;
+
+    &lt;/div&gt;
+    &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+    &lt;a id=&quot;devJS_empprofile&quot;&gt;
+    &lt;div class=&quot;item-content&quot;&gt;
+    &lt;div class=&quot;item-media&quot;&gt;
+    &lt;i class=&quot;ti-user&quot;&gt;&lt;/i&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;item-inner&quot;&gt;
+    &lt;span lanf=&quot;f_003_13&quot; class=&quot;title&quot;&gt;
+    Hồ sơ nh&acirc;n vi&ecirc;n                    &lt;/span&gt;
+    &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+    &lt;a id=&quot;JS_payrollonline&quot;&gt;
+    &lt;div class=&quot;item-content&quot;&gt;
+    &lt;div class=&quot;item-media&quot;&gt;
+    &lt;i class=&quot;ti-time&quot;&gt;&lt;/i&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;item-inner&quot;&gt;
+    &lt;span lanf=&quot;f_003_7&quot; class=&quot;title&quot;&gt;
+    T&iacute;nh C&ocirc;ng                    &lt;/span&gt;
+    &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+    &lt;a id=&quot;JS_device&quot;&gt;
+    &lt;div class=&quot;item-content&quot;&gt;
+    &lt;div class=&quot;item-media&quot;&gt;
+    &lt;i class=&quot;ti-id-badge&quot;&gt;&lt;/i&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;item-inner&quot;&gt;
+    &lt;span lanf=&quot;f_003_6&quot; class=&quot;title&quot;&gt;
+    Thiết Bị                    &lt;/span&gt;
+    &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;/a&gt;
+    &lt;/li&gt;
+
+
+
+    &lt;/ul&gt;
+
+    &lt;ol class=&quot;wrapper list-unstyled&quot;&gt;
+    &lt;li&gt;
+    &lt;a id=&quot;tmp_cakip_overview&quot; class=&quot;button-o&quot;&gt;
+    &lt;i class=&quot;ti-help&quot;&gt;&lt;/i&gt;
+    &lt;span lanf=&quot;f_003_12&quot; class=&quot;title&quot;&gt;
+    T&agrave;i liệu hướng dẫn            &lt;/span&gt;
+    &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;/ol&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    &lt;div class=&quot;wrapper&quot;&gt;
+    &lt;!--&lt;a href=&quot;javascript:void(0)&quot; onclick=&quot;admin$.mnujob(this, 'dev_hsnv');&quot; class=&quot;button-o&quot;&gt;--&gt;
+    &lt;a id=&quot;tmp_cakip_overview&quot; class=&quot;button-o&quot;&gt;
+    &lt;i class=&quot;ti-help&quot;&gt;&lt;/i&gt;
+    &lt;span lanf=&quot;f_003_12&quot; class=&quot;title&quot;&gt;
+    T&agrave;i liệu hướng dẫn                        &lt;/span&gt;
+    &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;/nav&gt;
+    &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;app-content&quot;&gt;
+    &lt;header class=&quot;navbar navbar-expand-lg navbar-light navbar-static-top&quot;&gt;
+
+    &lt;div class=&quot;navbar-header&quot;&gt;
+    &lt;a href=&quot;#&quot; id=&quot;mnucmd&quot; class=&quot;sidebar-mobile-toggler float-left d-lg-none&quot; data-toggle-class=&quot;app-slide-off&quot; data-toggle-target=&quot;#app&quot; data-toggle-click-outside=&quot;#sidebar&quot;&gt;
+    &lt;i class=&quot;ti-align-justify&quot; style=&quot;font-size:larger&quot;&gt;&lt;/i&gt;
+    &lt;/a&gt;
+    &lt;a class=&quot;navbar-brand&quot; href=&quot;javascript:void(0)&quot;&gt;
+    &lt;img src=&quot;srcpfmedia/images/hellologo.png&quot; alt=&quot;Hello&quot; width=&quot;40&quot; /&gt;
+    &lt;/a&gt;
+    &lt;a href=&quot;#&quot; class=&quot;sidebar-toggler float-right d-none d-lg-block d-xl-block&quot; data-toggle-class=&quot;app-sidebar-closed&quot; data-toggle-target=&quot;#app&quot;&gt;
+    &lt;i class=&quot;ti-align-justify&quot; style=&quot;font-size:larger&quot;&gt;&lt;/i&gt;
+    &lt;/a&gt;
+    &lt;!--&lt;a class=&quot;float-right menu-toggler d-block d-sm-none&quot; id=&quot;menu-toggler&quot; data-toggle=&quot;collapse&quot; href=&quot;.navbar-collapse&quot;&gt;
+    &lt;span class=&quot;sr-only&quot;&gt;Toggle navigation&lt;/span&gt;
+    &lt;i class=&quot;ti-view-grid&quot;&gt;&lt;/i&gt;
+    &lt;/a&gt;--&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;container-navbar-right&quot;&gt;
+    &lt;ul class=&quot;navbar-right&quot;&gt;
+    &lt;li class=&quot;dropdown&quot;&gt;
+    &lt;a href=&quot;javascript:void(0)&quot; data-parent-tab=&quot;#offTab&quot; data-tab=&quot;#off-users&quot; class=&quot;sidebar-mobile-toggler&quot; data-toggle-class=&quot;app-offsidebar-open&quot; data-toggle-target=&quot;#app&quot; data-toggle-click-outside=&quot;#off-sidebar&quot;&gt;
+    &lt;span class=&quot;hieu-badge partition-red animated infinite pulse&quot;&gt;1&lt;/span&gt;
+    &lt;i class=&quot;ti-comment animated bounce&quot;&gt;&lt;/i&gt;
+    &lt;span lanf=&quot;f_003_16&quot; class=&quot;d-none d-md-block d-lg-block d-xl-block&quot;&gt;
+    TIN NHẮN                            &lt;/span&gt;
+    &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;dropdown&quot;&gt;
+    &lt;a href=&quot;javascript:void(0)&quot; class=&quot;dropdown-toggle&quot; data-toggle=&quot;dropdown&quot;&gt;
+    &lt;i class=&quot;flag-icon flag-icon-vi&quot;&gt;&lt;/i&gt;
+    &lt;span lanf=&quot;lanCF1&quot; class=&quot;d-none d-md-block d-lg-block d-xl-block&quot;&gt;
+    Tiếng Việt                            &lt;/span&gt;
+    &lt;/a&gt;
+    &lt;div id=&quot;sellan&quot; role=&quot;menu&quot; class=&quot;dropdown-menu dropdown-menu-right dropdown-light dropdown-alignleft&quot;&gt;
+    &lt;a lang=&quot;en&quot; class=&quot;dropdown-item&quot;&gt;
+    &lt;i class='ti-check' style=&quot;visibility:hidden;&quot;&gt;&lt;/i&gt;
+    &lt;span&gt;
+    &lt;i class=&quot;flag-icon  flag-icon-en&quot;&gt;&lt;/i&gt;
+    English                                &lt;/span&gt;
+    &lt;/a&gt;
+    &lt;a lang=&quot;vi&quot; class=&quot;dropdown-item&quot;&gt;
+    &lt;i class='ti-check' style=&quot;visibility:visible;&quot;&gt;&lt;/i&gt;
+    &lt;span&gt;
+    &lt;i class=&quot;flag-icon  flag-icon-vi&quot;&gt;&lt;/i&gt;
+    Tiếng Việt                                &lt;/span&gt;
+    &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;/li&gt;
+
+    &lt;li class=&quot;dropdown current-user d-md-block d-lg-block d-xl-block&quot;&gt;
+
+    &lt;a class=&quot;dropdown-toggle&quot; data-toggle=&quot;dropdown&quot;&gt;
+
+    &lt;img src=&quot;srcpfmedia/images/lock50.png&quot; alt=&quot;Guest&quot; /&gt;
+
+    &lt;span class=&quot;username&quot;&gt;
+    &lt;i class=&quot;ti-angle-down&quot;&gt;&lt;/i&gt;
+    &lt;/span&gt;
+
+    &lt;/a&gt;
+
+    &lt;ul class=&quot;dropdown-menu dropdown-menu-right dropdown-light acclogin_menu&quot;&gt;
+
+
+    &lt;li class=&quot;dropdown-item&quot; lang=&quot;log&quot;&gt;
+    &lt;a&gt;
+    Đăng nhập                                &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;dropdown-item&quot; lang=&quot;reg&quot;&gt;
+    &lt;a&gt;
+    Đăng k&yacute;                                &lt;/a&gt;
+    &lt;/li&gt;
+
+    &lt;/ul&gt;
+
+    &lt;/li&gt;
+
+    &lt;/ul&gt;
+    &lt;/div&gt;
+
+    &lt;a class=&quot;dropdown-off-sidebar sidebar-mobile-toggler d-md-block d-lg-block&quot; data-toggle-class=&quot;app-offsidebar-open&quot; data-toggle-target=&quot;#app&quot; data-toggle-click-outside=&quot;#off-sidebar&quot;&gt;&lt;/a&gt; &amp;nbsp;
+    &lt;a class=&quot;dropdown-off-sidebar sidebar-mobile-toggler d-none d-sm-block&quot; data-toggle-class=&quot;app-offsidebar-open&quot; data-toggle-target=&quot;#app&quot; data-toggle-click-outside=&quot;#off-sidebar&quot;&gt;&amp;nbsp;&lt;/a&gt;
+
+    &lt;/header&gt;
+
+    &lt;div class=&quot;main-content&quot;&gt;
+
+    &lt;div class=&quot;toikhoqua&quot; style=&quot;display:none&quot;&gt;
+    &lt;div class=&quot;chrome-tabs&quot; style=&quot;--tab-content-margin: 9px&quot;&gt;
+    &lt;div class=&quot;chrome-tabs-content&quot;&gt;
+    &lt;!--&lt;div class=&quot;chrome-tab&quot;&gt;
+    &lt;div class=&quot;chrome-tab-dividers&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;chrome-tab-background&quot;&gt;
+    &lt;svg version=&quot;1.1&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+    &lt;defs&gt;
+    &lt;symbol id=&quot;chrome-tab-geometry-left&quot; viewbox=&quot;0 0 214 36&quot;&gt;
+    &lt;path d=&quot;M17 0h197v36H0v-2c4.5 0 9-3.5 9-8V8c0-4.5 3.5-8 8-8z&quot;&gt;&lt;/path&gt;
+    &lt;/symbol&gt;
+    &lt;symbol id=&quot;chrome-tab-geometry-right&quot; viewbox=&quot;0 0 214 36&quot;&gt;
+    &lt;use xlink:href=&quot;#chrome-tab-geometry-left&quot;&gt;&lt;/use&gt;
+    &lt;/symbol&gt;
+    &lt;clippath id=&quot;crop&quot;&gt;
+    &lt;rect class=&quot;mask&quot; width=&quot;100%&quot; height=&quot;100%&quot; x=&quot;0&quot;&gt;&lt;/rect&gt;
+    &lt;/clippath&gt;
+    &lt;/defs&gt;
+    &lt;svg width=&quot;52%&quot; height=&quot;100%&quot;&gt;
+    &lt;use xlink:href=&quot;#chrome-tab-geometry-left&quot; width=&quot;214&quot; height=&quot;36&quot; class=&quot;chrome-tab-geometry&quot;&gt;&lt;/use&gt;
+    &lt;/svg&gt;
+    &lt;g transform=&quot;scale(-1, 1)&quot;&gt;
+    &lt;svg width=&quot;52%&quot; height=&quot;100%&quot; x=&quot;-100%&quot; y=&quot;0&quot;&gt;
+    &lt;use xlink:href=&quot;#chrome-tab-geometry-right&quot; width=&quot;214&quot; height=&quot;36&quot; class=&quot;chrome-tab-geometry&quot;&gt;&lt;/use&gt;
+    &lt;/svg&gt;
+    &lt;/g&gt;
+    &lt;/svg&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;chrome-tab-content&quot;&gt;
+    &lt;div class=&quot;chrome-tab-favicon&quot; style=&quot;background-image: url('srcpfmedia/vendor/chrome-tabs/demo/images/google-favicon.ico')&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;chrome-tab-title&quot;&gt;Google&lt;/div&gt;
+    &lt;div class=&quot;chrome-tab-drag-handle&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;chrome-tab-close&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;/div&gt;--&gt;
+    &lt;!--&lt;div class=&quot;chrome-tab&quot; data-tab-id=&quot;overview&quot; active&gt;
+    &lt;div class=&quot;chrome-tab-dividers&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;chrome-tab-background&quot;&gt;
+    &lt;svg version=&quot;1.1&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+    &lt;defs&gt;
+    &lt;symbol id=&quot;chrome-tab-geometry-left&quot; viewbox=&quot;0 0 214 36&quot;&gt;
+    &lt;path d=&quot;M17 0h197v36H0v-2c4.5 0 9-3.5 9-8V8c0-4.5 3.5-8 8-8z&quot;&gt;&lt;/path&gt;
+    &lt;/symbol&gt;
+    &lt;symbol id=&quot;chrome-tab-geometry-right&quot; viewbox=&quot;0 0 214 36&quot;&gt;
+    &lt;use xlink:href=&quot;#chrome-tab-geometry-left&quot;&gt;&lt;/use&gt;
+    &lt;/symbol&gt;
+    &lt;clippath id=&quot;crop&quot;&gt;
+    &lt;rect class=&quot;mask&quot; width=&quot;100%&quot; height=&quot;100%&quot; x=&quot;0&quot;&gt;&lt;/rect&gt;
+    &lt;/clippath&gt;
+    &lt;/defs&gt;
+    &lt;svg width=&quot;52%&quot; height=&quot;100%&quot;&gt;
+    &lt;use xlink:href=&quot;#chrome-tab-geometry-left&quot; width=&quot;214&quot; height=&quot;36&quot; class=&quot;chrome-tab-geometry&quot;&gt;&lt;/use&gt;
+    &lt;/svg&gt;
+    &lt;g transform=&quot;scale(-1, 1)&quot;&gt;
+    &lt;svg width=&quot;52%&quot; height=&quot;100%&quot; x=&quot;-100%&quot; y=&quot;0&quot;&gt;
+    &lt;use xlink:href=&quot;#chrome-tab-geometry-right&quot; width=&quot;214&quot; height=&quot;36&quot; class=&quot;chrome-tab-geometry&quot;&gt;&lt;/use&gt;
+    &lt;/svg&gt;
+    &lt;/g&gt;
+    &lt;/svg&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;chrome-tab-content&quot;&gt;
+    &lt;div class=&quot;chrome-tab-favicon&quot; style=&quot;background-image: url('srcpfmedia/vendor/chrome-tabs/demo/images/facebook-favicon.ico')&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;chrome-tab-title&quot;&gt;Facebook Facebook Facebook Facebook&lt;/div&gt;
+    &lt;div class=&quot;chrome-tab-drag-handle&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;chrome-tab-close&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;/div&gt;--&gt;
+    &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;!--&lt;div class=&quot;chrome-tabs-bottom-bar&quot;&gt;&lt;/div&gt;--&gt;
+
+    &lt;/div&gt;
+
+    &lt;div class=&quot;wrap-content container&quot; id=&quot;app_container&quot; style=&quot;padding-left:0px;padding-right:0px&quot;&gt;
+    &lt;!--&lt;iframe src=&quot;https://hrpro.cf/login&quot; style=&quot;width:100%; height: 500px;&quot;&gt;&lt;/iframe&gt;--&gt;
+
+    &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;footer id=&quot;pagefooter&quot;&gt;
+    &lt;div class=&quot;footer-inner d-flex&quot;&gt;
+    &lt;div&gt;
+    &amp;copy;
+    &lt;span class=&quot;current-year&quot;&gt;&lt;/span&gt;
+    &lt;span class=&quot;text-bold text-uppercase&quot;&gt;
+    +84 339449621-HIHRS                &lt;/span&gt;.
+    &lt;span&gt;
+    Li&ecirc;n hệ bản quyền                &lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+    &lt;span class=&quot;go-top&quot;&gt;
+    &lt;i class=&quot;ti-angle-up&quot;&gt;&lt;/i&gt;
+    &lt;/span&gt;
+    &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;/footer&gt;
+    &lt;div id=&quot;off-sidebar&quot; class=&quot;sidebar&quot;&gt;
+    &lt;div class=&quot;sidebar-wrapper&quot;&gt;
+    &lt;ul id=&quot;offTab&quot; class=&quot;nav nav-tabs nav-justified&quot;&gt;
+    &lt;li class=&quot;nav-item&quot;&gt;
+    &lt;a href=&quot;#off-users&quot; class=&quot;nav-link active&quot; aria-controls=&quot;off-users&quot; role=&quot;tab&quot; data-toggle=&quot;tab&quot;&gt;
+    &lt;i class=&quot;ti-comments&quot;&gt;&lt;/i&gt;
+    &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;nav-item&quot;&gt;
+    &lt;a href=&quot;#off-activities&quot; class=&quot;nav-link&quot; aria-controls=&quot;off-activities&quot; role=&quot;tab&quot; data-toggle=&quot;tab&quot;&gt;
+    &lt;i class=&quot;ti-check-box&quot;&gt;&lt;/i&gt;
+    &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;nav-item&quot;&gt;
+    &lt;a href=&quot;#off-favorites&quot; class=&quot;nav-link&quot; aria-controls=&quot;off-favorites&quot; role=&quot;tab&quot; data-toggle=&quot;tab&quot;&gt;
+    &lt;i class=&quot;ti-heart&quot;&gt;&lt;/i&gt;
+    &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;div class=&quot;tab-content&quot;&gt;
+    &lt;div role=&quot;tabpanel&quot; class=&quot;tab-pane active&quot; id=&quot;off-users&quot;&gt;
+    &lt;div id=&quot;users&quot; toggleable active-class=&quot;chat-open&quot;&gt;
+    &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div role=&quot;tabpanel&quot; class=&quot;tab-pane&quot; id=&quot;off-activities&quot;&gt;
+    &lt;/div&gt;
+    &lt;div role=&quot;tabpanel&quot; class=&quot;tab-pane&quot; id=&quot;off-favorites&quot;&gt;
+    &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;/div&gt;
+    &lt;prehead&gt;
+    &lt;meta charset=&quot;utf-8&quot; /&gt;
+    &lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html; charset=utf-8&quot; /&gt;
+    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=Edge&quot; /&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1,user-scalable=0,minimum-scale=1,maximum-scale=1&quot; /&gt;
+
+    &lt;meta name=&quot;apple-mobile-web-app-capable&quot; content=&quot;yes&quot; /&gt;
+
+    &lt;meta name=&quot;apple-mobile-web-app-status-bar-style&quot; content=&quot;black&quot; /&gt;
+
+    &lt;meta content=&quot;Hello-HRM&quot; name=&quot;description&quot; /&gt;
+    &lt;meta content=&quot;HelloHRM&quot; name=&quot;author&quot; /&gt;
+    &lt;meta name=&quot;msapplication-TileColor&quot; content=&quot;#ffffff&quot; /&gt;
+    &lt;meta name=&quot;theme-color&quot; content=&quot;#ffffff&quot; /&gt;
+    &lt;!--&lt;link href=&quot;https://adamschwartz.co/chrome-tabs/css/chrome-tabs-dark-theme.css&quot; rel=&quot;stylesheet&quot; /&gt;--&gt;
+
+    &lt;/prehead&gt;
+    " data-whoami="*"></div>
+    <script src="https://hrm.dnd.vn/media/js/hole.js"></script>
+
+    <!--<script src="http://192.168.1.91:10996/media/js/hole.js"></script>-->
+</body>
+</html>

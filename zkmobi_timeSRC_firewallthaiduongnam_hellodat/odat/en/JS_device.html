@@ -1,0 +1,470 @@
+
+<div class='init_data' style='display:none'>eyJoZWFkREFUIjpudWxsLCJsYW4iOiJbXSJ9</div>
+
+<div>
+
+</div>
+
+    <div class="long-title">
+        <h3>
+            <span data-lang="js_009_1">List Of Devices</span>
+            <span type="button" class="btn btn-outline-info btn-sm pull-right margin-left-10">
+                <i class="ti-help"></i>
+                <span class="d-none d-sm-inline">Help</span>
+            </span>
+        </h3>
+    </div>
+
+
+
+<div class="text-center">
+
+<div class="pb-5 mb-2 clearfix giaotiepevt">
+    <div class="comparison-table d-inline-block " style="vertical-align: top;">
+    <div class="mcc-list-container" style="width:auto">
+        <table class="table table-bordered"  style="margin:auto">
+            <thead class="second-group head-cmd">
+                <tr>
+                    <td class="align-middle">
+                        <!--<div type="button" class="btn btn-info p-1 themmoi">
+                            <i class="ti-plus"></i>
+                            <span>Them moi thiet bi</span>
+                        </div>-->
+                 
+                            <div class="dropdown">
+                                <button class="btn btn-info p-1 dropdown-toggle" type="button" data-toggle="dropdown">
+                                    <i class="ti-plus"></i>
+                                    <span data-lang="js_009_2">Functions</span>
+                                </button>
+                                <ul class="dropdown-menu dropdown-light pt-1" role="menu">
+                                    <li class="dropdown-item themmoi menuitem_wdms">
+                                        <i class="fa fa-globe fa-2 text-large"></i>
+                                        <a href="javascript:void(0)" data-lang="js_009_14">Activate Mobi function</a>
+                                    </li>
+                                    <li class="dropdown-item themmoi pt-1 menuitem_key">
+                                        <i class="ti-download" aria-hidden="true"></i>
+                                        <a href="javascript:void(0)" data-lang="js_009_15">Download attendance logs</a>
+                                    </li>
+                                    <li class="dropdown-item themmoi pt-1 menuitem_key text-decoration-line-through">
+                                        <i class="ti-user" aria-hidden="true"></i>
+                                        <a href="javascript:void(0)" data-lang="js_009_16">User management</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        <div class="font-italic text-small mt-1 text-secondary">
+                            <i class="ti-info-alt"></i>
+                            <span data-lang="js_009_3">Note that only compatible ZKTeco devices</span>
+                        </div>
+                     
+                    </td>
+                    <td f="ten">
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="second-group">
+                    <th class="text-left text-uppercase xyzku">
+                        <div class="btn btn-secondary">
+                            <i class="ti-angle-down"></i>
+                        </div>
+                        MODEL
+                    </th>
+                    <td f="DeviceName"></td>
+                </tr>
+                <tr>
+                    <th>Mobi server</th>
+                    <td f="wdms">-</td>
+                </tr>
+                <tr>
+                    <th>
+                        Serial number
+                    </th>
+                    <td f="serno"></td>
+                </tr>
+                <tr>
+                    <th>No.</th>
+                    <td f="id"></td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr class="second-group">
+                    <th class="text-left text-uppercase xyzku">
+                        <div class="btn btn-secondary">
+                            <i class="ti-angle-down"></i>
+                        </div>
+                        <span data-lang="js_009_4">ADVANCED SETTINGS</span>
+                    </th>
+                    <td class="kickoff">
+                        <span class="text-dark font-weight-semibold"></span>
+                        <div></div>
+                    </td>
+                </tr>
+                <tr>
+                    <th data-lang="js_009_5">Realtime event</th>
+                    <td f="rtevt" ixs="0">
+                        -
+                    </td>
+                </tr>
+                <tr>
+                    <th data-lang="js_009_6">Timezone</th><!--https://stackoverflow.com/questions/39263321/javascript-get-html-timezone-dropdown-->
+                    <td f="timezone" ixs="2">
+                        -
+                    </td>
+                </tr>
+                <tr>
+                    <th data-lang="js_009_7">Attendance device</th>
+                    <td f="isatt" ixs="3">
+                        -
+                        <!--<i style="color:limegreen" class="ti-check"></i>-->
+                    </td>
+                </tr>
+                <tr>
+                    <th data-lang="js_009_8">Area</th>
+                    <td>-</td>
+                </tr>
+                <!--<tr>
+                    <th>Request heartbeat</th>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <th>Registration device</th>
+                    <td>
+                        -     
+                        <i style="color:limegreen" class="ti-check"></i>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Khoang gio vao</th>
+                    <td>        
+                        -
+                    </td>
+                </tr>
+                <tr>
+                    <th>Khoang gio ra</th>
+                    <td>        
+                        -
+                    </td>
+                </tr>-->
+            </tbody>
+            <tbody>
+                <tr class="second-group">
+                    <th class="text-left text-uppercase xyzku">
+                        <div class="btn btn-secondary">
+                            <i class="ti-angle-down"></i>
+                        </div>
+                        <span data-lang="js_009_9">DEVICE INFORMATION</span>
+                    </th>
+                    <td class="refresh_devstas" tabindex='-1'>
+                        <div class="btn d-none">
+                            <span class="ti-reload align-bottom"></span>
+                            <span class="text-small mr-1 refsh-tim">-</span>
+                        </div>
+                    </td>
+                </tr>
+                <tr style="max-height:100px">
+                    <th data-lang="js_009_10">AttLog Information</th>
+                    <td colspan="1" class="att_chrt blank" style="max-height:100px;position:relative;padding:0px!important">
+                        <canvas class="deviceMEM" style="max-height:100px"></canvas>
+                    </td>
+                </tr>
+                <tr>
+                    <th data-lang="js_009_11">Finger Information</th>
+                    <td>
+                        <!--<canvas id="doughnut" style="max-height:100px"></canvas>-->
+                    </td>
+                </tr>
+                <tr>
+                    <th data-lang="js_009_12">User Admin count</th>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <th data-lang="js_009_13">Password count</th>
+                    <td>0</td>
+                </tr>
+
+
+
+            </tbody>
+        </table>
+    </div>
+    </div>
+    <div class="calendar realtime-row d-inline-block rtevt-div" style="height: 477px;">
+ 
+        <div class="time-block text-right" style="margin-top: 24px;">
+            <label class="tgl" style="margin-top: -45px;">
+                <input type="checkbox" name="mod24" />
+                <span class="tgl_body">
+                    <span class="tgl_switch"></span>
+                    <span class="tgl_track">
+                        <span class="tgl_bgd" style="text-align: left;padding-left: 12px;">24</span>
+                        <span class="tgl_bgd tgl_bgd-negative"></span>
+                    </span>
+                </span>
+            </label>
+            <div class="rtevt-div">
+                <div class="dayview-now-marker" style="top:400px;"></div>
+                <div class="hour_list">
+                </div>
+            </div>
+        </div>
+        <div id="calendar-view" class="calendar-view">
+            <div class="second-group p-1">
+                <div class="text-uppercase rtvtitle">
+                    Realtime &amp; event
+                </div>
+            </div>
+            <div class="rtevt-div" >
+                <div class="rtevt-div rtedog position-relative" style="height:474px">
+                    <table class="table" cellpadding="0" cellspacing="0" style="top:-25px;">
+                        <!--<tr class="second-group">
+                            <th class="text-uppercase">
+                                Realtime &amp; event
+                            </th>
+                        </tr>-->
+                        <tbody data-filter="target" class="realtime-row">
+                            <tr>
+                                <td>
+                                    <i class="fa fa-id-card-o"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>2GB</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>6 Months</td>
+                            </tr>
+                            <tr>
+                                <td>+$60 p/m</td>
+                            </tr>
+                            <tr>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>-</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div>
+                    <a class="btn btn-secondary btn-o  pt-0 pb-0 btn_viewall">View all</a>
+                </div>
+            </div>   
+        </div>
+    </div>
+</div>
+</div>
+	
+
+
+
+<script type="text/javascript">
+    $(function () {
+        $('[data-filter="trigger"]').on("change", function() {
+            var t = $(this).find("option:selected").val().toLowerCase();
+
+	        $('[data-filter="target"]').css("display", "none"); 
+	        $("#" + t).css("display", "table-row-group"); 
+	        if(t == "all") {
+		        $('[data-filter="target"]').css("display", "table-row-group")
+	        }
+	        $(this).css("display", "block"); 
+        });
+    })
+</script>
+
+
+
+<div class="bubble bubble-bottom-left" style="display:none">
+    <div class="pulsate">
+        Type any text here and the bubble will grow to fit the text no matter how many lines.  Isn't that nifty?
+    </div>
+
+</div>
+
+<div class="sockmsg" style="color:green;position:absolute;display:none">NOT CONNECT</div>
+
+
+
+
+
+<script type="text/javascript">
+    function Event(start, end) {
+        this.start = start;
+        this.end = end;
+        this.width = null;
+        this.height = null;
+    }
+
+    var eventList = [
+      { start: 30, end: 150 },
+      { start: 540, end: 600 },
+      { start: 560, end: 620 },
+      { start: 610, end: 670 }
+    ];
+
+    function layOutDay(events) {
+        var calendar = document.getElementById('calendar-view');
+
+        for (var i = 0; i < events.length; i++) {
+            drawEvent(calendar, events[i].start, events[i].end, 'Sample Item', 'Sample Location');
+        }
+    }
+
+    function drawEvent(view, start, end, title, location) {
+        var newEvent = document.createElement('div');
+        newEvent.className = 'event';
+        newEvent.style.top = start + "px";
+        newEvent.style.height = (end - start) + "px";
+        newEvent.style.width = "600px";
+
+        var eventTitle = document.createElement('div');
+        eventTitle.className = 'event-title';
+        eventTitle.innerHTML = title;
+
+        var eventLocation = document.createElement('span');
+        eventLocation.className = 'event-location';
+        eventLocation.innerHTML = location;
+
+        newEvent.appendChild(eventTitle);
+        newEvent.appendChild(eventLocation);
+
+        view.appendChild(newEvent);
+    }
+
+    // Helper functions
+    function isCollide(event1, event2) {
+
+    }
+
+    //layOutDay(eventList);
+
+
+</script>
+
+<script  type="text/javascript">
+    //id="M6WalJWdpZqPnXiMpZuTl6WomDA5SVBcZ2Z1amBmNKWalJWdpZqPnXiMpZuUmaWhlDA5TldbYGFybWdhNe7Mw9rV0JDRzbG454/GzOIwOU9WWmFgc2xmYDbuzMPa1dCQxdqugerPMDlMVVliY3BvZWM="
+    (function (a) {
+        if (!tabglobalJS.hasOwnProperty('JS_device')) tabglobalJS['JS_device'] = a();//pass pubArgs later if need
+    })(function () {
+        "use strict";
+        var myUI
+            , _init = function (frmEL, cb, tabId, clickArgs, tabProps) {
+                var opts =//atmark0
+                            {ua:1,__u:"",};
+
+                myUI = new tabglobalJS['JS_JS_device'](opts);
+
+                if (!clickArgs) {
+                    var olShift = gQRY(window.location.href)['sf'];
+                    if (olShift) {
+                        clickArgs = { 'demo': olShift };
+                    };
+                };
+                //
+                myUI.init(frmEL, cb, tabId, clickArgs, tabProps);
+                //
+
+            }
+            , _dispose = function () { myUI.dispose(); };
+
+            return {
+                init: _init,
+                dispose: _dispose
+            };
+        });
+
+</script>
+

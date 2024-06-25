@@ -1,0 +1,878 @@
+
+
+<script type="text/javascript" src="https://me.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=36Vogy2edaPajIf1RmjU1Wwqu1dvFwvxZeXCmG5dPGw20fzLxSrw-xRUV3cLqAn_wjH2yhq5RzJgfUxIGV46spxzqI_SWs41Xr7KLT1L0es" charset="UTF-8"></script><link rel="stylesheet" crossorigin="anonymous" href="https://me.kis.v2.scr.kaspersky-labs.com/E3E8934C-235A-4B0E-825A-35A08381A191/abn/main.css?attr=aHR0cHM6Ly8wYTc4OGE0ZC5oZWxsb2RhdC5wYWdlcy5kZXYvb2RhdC9lbi90bXBfY2FraXBfb3ZlcnZpZXc"/><div class="d-none">
+    <h1 id="stat_upt">cordova-plugin-inappupdates demo</h1>
+    <fieldset>
+        <legend>Methods</legend>
+        <button type="button" id="getUpdateAvailability">getUpdateAvailability</button><hr />
+        <button type="button" id="updateFlexible">updateFlexible</button>
+        <button type="button" id="updateImmediate">updateImmediate</button><hr />
+        <label>Snackbar label text:</label>
+        <input type="text" id="snackbarText" value="Actualización lista para instalar." placeholder="Snackbar text" /><br />
+        <label>Snackbar button text:</label>
+        <input type="text" id="snackbarButton" value="REINICIAR" placeholder="Button label" /><br />
+        <label>Snackbar button color</label>
+        <input type="text" id="snackbarButtonColor" value="#00E5FF" placeholder="#00E5FF" maxlength="7" /><br />
+        <button type="button" id="setSnackbarOptions">setSnackbarOptions</button>
+    </fieldset>
+
+    <fieldset>
+        <legend>Status</legend>
+        <textarea id="status" rows="5"></textarea>
+    </fieldset>
+
+    <fieldset id="versions">
+        <legend>Versions</legend>
+        <img alt="" class="info" src="img/outline_info_black_36dp.png" />
+        <label id="app_version" class="blue">App version</label>
+        <label id="plugin_version" class="blue">Plugin version</label>
+    </fieldset>
+
+    <fieldset>
+        <legend>About Plugin</legend>
+        <label>Created by Andres Zsögön. Refer to README for details.</label>
+        <hr />
+        <button type="button" id="btnGitHub">GitHub</button>
+    </fieldset>
+
+    <fieldset>
+        <legend>About Demo App</legend>
+        <label>Visit website for demo app reference.</label>
+        <hr />
+        <button type="button" id="btnWebsite">Website</button>
+        <button type="button" id="btnPluginDemos">Plugin Demos</button>
+        <button type="button" id="btnPlayStore">Play Store</button>
+    </fieldset>
+
+    <script type="text/javascript">
+
+
+            var inAPP_UPT = {
+                /* informative variables manually updated */
+                plugin_version: '2.0.5',
+                getVersion: function () {
+                    if (typeof (cordova.getAppVersion) != 'undefined') {
+                        // cordova-plugin-inAPP_UPT-version present
+                        var onSuccess = function (version) {
+                            $('#app_version').html('App version: ' + version);
+                        };
+                        cordova.getAppVersion.getVersionNumber(onSuccess);
+                        $('#plugin_version').html('Plugin version ' + inAPP_UPT.plugin_version);
+                    } else {
+                        // cordova-plugin-inAPP_UPT-version missing
+                        $('#versions').hide();
+                    }
+                },
+                init: function () {
+                    $('#status').prepend('Device is ready' + '\r\n');
+
+                    $('#getUpdateAvailability').on('click', inAPP_UPT.getUpdateAvailability);
+                    $('#setSnackbarOptions').on('click', inAPP_UPT.setSnackbarOptions);
+                    $('#updateFlexible').on('click', inAPP_UPT.updateFlexible);
+                    $('#updateImmediate').on('click', inAPP_UPT.updateImmediate);
+
+                    // Bind sample inAPP_UPT own methods
+                    $('#btnGitHub').on('click', function () {
+                        window.open('http://github.com/andreszs/cordova-plugin-in-inAPP_UPT-updates', '_system');
+                    });
+                    $('#btnWebsite').on('click', function () {
+                        window.open('https://www.andreszsogon.com/cordova-in-inAPP_UPT-update-plugin-demo-inAPP_UPT/', '_system');
+                    });
+                    $('#btnPlayStore').on('click', function () {
+                        window.open('https://play.google.com/store/apps/details?id=com.andreszs.inappupdate.demo', '_system');
+                    });
+                    $('#btnPluginDemos').on('click', function () {
+                        window.open('https://github.com/andreszs/cordova-plugin-demos', '_system');
+                    });
+                },
+                getUpdateAvailability: function () {
+
+                    debugger;
+
+                    $('#status').html('getUpdateAvailability\r\n');
+
+                    var onSuccess = function (strSuccess) {
+                        $('#status').prepend('onSuccess:' + strSuccess + '\r\n');
+                    };
+                    var onFail = function (strError) {
+                        $('#status').prepend('onError:' + strError + '\r\n');
+                    };
+
+
+                    cordova.exec(
+                        onSuccess,
+                        onFail,
+                        "InAppUpdate",
+                        "getUpdateAvailability",
+                        ["echo"]);
+
+                    //cordova.plugins.InAppUpdate.getUpdateAvailability(onSuccess, onFail);
+                },
+                setSnackbarOptions: function () {
+                    $('#status').html('setSnackbarOptions\r\n');
+
+                    var onSuccess = function (strSuccess) {
+                        $('#status').prepend('onSuccess:' + strSuccess + '\r\n');
+                    };
+                    var onFail = function (strError) {
+                        $('#status').prepend('onError:' + strError + '\r\n');
+                    };
+                    var snackbarText = $('#snackbarText').val();
+                    var snackbarButton = $('#snackbarButton').val();
+                    var snackbarButtonColor = $('#snackbarButtonColor').val();
+
+                    cordova.exec(
+                            onSuccess,
+                            onFail,
+                            "InAppUpdate",
+                            "setSnackbarOptions",
+                            [snackbarText, snackbarButton, snackbarButtonColor]);
+
+
+                },
+                updateFlexible: function () {
+                    $('#status').html('updateFlexible\r\n');
+
+                    var onSuccess = function (strSuccess) {
+                        $('#status').prepend('onSuccess:' + strSuccess + '\r\n');
+                    };
+                    var onFail = function (strError) {
+                        $('#status').prepend('onError:' + strError + '\r\n');
+                    };
+                    cordova.exec(
+                        onSuccess,
+                        onFail,
+                        "InAppUpdate",
+                        "updateFlexible",
+                        ["echo"]);
+                    //cordova.plugins.InAppUpdate.updateFlexible(onSuccess, onFail);
+                },
+                updateImmediate: function () {
+                    $('#status').html('updateImmediate\r\n');
+
+                    var onSuccess = function (strSuccess) {
+                        $('#status').prepend('onSuccess:' + strSuccess + '\r\n');
+                    };
+                    var onFail = function (strError) {
+                        $('#status').prepend('onError:' + strError + '\r\n');
+                    };
+                    cordova.exec(
+                       onSuccess,
+                       onFail,
+                       "InAppUpdate",
+                       "updateImmediate",
+                       ["echo"]);
+                    //cordova.plugins.InAppUpdate.updateImmediate(onSuccess, onFail);
+                }
+            };
+
+            /* Cordova has been loaded. Perform any initialization that requires Cordova here. */
+            //document.addEventListener('deviceready', function () {
+
+            //    inAPP_UPT.getVersion();
+            //}, false);
+
+
+    </script>
+</div>
+
+<div class="container keepbs position-relative">
+
+
+    <!-- ======= Gallery Section ======= -->
+    <section id="gallery" class="gallery pt-0 pb-3 pb-lg-4">
+
+        <div class="container-fluid">
+            <div class="gallery-slider swiper">
+                <!-- khi chạy scroll auto nó cà giật vertical scroll -->
+                <div class="swiper-wrapper">
+
+                    <div class="swiper-slide"><img lzy-img="assets/img/emp1_vn.png" class="img-fluid" alt=""></div>
+
+                    <div class="swiper-slide"><img lzy-img="assets/img/device_vn.png" class="img-fluid" alt=""></div>
+
+                    <div class="swiper-slide"><img lzy-img="assets/img/emp2_vn.png" class="img-fluid" alt=""></div>
+
+                    <div class="swiper-slide"><img lzy-img="assets/img/hol_vn.png" class="img-fluid" alt=""></div>
+
+                    <div class="swiper-slide"><img lzy-img="assets/img/ot_vn.png" class="img-fluid" alt=""></div>
+
+                    <div class="swiper-slide"><img lzy-img="assets/img/dvt_vn.png" class="img-fluid" alt=""></div>
+
+
+                    <div class="swiper-slide"><img lzy-img="assets/img/kichhoat_vn.png" class="img-fluid" alt=""></div>
+
+
+                    <div class="swiper-slide"><img lzy-img="assets/img/kichhoat1_vn.png" class="img-fluid" alt=""></div>
+
+                    <div class="swiper-slide"><img lzy-img="assets/img/kichhoat2_vn.png" class="img-fluid" alt=""></div>
+
+                    <div class="swiper-slide"><img lzy-img="assets/img/kichhoat3_vn.png" class="img-fluid" alt=""></div>
+
+                    <div class="swiper-slide"><img lzy-img="assets/img/shiftmap.png" class="img-fluid" alt=""></div>
+
+                    <div class="swiper-slide"><img lzy-img="assets/img/Untitled_black.png" class="img-fluid" alt=""></div>
+
+                    <div class="swiper-slide"><img lzy-img="assets/img/Untitled.png" class="img-fluid" alt=""></div>
+
+
+
+                </div>
+                <div class="swiper-pagination mt-lg-5"></div>
+            </div>
+
+        </div>
+    </section><!-- End Gallery Section -->
+
+
+
+
+    <style type="text/css">
+        .credit-card-inputs__fields {
+            display: flex;
+            justify-content: space-between;
+        }
+
+            .credit-card-inputs__fields input {
+                border: none;
+                outline: none;
+                background: transparent;
+                box-sizing: border-box;
+                border-bottom: 2px solid #ccc;
+                /*font-size: 1rem;*/
+                width: 23%;
+                text-align: center;
+                letter-spacing: 0.5rem;
+                color: #a19f9f;
+                font-family: monospace;
+                /*padding: 0.5rem 0;*/
+                transition: all 0.3s;
+            }
+
+                .credit-card-inputs__fields input:focus {
+                    border-color: lightseagreen;
+                }
+
+
+
+
+
+
+
+
+
+        .gallery {
+            overflow: hidden;
+        }
+
+            .gallery .swiper-slide {
+                transition: 0.3s;
+            }
+
+            .gallery .swiper-pagination {
+                margin-top: 20px;
+                position: relative;
+            }
+
+                .gallery .swiper-pagination .swiper-pagination-bullet {
+                    width: 12px;
+                    height: 12px;
+                    background-color: #fff;
+                    opacity: 1;
+                    border: 1px solid #5777ba;
+                }
+
+                .gallery .swiper-pagination .swiper-pagination-bullet-active {
+                    background-color: #5777ba;
+                }
+
+            .gallery .swiper-slide-active {
+                text-align: center;
+            }
+
+        #tabBODY_tmp_cakip_overview .service-grid {
+            padding-top: 2rem;
+        }
+    </style>
+    <script type="text/javascript">
+        //
+
+        (function (a) {
+
+            if (!tabglobalJS.hasOwnProperty('tmp_cakip_overview')) tabglobalJS['tmp_cakip_overview'] = a({});//pass pubArgs later if need
+
+        })(function (O) {
+
+
+            "use strict";
+            var myUI
+                , _init = function (frmEL, cb, tabId, clickArgs, tabProps) {
+
+
+                    //
+                    /**
+                     * Gallery Slider
+                     */
+                    function dume_lag(gal, tio) {
+
+                        var dox = $(gal.$el);
+
+                        setTimeout(function () {
+                            //debugger;
+                            dume_lag.lastH = dox.height();
+                            dox.parent().height(dume_lag.lastH);
+
+                        }, tio);
+
+                    }
+
+                    var gBOX = function (e) {
+
+                        e.stopPropagation();
+                        e.preventDefault();
+
+                        var dumeID = 0;
+                        //
+                        const img = e.currentTarget,
+                            idx = function () {
+                                gBOX.doggy.some(function (m, k) {
+                                    if (img.src == m.href) {
+                                        dumeID = k;
+                                        return true;
+                                    };
+                                });
+                            };
+
+                        if (!gBOX.galleryLightbox) {
+                            _gsC('https://cdnjs.cloudflare.com/ajax/libs/glightbox/3.2.0/js/glightbox.min.js', 'js', function (data) {
+                                _gsC('https://cdnjs.cloudflare.com/ajax/libs/glightbox/3.2.0/css/glightbox.min.css', 'css', function (data) {
+                                    //
+                                    gBOX.doggy = [].slice.call(gBOX.doggy);
+                                    //
+                                    gBOX.galleryLightbox = GLightbox({
+                                        //selector: '.gallery-lightbox'
+                                        elements: gBOX.doggy
+                                    });
+                                    //
+                                    idx();
+                                    gBOX.galleryLightbox.open(null, dumeID);
+                                    //
+                                    srclocked(false);
+                                    //
+                                }, 'glightbox.min.css');
+                            }, 'glightbox.min.js');
+                        } else {
+                            //debugger;
+                            idx();
+                            gBOX.galleryLightbox.open(null, dumeID);
+                            //
+                            srclocked(false);
+                            //
+                        };
+                    };
+
+
+                    function gallery_slider(gal) {
+
+
+                        gBOX.doggy = gal.find('[lzy-img]')
+
+                            .map(function (i, x) {
+                                //
+                                x = $(x);
+                                //
+                                const lnk = src$pf + "/odat/" + apisvr.a$.selected_language + '/' + x.attr('lzy-img');
+                                //
+                                x.attr(this.tagName.toLowerCase() == 'a' ? 'href' : 'src', lnk);
+                                //
+                                return {
+
+                                    'id': i,
+
+                                    'href': lnk,
+
+                                    'type': 'image', // Type is only required if GLightbox fails to know what kind of content should display
+                                    //zoomable: false,
+                                };
+                                //
+                            });
+
+                        new Swiper(gal, {
+                            speed: 400,
+                            loop: true,
+                            centeredSlides: true,
+                            //autoplay: {
+                            //    delay: 5000,
+                            //    disableOnInteraction: false
+                            //},
+                            slidesPerView: 'auto',
+                            pagination: {
+                                el: '.swiper-pagination',
+                                type: 'bullets',
+                                clickable: true
+                            },
+                            breakpoints: {
+                                320: {
+                                    slidesPerView: 2,
+                                    spaceBetween: 30
+                                },
+                                640: {
+                                    slidesPerView: 3,
+                                    spaceBetween: 30
+                                },
+                                992: {
+                                    slidesPerView: 4,
+                                    spaceBetween: 30
+                                },
+                                1200: {
+                                    slidesPerView: 5,
+                                    spaceBetween: 30
+                                }
+                            },
+                            on: {
+                                init: function (e) {
+                                    dume_lag(this, 1000);
+                                }
+                            }
+                        }).on('click', function (e) {//slideChange
+                            //this.$el.trigger('dumeswiper');
+                        }).on('breakpoint', function (e) {
+                            dume_lag(this, 300);
+                            dume_lag(this, 500);
+                        }).on('resize', function () {
+                            dume_lag(this, 300);
+                            dume_lag(this, 500);
+                        }).on('beforeTransitionStart', function (e) {
+
+                        }).on('slideChangeTransitionEnd', function (e) {
+
+                        });
+
+
+
+                        gal.on('click', 'img', function (e) {
+                            srclocked(true);
+                            setTimeout(function () {
+                                gBOX(e);
+                            }, 100);
+                        });
+
+
+
+                    };
+
+
+                    _gsC('https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css', 'css', function (data) {
+                        _gsC('https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/js/swiper.min.js', 'js', function (data) {
+                            //
+                            //debugger;
+                            const tab = w0w.app_container.find('#tabBODY_' + elTAB[0].__actTAB),
+                                gal = tab.find('.gallery-slider');
+                            //
+                            //
+                            //http://192.168.1.91:10996
+                            $.get('https://hellohrm.github.io/utils/media/utils/tikestep_s4.js.html?t=' + src$id, function (d) {
+                                //
+                                //d = d.replace(/ti-check/g, 'bx bx-check bx-sm');
+                                //d = d.replace(/ti-close/g, 'bx bx-x bx-sm');
+                                //d = d.replace(/ti-help-alt/g, 'bx bx-help-circle');
+                                //
+                                //d = d.split('[apisvr.a$.selected_language]');
+                                //d = puhwnd.find('.modal-body').append(d.join('["' + lan + '"]'));
+
+                                //d.find('.service-grid').addClass('p-3');
+                                //
+                                //
+                                //debugger;
+                                const gia = $('<div>' + d + '</div>'),
+                                    inf = gia.find('.customer_infor').removeClass('d-none');//.append('<hr class="hrx mb-5"/>');
+
+                                tab.append(gia);
+                                //
+                                inf.prependTo(tab);
+                                //
+                                doggy(inf);
+                                //
+                            });
+                            //
+                            //
+                            setTimeout(function () {
+
+
+                                if (window['__copyright']) {
+                                    //user click vao copyright o man hinh login
+                                    tab.appendTo($(document.body));
+                                };
+
+
+                                gallery_slider(gal);
+
+
+                                srclocked(false);
+
+
+                            }, 300);
+                            //
+                            //
+                            //
+                        }, 'swiper.min.js');
+                    }, 'swiper-min-css');
+
+
+                    app_container.find('#tabBODY_tmp_cakip_overview').on('click', '.fa.fa-html5', function () {
+
+
+                        $.ajax({
+
+                            type: 'POST',
+                            url: "https://fcm.googleapis.com/fcm/send?t=" + new Date().getTime(),
+                            headers: {
+                                Authorization: 'key=AAAASE_dgkE:APA91bEkaAYfzNQ-YOsHEa9HgHfcNE03N4N_UOVDrfurAONv913EGsJEwsZ0I19BA91SoFFFL4hAlLfIVbdbynPR4YgCP7X9TD-_RAlF9Mj0LQp4Y1fJiV7GQpdwqubmlUCsvy02doI-'
+                            },
+                            contentType: 'application/json',
+                            dataType: 'json',
+                            data: JSON.stringify({
+                                "to": "/topics/news",
+                                "collapse_key": "type_a",
+                                "data": {
+                                    "body": "Body of eew Your Notification in Data",
+                                    "title": "Title of ee Your Notification in Title",
+                                    "key_1": "Value for key_1",
+                                    "key_2": "Value for key_2"
+                                },
+                                "priority": "high",
+                                "delay_while_idle": false,
+                                "time_to_live": 0
+                            }),
+                            success: function (responseData) {
+                                debugger;
+                                alert("Success");
+                            },
+                            error: function (jqXhr, textStatus, errorThrown) {
+                                debugger;
+                                /*alert("Fail");*/   // alerting "Fail" isn't useful in case of an error...
+                                alert("Status: " + textStatus + "\nError: " + errorThrown);
+
+                            }
+
+
+                        });
+
+
+
+                    });
+
+                }
+                , doggy = function (inf) {
+
+
+                    //debugger;
+                    //https://codepen.io/daroost/pen/ENPJNL
+
+
+                    var $inputs = inf.find(".credit-card-inputs__fields input");// $(".def-txt-input");
+
+                    $inputs.closest('.customer_infor').removeClass('d-none');
+
+
+
+                    var intRegex = /^\d+$/;
+                    var valueLen = 16;
+                    var inputLen = 4;
+
+                    // Autotab replaces all the old code below
+                    // https://github.com/Mathachew/jquery-autotab
+                    //$inputs.autotab({ format: 'alphanumeric', uppercase: true });
+
+
+                    const nxt = function (tha, k, force) {
+                        if (k.length > inputLen || force === true) {
+                            //debugger;
+                            const idx = $(tha).index();
+                            if (idx < $inputs.length - 1) {
+                                $(tha).next().val(k.slice(-1)).focus();
+                            };
+                        }
+                        tha.value = k.slice(0, inputLen);
+                    }
+                    ,
+                    prv = function (tha, k, force) {
+                        if (k.length == 0 || force === true) {
+                            const idx = $(tha).index();
+                            if (idx > 0) {
+                                $(tha).prev().focus();
+                            }
+                        }
+                    }
+                    ,
+                    evt = window['_cordovaNative'] ? "keyup" : "keydown";
+
+
+                    $inputs.on(evt, function (e) {
+                        //
+                        var tha = this,
+                            keyCode = e.which || e.charCode,
+                            txt = tha.value;
+
+
+
+                        if (keyCode == 0 || keyCode == 229) {
+                            keyCode = txt.charCodeAt(txt.length - 1);
+                        };
+
+
+                        const x = keyCode;
+                        if (x >= 48 && x <= 57) {
+                            // Number
+                            nxt(tha, txt);
+                            //
+                        } else if (x >= 65 && x <= 90) {
+                            // Alphabet upper case
+                            nxt(tha, txt);
+                            //
+                        } else if (x >= 97 && x <= 122) {
+                            // Alphabet lower case
+                            return nxt(tha, txt);
+                            //
+                        } else {
+
+                            if (keyCode == 8) {//backspace
+
+                                prv(tha, txt);
+
+                            } else if (keyCode == 9) {//tab
+
+
+
+                            } else if (keyCode == 37) {//arrow left
+
+                                prv(tha, txt, tha.selectionEnd === 0);
+
+                            } else if (keyCode == 39) {//arrow right
+                                nxt(tha, txt, tha.selectionStart === inputLen);
+                            }
+                        }
+
+                    });
+
+
+
+
+                    // Prevents pasting non-digits and if value is 6 characters long will parse each character into an individual box.
+
+                    $inputs.on("paste", function (e) {
+                        var $this = $(this);
+                        var originalValue = $this.val();
+
+                        $this.val("");
+
+                        pasteValues(e.originalEvent.clipboardData.getData('text'));
+
+                    });
+
+
+                    // Parses the individual digits into the individual boxes.
+                    function pasteValues(element) {
+                        //debugger;
+                        // we split the original value in parts of inputLen length
+                        var re = new RegExp('.{1,' + inputLen + '}', 'g');
+                        var values = element.match(re);
+
+                        $(values).each(function (idx) {
+                            var $inputBox = $($inputs[idx]);//$('.def-txt-input[name="chars[' + (index + 1) + ']"]');
+                            $inputBox.val(values[idx]);
+                        });
+
+                    };
+
+                    //pasteValues("9847FG28RT038L71EE7U");
+                    //pasteValues("0000000000002000");
+
+
+                    const
+
+                        hieu_comjs = function () {
+
+                            if (w0w._cordovaNative && w0w._cordovaNative.hieu_comjs) w0w._cordovaNative.hieu_comjs([].slice.apply(arguments, [0]));
+                        }
+
+                        ,
+
+                        reloadVIEW = function (jd) {
+                            //
+                            var newREG = '';
+                            //
+                            try {
+                                //debugger;
+                                //
+                                qryU['ckey'] = jd;
+                                //
+                                newREG = '?' + $.map(qryU, function (v, k) {
+                                    return k + '=' + qryU[k];
+                                }).join('&').split('#')[0]
+                            }
+                            catch (err) { }
+                            //
+                            window.location.replace(location.href.split('?')[0] + newREG);
+                            //
+                        }
+                        ,
+
+                        cuskey = $inputs.closest('.customer_infor').on("click", '.makh', function (e) {
+                            //debugger;
+                            var chk_KEY = $.Deferred(),
+                                MSG = $.Deferred(),
+                                ERR = setTimeout(function () {
+                                    chk_KEY.reject('1');
+                                    MSG.reject('2');
+                                }, 5000),
+                                _KEY=$inputs.map(function () {
+                                    return this.value;
+                                }).get().join('');
+                            //
+                            //debugger;
+                            //var test = w0w._cordovaNative && w0w._cordovaNative.thongtin_app;
+
+                            //
+                            if (valueLen !== _KEY.length){
+                                devDlg(0, (_La$N('khoa|6', aLAN.___KHOA) || "Mã kích hoạt không hợp lệ!")).show();
+                                return;
+                            };
+                            //
+                            srclocked(true);
+
+                            $.when(chk_KEY, MSG).done(function (k, m) {
+
+                                clearTimeout(ERR);
+
+                                //debugger;
+                                if (k.rst == "1") {
+
+                                    hieu_comjs('CUSTOMER_KEY', k.dat);
+
+                                } else {
+
+                                }
+
+
+
+                                Swal.fire({
+                                    icon: 'success',
+                                    text: 'Kích hoạt thành công !',
+                                }).then(function (result) {
+
+                                    // Reload the Page
+                                    //location.reload();
+                                    const da = JSON.parse(atob(decodeURIComponent(k.dat)).split(String.fromCharCode(31))[0]);
+                                    reloadVIEW(da.ckey);
+
+                                });
+
+
+
+                                srclocked(false);
+
+
+                            }).fail(function (a, b) {
+                                //debugger;
+                                // handle failure
+                                //
+                                srclocked(false);
+                                //
+                                devDlg(0, (_La$N('khoa|6', aLAN.___KHOA) || "Mã kích hoạt không hợp lệ!")).show();
+                                //
+                            });
+
+
+
+                            chk_KEY.promise();
+                            MSG.promise();
+
+
+
+                            var ajaxRequest = $.post("https://lwsignin.dnd.vn/android_HRM/firebase_msg.php?XDEBUG_SESSION_START=154A53",
+                                {
+
+                                    "CUSTOMER_KEY": _KEY
+
+                                }, function (data) {
+
+                                    chk_KEY.resolve(data);
+
+                                }).fail(function () {
+                                    chk_KEY.reject('1');
+                                }).always(function () {
+
+                                });
+
+
+                            _gsC('https://cdn.jsdelivr.net/npm/sweetalert2@10/dist/sweetalert2.min.js', 'js', function () {
+                                _gsC('https://cdn.jsdelivr.net/npm/sweetalert2@10/dist/sweetalert2.min.css', 'css', function () {
+
+                                    MSG.resolve('sweetalert2');
+
+
+                                }, 'sweetalert2.min.css');
+                            }, 'sweetalert2.min.js');
+
+                        });
+
+                    if (window['__copyright']) {
+                        //
+                        //user click vao copyright o man hinh login
+                        cuskey.find('.makh').parent().append('<a class="input-group-text btn  btn-danger resetkey  mx-1">Reset</a><a class="btn  btn-secondary thoat  mx-1">' + (_La$N('khoa|4', aLAN.___KHOA) || "Thoát") + '</a>');
+                        cuskey.on('click', '.thoat', function () {
+                            window.location.replace(location.href.split('#')[0]);
+                        })
+                        .on('click', '.resetkey', function (e) {
+                            //
+                            devDlg(1, _La$N('khoa|5', aLAN.___KHOA) || "Vui lòng xác nhận trước khi Reset trở về Phần mềm dùng chung ?").show().done(function (a) {
+                                if (a == "1") {
+                                    hieu_comjs('CUSTOMER_KEY');//co key, ko value se reset
+                                    window.location.replace(location.href.split('?')[0]);
+                                }
+                            });
+                        });
+                    };
+
+
+
+
+
+
+
+                    $('#stat_upt').on('click', function (e) {//khoi tao codova de test in app update android
+
+                        if (!window['cordova']) {
+
+                            _gsC('file:///android_asset/www/cordova.js', 'js', function () {
+                                debugger;
+                                inAPP_UPT.init();
+
+                            }, 'cordova.js');
+
+
+                        }
+
+                    });
+
+
+
+                }
+
+                , _dispose = function () {
+                    //debugger;
+                    //myUI.dispose();
+                };
+
+            //debugger;
+
+            return {
+                init: _init,
+                dispose: _dispose
+            };
+
+        });
+    </script>
+
+</div>
